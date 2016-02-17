@@ -1,0 +1,58 @@
+Updated Project Proposal
+
+I think the thesis will have two main themes – one more theoretical and using data which already exist, and one more applied involving fieldwork and with relevance to management.
+
+Theme 1: Functional traits and diversity in waterbird communities at PNLP
+
+I've only seen one paper on wader functional diversity, so this may be an opportunity to do something new and exciting!
+
+Seasonal and inter-habitat variation
+
+Using Demetrio's dataset of bird censuses for the different habitats in the park, going back several years, we can compare tendencies in the (a) composition of the community (just presence/absence of species) and (b) functional traits of those species, and therefore the total community.
+
+We have two sources of variation, the seasons (summer/winter) and the habitats (lagoon, beach, estuary, fields). 
+
+For the species lists, I'd like to use a clustering analysis (with each census being a single point). I would expect that the main clusters would represent the seasonal differences, due to the fairly large contribution of boreal migrants to these communities.
+
+Conversely, I would expect functional traits to be relatively conserved within habitats in both seasons. I need to read up on how dimension-reduction works in functional analyses, but if a similar clustering analysis is possible I would expect each community to cluster distinctly, with less difference between the seasons.
+
+If the second prediction is wrong, it suggests that some functional trait is missing in one season, which would be likely to have other (predictable, testable) effects on the ecosystem.
+
+It may also be possible to analyse various traits of interest (e.g. total bird biomass) using two-way ANOVA.
+
+Effects of management
+
+There is also data of counts before and after the barra opening, and before and after the shrimp-fishing season. If it is possible to analyse the totality of community functional traits in a way that is easy to interpret, I think this would have the potential to be very interesting.
+
+As you can see I do not yet know a lot about analysing functional diversity, but Leandro Duerte may be able to help. If there is not enough time, I would leave out the effects of management section.
+
+Theme 2: Energy intake of Calidris alba and Calidris fuscicollis on the beach 
+
+Narrowing in, this second part focuses on a single habitat and two species with fairly specialised but fairly similar feeding methods. Calidris alba at PNLP is near the southern extreme of its wintering range, whereas C. fuscicollis is near the northenmost part.
+
+By calculating prey intake rates, activity budgets and the calorific value of prey it will be possible to calculate daily energy intake of these birds. Using meteorological data from the Farol we can calculate daily energy requirements. Using sediment samples, it will be possible to estimate the total available energy from foraging in these sediments.
+
+Global comparison
+
+Both species (but especially C. alba) have a wide range of wintering latitudes. The relative costs and benefits of a given latitude will reflect a trade-off between migration distance (requiring time and energy) and energy availability during the winter (permitting earlier spring departure).
+
+Using values derived from the literature and unpublished data we can compare PNLP with other sites, and other flyways, to see if this gives insight into why birds come here rather than staying in California, or going to Tierra del Fuego. 
+
+At this stage I am not sure if this comparison will be purely descriptive or if some correlative analysis would be possible. The best would be meta-analysis but I don't know how to do it, and I don't know if the data is numerous or homogeneous enough. 
+
+Local comparison
+
+I am staying at Praia de Farol, next to the boundary of the park. Recreational users, fishers and shellfishers are all permitted to the north, whereas only a few licensed artesanais are allowed inside the park. There is therefore a big difference in disturbance.
+
+I would like to quantify this disturbance by estimating distance to 'disturbers'. I would also like to experimentally measure flight distance in this species, to see how it compares with flocks' average distance from people.
+
+I would like to compare % time spent foraging between these two areas, and see if it correlates with number of disturbers. There are three plausible options:
+1. There is no relationship – flocks settle considerably more than their flight distance from disturbers.
+2. Birds spend less time foraging when closer to disturbance, due to increased vigilance behaviour. This causes a difference between the two sites.
+3. Birds increase vigilance in the north, despite remaining a long distance from individual disturbers, because of the perceptibly greater human presence in the area in general. This is related to the 'landscape of fear' concept (and probably the least likely).
+
+We can use the density of disturbers and the flight distance to calculate the total area of unusable habitat (i.e., the area of a circle with radius = flight distance, multiplied by number of fishers). 
+
+It might also be possible to look at what the shellfishers are taking and see if it is species / size classes used by Calidris as food. The data may already exist or I may be able to measure somebody's catch. Similarly, it could be useful to take sediment cores from both areas for comparison purposes. Again, this might have already been done – there seem to be a few benthos-enthusiasts at FURG.
+
+A  lot of these analyses were already done in the Tagus so I have a model to compare with. 
