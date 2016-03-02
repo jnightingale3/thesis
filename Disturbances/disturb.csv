@@ -1,4 +1,6 @@
-date,location,time,vehicle,person,dog,unknown,helicopter
-22/02/16,north,06:16:00,0,3,1,1,0
-21/02/16,park,02:00:00,1,2,0,1,1
-23/02/16,park,04:47:00,3,0,0,0,0
+date,location,time,vehicle,person,dog,aircraft,unknown,suggest.unknown
+22/02/16,north,06:16:00,0,3,1,0,1,
+21/02/16,park,02:00:00,1,2,0,1,1,
+23/02/16,park,04:47:00,3,0,0,0,0,
+29/02/16,north,06:33:00,3,3,0,0,1,rodent
+01/03/16,park,06:11:00,9,1,2,,2,1x plane (heard not seen)
