@@ -13,5 +13,7 @@ with(alba, plot(location, rank(flock.size), main='Rank flock size') )
 
 # flock size and proportion foraging
 with(alba, plot(flock.size, prop.forag))
-abline(with(alba, lm(prop.forag ~ flock.size)))
+lm.flock.forag <- lm(prop.forag ~ flock.size, data=alba)
+summary(lm.)
+abline(with(alba, )))
 with(alba, summary(glm(cbind(forag, (roost + preen)) ~ flock.size, family=binomial(link = "logit"))))
