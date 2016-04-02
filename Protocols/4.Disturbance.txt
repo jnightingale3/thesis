@@ -1,0 +1,7 @@
+I recorded when flocks were disturbed during sampling. A disturbance event was defined as any member of another species approaching the flock, causing birds to move or change their behaviour. I recorded the cause of the disturbance where possible in the following categories:
+—human, walking or cycling
+—human, driving a motorised terrestrial vehicle
+—dog
+—predator
+—aircraft
+—other
