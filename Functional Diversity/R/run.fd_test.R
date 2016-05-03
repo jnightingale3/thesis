@@ -1,6 +1,5 @@
 # load data
 setwd('~/Dropbox/Thesis/Repo/thesis/Functional Diversity/R')
-source('dat.mig.ufrj.R')
 
 # load packages
 require(FD) # for functional diversity metrics
@@ -8,25 +7,25 @@ require(reshape2) # for data manipulation for plotting
 
 # create new data frame for this analysis
 # only including species for which I have data
-# TODO complete trait matrix!
-spsite <- dat.spsite[,names(dat.spsite) %in% dat.umig$sp]
-# add site to row names to identify communities 
-row.names(spsite) <- as.character(dat.spsite$site)
+
+# species data need to be identical & in the same order in both matrices
+common_spp <- intersect(rownames(trait_mat), colnames(dat.spsite))
+spsite <- dat.spsite[,colnames(dat.spsite) %in% common_spp]
 # analysis requires at least 3 unique species to be observed!
 spsite <- spsite[(rowSums(spsite != 0)>2),]
 
 # store species names in row names - can't include as a column
-row.names(dat.umig) <- dat.umig$sp
+#row.names(dat.umig) <- dat.umig$sp
 
-# species data need to be identical & in the same order in both matrices
-spsite <- spsite[,sort(dat.umig$sp)] %>% droplevels
-dat.umig <- dat.umig[sort(dat.umig$sp),-c(1:3)] %>% droplevels
+# create trait matrix only including correct species
+trait_fd <- trait_mat[rownames(trait_mat) %in% common_spp,]
 # check
-identical(row.names(dat.umig), row.names(t(spsite)))
+all.equal(rownames(trait_fd), colnames(spsite))
 sum(rowSums(spsite) > 2) == nrow(spsite)
 
-# run full distance-based FD analysis using package FD
-fd.test <- dbFD(x=dat.umig, a=spsite)
+
+### run full distance-based FD analysis using package FD
+fd.test <- dbFD(x=trait_fd, a=spsite, corr = 'cailliez', calc.FGR=F)
 # summary(fd.test) # what have we got?
 
 # llply(fd.test, .fun=print) # print all the output
@@ -35,7 +34,7 @@ fd.test <- dbFD(x=dat.umig, a=spsite)
 ## look at some CWMs
 
 # extract this data, add habitat info and reshape for plotting
-source('dat.habitat.ufrj.R')
+
 cwms <- assign_habitat(fd.test$CWM, site=rownames(fd.test$CWM)) %>% 
   melt(id=c('site', 'habitat', 'season'))
 cwms$value <- as.numeric(cwms$value) # convert these values to numbers for plotting
@@ -127,9 +126,9 @@ ggdendrogram(spclust.dend)
 print(ggplot(spclust.dend))
 
 ### PCOA
-require(ade4)
-dat.umig_short <- dat.umig[,-17]
-sp.pcoa <- dudi.pco(vegdist(dat.umig_short, method='gower'))
+#require(ade4)
+#dat.umig_short <- dat.umig[,-17]
+sp.pcoa <- pcoa(dist.trait, correction = 'cailliez', rn=rownames(trait_mat))
 str(sp.pcoa)
 summary(sp.pcoa)
 biplot(sp.pcoa)
@@ -139,7 +138,7 @@ biplot(sp.pcoa)
 ## extract scores
 sp.scores <- data.frame(sp.pcoa$li)
 # join with mig status
-sp.scores$mig <- dat.umig$mig
+sp.scores$mig <- master_trait$mig
 
 with(sp.scores,plot(mig, A1))
 with(sp.scores,plot(mig, A2))

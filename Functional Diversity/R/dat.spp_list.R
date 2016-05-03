@@ -1,8 +1,12 @@
+### This file takes the raw census spreadsheets
+### and removes various problems, such as typos,
+### synonyms and species never or rarely (<5%) observed
+
 ## set working directory
-setwd('/home/josh/Dropbox/Thesis/Repo/thesis/Functional Diversity/R')
+# setwd('/home/josh/Dropbox/Thesis/Repo/thesis/Functional Diversity/R')
 
 ## load required packages
-require(plyr) # for join_all() function to join list of dataframes
+# require(plyr) # for join_all() function to join list of dataframes
 
 ## read in each year's census data into a list
 dat.list <- list(
@@ -21,11 +25,12 @@ dat.list <- list(
   'd2015ver' = read.csv("data/spp.matrices/2015ver.csv")
 )
 
-## rename columns for join
+## rename columns for join - each census needs a unique name
+## create by combining site name and season-year combo (= filename)
 il <- 1 # initialise list index
 for (ii in (1:length(names(dat.list))) ) {
-  names(dat.list[[ii]])[-1] <- paste( names(dat.list[[ii]])[-1], 
-                                      names(dat.list)[ii], sep='-')
+  names(dat.list[[ii]])[-1] <- paste( names(dat.list[[ii]])[-1],    # sitename
+                                      names(dat.list)[ii], sep='-') # filename
 }
 
 ## join all years into a master species checklist
@@ -40,7 +45,8 @@ master <- join_all(dat.list, by='sp', type='full')
 
 # create separate dataframe of counts (they are removed below)
 counts <- master[,-1]
-master$total <- rowSums(counts, na.rm=T)
+master$total <- rowSums(counts, na.rm=T) # total number observed
+master$octot <- rowSums(counts > 0, na.rm=T) # total number of occurrences
 
 ## remove blank lines
 noblank <- subset(master, sp != '')
@@ -55,9 +61,17 @@ noblankID <- noblank[grep('sp', noblank$sp, invert=TRUE),]
 source('def.maca_whacker.R')
 noblankIDmac <- droplevels(maca_whacker(noblankID))
 
-# list of species that were observed and identified
+#############################################
+## option 1: minimum number of occurrences ##
+#############################################
+# list of species that were observed more than 5% surveys and identified
 # use droplevels to remove unused factor levels
-spp.obs <- droplevels(subset(noblankIDmac, total > 0))
+# spp.obs <- droplevels(subset(noblankIDmac, octot > (134 * .05)))
+
+#############################################
+#### option 2: all species that occurred ####
+#############################################
+spp.obs <- droplevels(subset(noblankIDmac, octot > 0))
 
 ## show list of species
 # may still contain synonyms, typos etc
@@ -95,3 +109,6 @@ rm(list=unneeded); rm(unneeded)
 # lapply(dat.list, function(x) {(x[(x[,1] == 'Anhima cornuta'),-1])})
 # lapply(dat.list, function(x) {(x[(x[,1] == "Phoenicopterus ruber"),-1])})
 # lapply(dat.list, function(x) {(x[(x[,1] == 'Jabiru mycteria'),-1])})
+#
+# # include various mispellings and weird special charactcer errors
+# lapply(dat.list, function(x) {(x[grep('melanops', x[,1]),-1])})

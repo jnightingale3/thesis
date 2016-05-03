@@ -5,12 +5,14 @@ remove_unwanted <- function(x) {
     
   spp_to_delete <- c("Anthus correndera", "Anthus lutescens", # pipits
                      "Anumbius annumbi", # Firewood-gatherer
+                     "Buteo magnirostris", # Roadside Hawk
+                     "Caracara plancus", # a caracara
                      "Certhiaxis cinnamomea", # spinetail
                      "Circus buffoni", "Gavião do banhado", # Long-winged Harrier
+                     "Circus buffoni ", # same species, with added typo
                      "Furnarius rufus", # Rufous Hornero
                      "Hemithraupis guira", # Guira Tanager
-                     "Milvago chimango", "Milvago chimachima",  "Caracara plancus", 
-                     # caracaras
+                     "Milvago chimachima", "Milvago chimango", # more caracaras
                      "Pitangus sulphuratus", # Bem-te-vi                 
                      "Rhea americana", # Rhea
                      "Rostrhamus sociabilis", # Snail Kite
@@ -18,7 +20,7 @@ remove_unwanted <- function(x) {
                      "Xolmis irupero" # White Monjita
   )
   
-  # show (hopefully final) list of species
+  # return final list of species
   final.x <- subset(x, x %in% spp_to_delete == FALSE)
   
   return(final.x)

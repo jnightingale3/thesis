@@ -1,0 +1,35 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Josh Nightingale}
+\begin{document}
+
+\section*{Results}
+
+<<packages, echo=FALSE, results='hide', error=FALSE, warning=FALSE, message=FALSE>>=
+require(magrittr) # ceci n'est pas un pipe
+require(plyr) # for join_all() function to join list of dataframes
+require(vegan) # vegdist() function for Bray-Curtis distance
+require(cluster) # daisy() for Gower distance on mixed numeric/class variables
+require(reshape2) # organising data, mainly for plotting
+@
+
+<<setup, echo=FALSE, results='hide', error=FALSE, warning=FALSE, message=FALSE>>=
+setwd('~/Dropbox/Thesis/Repo/thesis/Functional Diversity/R')
+
+## load data files
+
+# species data
+source('dat.census_matrices.R')
+
+# trait matrix
+source('dat.trait_mats.R')
+
+# distance matrices
+source('dat.dist_mats.R')
+@
+
+
+\end{document}\

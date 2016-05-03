@@ -1,0 +1,105 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{Smith2009a}{article}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Smith}{S.}%
+     {Robert~J.}{R.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ver{\'{i}}ssimo}{V.}%
+     {Diogo}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Leader-Williams}{L.-W.}%
+     {Nigel}{N.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Cowling}{C.}%
+     {Richard~M}{R.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Knight}{K.}%
+     {Andrew~T}{A.~T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SRJ+1}
+  \strng{fullhash}{SRJVDLWNCRMKAT1}
+  \field{labelyear}{2009}
+  \field{sortinit}{S}
+  \field{abstract}{%
+  To save biodiversity, on-the-ground agencies need to set the conservation
+  research agenda, not distant academics and non-governmental organizations.%
+  }
+  \verb{doi}
+  \verb 10.1038/462280a
+  \endverb
+  \field{isbn}{0028-0836}
+  \field{issn}{0028-0836}
+  \field{number}{7271}
+  \field{pages}{280\bibrangedash 281}
+  \field{title}{{Let the locals lead.}}
+  \field{volume}{462}
+  \verb{file}
+  \verb :home/josh/Papers/Nature/Smith et al. - 2009 - Let the locals lead.pdf:
+  \verb pdf
+  \endverb
+  \field{journaltitle}{Nature}
+  \field{year}{2009}
+\endentry
+
+\entry{Yoon2002}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Yoon}{Y.}%
+     {Y~J}{Y.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Brimblecombe}{B.}%
+     {P}{P}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{YYJBP1}
+  \strng{fullhash}{YYJBP1}
+  \field{labelyear}{2002}
+  \field{sortinit}{Y}
+  \field{pages}{17\bibrangedash 30}
+  \field{title}{{Modelling the contribution of sea salt and dimethyl sulfide
+  derived aerosol to marine CCN}}
+  \field{volume}{2}
+  \verb{file}
+  \verb :home/josh/Papers/Atmospheric Chemistry and Physics/Yoon, Brimblecombe
+  \verb - 2002 - Modelling the contribution of sea salt and dimethyl sulfide de
+  \verb rived aerosol to marine CCN.pdf:pdf
+  \endverb
+  \field{journaltitle}{Atmospheric Chemistry and Physics}
+  \field{year}{2002}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
