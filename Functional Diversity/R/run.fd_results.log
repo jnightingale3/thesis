@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2014.5.22)  18 APR 2016 18:57
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2014.5.22)  10 MAY 2016 03:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -284,9 +284,16 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip44
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip44
+\@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -336,8 +343,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \totwidth@=\dimen116
 \lineht@=\dimen117
 \@envbody=\toks20
-\multlinegap=\skip45
-\multlinetaggap=\skip46
+\multlinegap=\skip46
+\multlinetaggap=\skip47
 \mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
@@ -359,28 +366,62 @@ tim
 (./run.fd_results.aux)
 \openout1 = `run.fd_results.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
- [1
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+Package color Info: Redefining color shadecolor on input line 71.
+File: figure/distpairs-1.pdf Graphic file (type QTm)
+ <use  "figure/distpairs-1.pdf" >
+LaTeX Font Info:    Try loading font information for U+msa on input line 85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+]
+Package color Info: Redefining color shadecolor on input line 120.
+File: figure/fdsea-1.pdf Graphic file (type QTm)
+
+<use  "figure/fdsea-1.pdf" >
+Package color Info: Redefining color shadecolor on input line 153.
+File: figure/fdhabsea-1.pdf Graphic file (type QTm)
+ <use  "figure/fdhabsea-1.pdf" >
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2
+
+] [3] [4]
+Package color Info: Redefining color shadecolor on input line 175.
+File: figure/SEShists-1.pdf Graphic file (type QTm)
+ <use  "figure/SEShists-1.pdf" > [5
+
+] [6
+
+] [7
 
 ] (./run.fd_results.aux) ) 
 Here is how much of TeX's memory you used:
- 1752 strings out of 495615
- 20009 string characters out of 6186810
- 70020 words of memory out of 5000000
- 4964 multiletter control sequences out of 15000+600000
- 4544 words of font info for 17 fonts, out of 8000000 for 9000
+ 1870 strings out of 495615
+ 21853 string characters out of 6186810
+ 74358 words of memory out of 5000000
+ 5049 multiletter control sequences out of 15000+600000
+ 9496 words of font info for 36 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 27i,5n,24p,271b,119s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,8n,24p,551b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on run.fd_results.pdf (1 page).
+Output written on run.fd_results.pdf (7 pages).

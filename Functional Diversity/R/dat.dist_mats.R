@@ -7,9 +7,9 @@
 # require(cluster) # daisy() for Gower distance on mixed numeric/class variables
 
 ### species data
-## this one is straightforward, using Bray-Curtis distance (default)
-## ln(x+1) transformation
-dist.spp <- vegdist(log1p(dat.spsite)>0, method='jac')
+## this one is straightforward, using Cao index
+## log1p() function does ln(x+1) transformation (don't need with Cao)
+dist.spp <- vegdist((dat.spsite>0), method='cao')
 # dist.spp <- vegdist(dat.spsite>0, method='raup')
 
 ### trait data
@@ -18,26 +18,45 @@ dist.spp <- vegdist(log1p(dat.spsite)>0, method='jac')
 ## a separate distance matrix is calculated for each type of trait
 ## which is then averaged to give an overall distance matrix
 
+## only create matrices for species included in analysis
+traitsp <- which(master_trait$species %in% colnames(dat.spsite))
+
 # behavioural
-dist.beh <- gowdis(behav_mat, asym.bin = 1:ncol(behav_mat))
+dist.beh <- gowdis(behav_mat[traitsp,], asym.bin = 1:ncol(behav_mat))
 # diet contents
-dist.diet <- gowdis(diet_mat, asym.bin = 1:ncol(diet_mat))
+dist.diet <- gowdis(diet_mat[traitsp,], asym.bin = 1:ncol(diet_mat))
 # morphological
-dist.mph <- gowdis(morph_mat)
+dist.mph <- gowdis(morph_mat[traitsp,])
+
+## why are there NAs in these distance matrices?
+## behaviour matrix is complete (no missing data)
+## diet matrix only missing data for one species
+## help file says NA generated if data missing from both of pair
+## clearly not the case here!
+## morphological data set has missing values, and no NAs in distance mat!
+##### anyway, remove the influence of NAs on overall trait matrix
+## by setting them to 0 (therefore not included in sum, equivalent to na.rm=T)
+
+# sum(is.na(dist.beh)) # 6
+dist.beh0 <- dist.beh
+dist.beh0[is.na(dist.beh0)] <- 0
+# sum(is.na(dist.diet)) # 80
+dist.diet0 <- dist.diet
+dist.diet0[is.na(dist.diet0)] <- 0
+# sum(is.na(dist.mph)) # 0
 
 # overall trait distance matrix
-dist.trait <- (dist.beh + dist.diet + dist.mph) / 3
+dist.trait <- (dist.beh0 + dist.diet0 + dist.mph) / 3
+attr(dist.trait, 'Labels') <- colnames(dat.spsite)
+# sum(is.na(dist.trait)) # 0 - good; need 0 for future functions
 
-sum(is.na(dist.beh))
-dist.beh[is.na(dist.beh)] <- 0
-sum(is.na(dist.diet))
-dist.diet[is.na(dist.diet)] <- 0
-sum(is.na(dist.mph))
 
-# # how do these correlate?
+# how do these correlate?
+# source('def.panelutils.R')
 # pairs(x=data.frame(
-#   beh = as.vector(dist.beh),
-#   die = as.vector(dist.diet),
+#   beh = as.vector(dist.beh0),
+#   die = as.vector(dist.diet0),
 #   mph = as.vector(dist.mph),
-#   mean = as.vector(dist.mean)
-# )) # individual variables not correlated; mean represents all three :)
+#   mean = as.vector(dist.trait)
+# ), upper.panel = panel.cor)
+# individual mats not correlated r<.2; mean represents all three with r>.5 :)

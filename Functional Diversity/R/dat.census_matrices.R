@@ -51,13 +51,13 @@ dat.trans <- llply(dat.no0, .fun=function(x) {
 
 ## all matrices should be consistent
 ## therefore, need to include species not seen on that census
-spp.list <- final.spp.list[-(which(final.spp.list %in% TEMP_REMOVAL))]
+spp.list <- final.spp.list
 bodge <- matrix(NA, nrow=1, ncol=(length(spp.list))) %>% data.frame
 names(bodge) <- c(as.character(spp.list))
 
 ## join together by all common columns
 
-##tthis part incomplete - unwanted species, typos etc getting through- how?
+## this part incomplete - unwanted species, typos etc getting through- how?
 
 dat.addunobs <- llply(dat.trans, .fun=function(x) {
   badger <- (join(x, bodge, type='left'))
@@ -84,13 +84,9 @@ dat.addunobs <- llply(dat.trans, .fun=function(x) {
 dat.spsite <- join_all(dat.addunobs, type='full')
 # bodge it for now by removing columns containing '.1'
 dat.spsite <- dat.spsite[,grep('.1', names(dat.spsite),invert=TRUE)]
-
-##############################################################
-## TEMPORARY FIX!!! NO trait data for two species ############
-TEMP_REMOVAL <- c("Rollandia rolland", "Sterna vittata") #####
-TEMP_COL_BYE <- which(names(dat.spsite) %in% TEMP_REMOVAL) ###
-dat.spsite %<>% extract(,-(TEMP_COL_BYE)) ####################
-##############################################################
+# analysis requires at least 3 unique species to be observed
+# include only surveys where at least 5 species were observed
+dat.spsite <- dat.spsite[(rowSums(dat.spsite != 0)>4),]
 
 ## Remove site column so data frame is all numeric
 source('def.clean_snames.R') # function to standardise site labels

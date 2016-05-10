@@ -16,87 +16,524 @@
   {}
 \endgroup
 
-\entry{Smith2009a}{article}{}
-  \name{author}{5}{}{%
-    {{}%
-     {Smith}{S.}%
-     {Robert~J.}{R.~J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Ver{\'{i}}ssimo}{V.}%
-     {Diogo}{D.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Leader-Williams}{L.-W.}%
-     {Nigel}{N.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Cowling}{C.}%
-     {Richard~M}{R.~M.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Knight}{K.}%
-     {Andrew~T}{A.~T.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{SRJ+1}
-  \strng{fullhash}{SRJVDLWNCRMKAT1}
-  \field{labelyear}{2009}
-  \field{sortinit}{S}
-  \field{abstract}{%
-  To save biodiversity, on-the-ground agencies need to set the conservation
-  research agenda, not distant academics and non-governmental organizations.%
-  }
-  \verb{doi}
-  \verb 10.1038/462280a
-  \endverb
-  \field{isbn}{0028-0836}
-  \field{issn}{0028-0836}
-  \field{number}{7271}
-  \field{pages}{280\bibrangedash 281}
-  \field{title}{{Let the locals lead.}}
-  \field{volume}{462}
-  \verb{file}
-  \verb :home/josh/Papers/Nature/Smith et al. - 2009 - Let the locals lead.pdf:
-  \verb pdf
-  \endverb
-  \field{journaltitle}{Nature}
-  \field{year}{2009}
-\endentry
-
-\entry{Yoon2002}{article}{}
+\entry{Benjamini1995}{article}{}
   \name{author}{2}{}{%
     {{}%
-     {Yoon}{Y.}%
-     {Y~J}{Y.~J.}%
+     {Benjamini}{B.}%
+     {Yoav}{Y.}%
      {}{}%
      {}{}}%
     {{}%
-     {Brimblecombe}{B.}%
+     {{Yosef Hochberg}}{Y.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BYY1}
+  \strng{fullhash}{BYY1}
+  \field{labelyear}{1995}
+  \field{sortinit}{B}
+  \field{number}{1}
+  \field{pages}{289\bibrangedash 300}
+  \field{title}{{Controlling the false discovery rate: a practical and powerful
+  approach to multiple testing}}
+  \field{volume}{57}
+  \verb{file}
+  \verb :home/josh/Papers/Journal of the Royal Statistical Society. Series B (M
+  \verb ethodological)/Benjamini, Yosef Hochberg - 1995 - Controlling the false
+  \verb  discovery rate a practical and powerful approach to multiple testing.p
+  \verb df:pdf
+  \endverb
+  \field{journaltitle}{Journal of the Royal Statistical Society. Series B
+  (Methodological)}
+  \field{year}{1995}
+\endentry
+
+\entry{Borcard2011}{book}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Borcard}{B.}%
+     {D}{D}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gillet}{G.}%
+     {F}{F}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Legendre}{L.}%
      {P}{P}%
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{YYJBP1}
-  \strng{fullhash}{YYJBP1}
-  \field{labelyear}{2002}
-  \field{sortinit}{Y}
-  \field{pages}{17\bibrangedash 30}
-  \field{title}{{Modelling the contribution of sea salt and dimethyl sulfide
-  derived aerosol to marine CCN}}
-  \field{volume}{2}
+  \list{publisher}{1}{%
+    {Springer}%
+  }
+  \strng{namehash}{BDGFLP1}
+  \strng{fullhash}{BDGFLP1}
+  \field{labelyear}{2011}
+  \field{sortinit}{B}
+  \field{title}{{Numerical Ecology with R}}
+  \list{location}{1}{%
+    {New York}%
+  }
+  \field{year}{2011}
+\endentry
+
+\entry{Cao1997}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Cao}{C.}%
+     {Yong}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Williams}{W.}%
+     {W~Peter}{W.~P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bark}{B.}%
+     {Anthony~W}{A.~W.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{community index,have been devel-,macroinvertebrates,numerous community
+  similarity measures,pling,river,sam-,similarity,water quality}
+  \strng{namehash}{CYWWPBAW1}
+  \strng{fullhash}{CYWWPBAW1}
+  \field{labelyear}{1997}
+  \field{sortinit}{C}
+  \field{number}{1}
+  \field{pages}{95\bibrangedash 106}
+  \field{title}{{Similarity measure bias in river benthic Aufwuchs community
+  analysis}}
+  \field{volume}{69}
   \verb{file}
-  \verb :home/josh/Papers/Atmospheric Chemistry and Physics/Yoon, Brimblecombe
-  \verb - 2002 - Modelling the contribution of sea salt and dimethyl sulfide de
-  \verb rived aerosol to marine CCN.pdf:pdf
+  \verb :home/josh/Papers/Water Environment Research/Cao, Williams, Bark - 1997
+  \verb  - Similarity measure bias in river benthic Aufwuchs community analysis
+  \verb .pdf:pdf
   \endverb
-  \field{journaltitle}{Atmospheric Chemistry and Physics}
+  \field{journaltitle}{Water Environment Research}
+  \field{year}{1997}
+\endentry
+
+\entry{Gotelli2002}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Gotelli}{G.}%
+     {N~J}{N.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {McCabe}{M.}%
+     {D~J}{D.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{absence matrix,community assembly rules,meta-analysis,null
+  models,presence,species co-occurrence}
+  \strng{namehash}{GNJMDJ1}
+  \strng{fullhash}{GNJMDJ1}
+  \field{labelyear}{2002}
+  \field{sortinit}{G}
+  \field{number}{8}
+  \field{pages}{2091\bibrangedash 2096}
+  \field{title}{{Species co-occurrence: a meta-analysis of J. M. Diamond's
+  assembly rules model}}
+  \field{volume}{83}
+  \verb{file}
+  \verb :home/josh/Papers/Ecology/Gotelli, McCabe - 2002 - Species co-occurrenc
+  \verb e a meta-analysis of J. M. Diamond's assembly rules model.pdf:pdf
+  \endverb
+  \field{journaltitle}{Ecology}
   \field{year}{2002}
+\endentry
+
+\entry{DelHoyo2016}{book}{}
+  \name{editor}{5}{}{%
+    {{}%
+     {Hoyo}{H.}%
+     {J.}{J.}%
+     {del}{d.}%
+     {}{}}%
+    {{}%
+     {Elliott}{E.}%
+     {A.}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sargatal}{S.}%
+     {J.}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Christie}{C.}%
+     {D.A.}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Juana}{J.}%
+     {E.}{E.}%
+     {de}{d.}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Lynx Editions}%
+  }
+  \strng{namehash}{HJd+1}
+  \strng{fullhash}{HJdEASJCDJEd1}
+  \field{labelyear}{2016}
+  \field{sortinit}{H}
+  \field{title}{{Handbook of the Birds of the World Alive}}
+  \verb{url}
+  \verb http://www.hbw.com/
+  \endverb
+  \list{location}{1}{%
+    {Madrid}%
+  }
+  \field{year}{2016}
+\endentry
+
+\entry{Laliberte2014}{misc}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Lalibert{\'{e}}}{L.}%
+     {E.}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Legendre}{L.}%
+     {P.}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Shipley}{S.}%
+     {B.}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {R package version 1.0-12.}%
+  }
+  \strng{namehash}{LELPSB1}
+  \strng{fullhash}{LELPSB1}
+  \field{labelyear}{2014}
+  \field{sortinit}{L}
+  \field{title}{{FD: measuring functional diversity from multiple traits, and
+  other tools for functional ecology}}
+  \field{year}{2014}
+\endentry
+
+\entry{Laliberte2010}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Laliberte}{L.}%
+     {Etienne}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Legendre}{L.}%
+     {Pierre}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{functional composition,functional dispersion,functional
+  divergence,functional diversity,functional evenness,functional
+  identity,functional richness,functional trait,multivariate dispersion}
+  \strng{namehash}{LELP1}
+  \strng{fullhash}{LELP1}
+  \field{labelyear}{2010}
+  \field{sortinit}{L}
+  \field{number}{1}
+  \field{pages}{299\bibrangedash 305}
+  \field{title}{{A distance-based framework for measuring functional diversity
+  from multiple traits}}
+  \field{volume}{91}
+  \verb{file}
+  \verb :home/josh/Papers/Ecology/Laliberte, Legendre - 2010 - A distance-based
+  \verb  framework for measuring functional diversity from multiple traits.pdf:
+  \verb pdf
+  \endverb
+  \field{journaltitle}{Ecology}
+  \field{year}{2010}
+\endentry
+
+\entry{Mendez2012}{article}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Mendez}{M.}%
+     {Veronica}{V.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gill}{G.}%
+     {Jennifer~a.}{J.~a.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Burton}{B.}%
+     {Niall H.~K.}{N.~H.~K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Austin}{A.}%
+     {Graham~E.}{G.~E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Petchey}{P.}%
+     {Owen~L.}{O.~L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Davies}{D.}%
+     {Richard~G.}{R.~G.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{community composition,community
+  structure,competition,environmental,estuary ecology,filtering,functional
+  diversity,waders}
+  \strng{namehash}{MV+1}
+  \strng{fullhash}{MVGJaBNHKAGEPOLDRG1}
+  \field{labelyear}{2012}
+  \field{sortinit}{M}
+  \verb{doi}
+  \verb 10.1111/j.1472-4642.2011.00868.x
+  \endverb
+  \field{issn}{13669516}
+  \field{number}{4}
+  \field{pages}{356\bibrangedash 365}
+  \field{title}{{Functional diversity across space and time: trends in wader
+  communities on British estuaries}}
+  \verb{url}
+  \verb http://doi.wiley.com/10.1111/j.1472-4642.2011.00868.x
+  \endverb
+  \field{volume}{18}
+  \verb{file}
+  \verb :home/josh/Papers/Diversity and Distributions/Mendez et al. - 2012 - Fu
+  \verb nctional diversity across space and time trends in wader communities on
+  \verb  British estuaries.pdf:pdf
+  \endverb
+  \field{journaltitle}{Diversity and Distributions}
+  \field{year}{2012}
+\endentry
+
+\entry{Nascimento1995}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Nasicmento}{N.}%
+     {In{\^{e}}s de Lima~Serrano}{I.~d. L.~S.}%
+     {do}{d.}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais
+  Renov{\'{a}}veis}%
+  }
+  \strng{namehash}{NIdLSd1}
+  \strng{fullhash}{NIdLSd1}
+  \field{labelyear}{1995}
+  \field{sortinit}{N}
+  \field{edition}{1st editio}
+  \field{title}{{Aves do Parque Nacional da Lagoa do Peixe}}
+  \list{location}{1}{%
+    {Bras{\'{i}}lia}%
+  }
+  \field{year}{1995}
+\endentry
+
+\entry{Oksanen2016}{manual}{}
+  \name{author}{10}{}{%
+    {{}%
+     {Oksanen}{O.}%
+     {Jari}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Blanchet}{B.}%
+     {F~Guillaume}{F.~G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kindt}{K.}%
+     {Roeland}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Legendre}{L.}%
+     {Pierre}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Minchin}{M.}%
+     {Peter~R}{P.~R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {O'Hara}{O.}%
+     {R~B}{R.~B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Simpson}{S.}%
+     {Gavin~L}{G.~L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Solymos}{S.}%
+     {Peter}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Stevens}{S.}%
+     {M~Henry~H}{M.~H.~H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wagner}{W.}%
+     {Helene}{H.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{OJ+1}
+  \strng{fullhash}{OJBFGKRLPMPRORBSGLSPSMHHWH1}
+  \field{labelyear}{2016}
+  \field{sortinit}{O}
+  \field{title}{{vegan: Community Ecology Package}}
+  \verb{url}
+  \verb https://cran.r-project.org/package=vegan
+  \endverb
+  \field{annotation}{%
+  R package version 2.3-4%
+  }
+  \field{year}{2016}
+\endentry
+
+\entry{vanPerlo2009}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Perlo}{P.}%
+     {Ber}{B.}%
+     {van}{v.}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Oxford University Press}%
+  }
+  \strng{namehash}{PBv1}
+  \strng{fullhash}{PBv1}
+  \field{labelyear}{2009}
+  \field{sortinit}{P}
+  \field{edition}{1st editio}
+  \field{title}{{A Field Guide to the Birds of Brazil}}
+  \list{location}{1}{%
+    {New York}%
+  }
+  \field{year}{2009}
+\endentry
+
+\entry{Sanabria2011}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Sanabria}{S.}%
+     {Jos{\'{e}} Ant{\^{o}}nio~Fazio}{J.~A.~F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{M{\"{u}}ller Brusco}}{M.}%
+     {Giuliano}{G.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SJAFMG1}
+  \strng{fullhash}{SJAFMG1}
+  \field{labelyear}{2011}
+  \field{sortinit}{S}
+  \field{number}{4}
+  \field{pages}{529\bibrangedash 534}
+  \field{title}{{Registros relevantes de Charadriiformes em praias do litoral
+  norte do Rio Grande do Sul, Brasil}}
+  \field{volume}{19}
+  \verb{file}
+  \verb :home/josh/Papers/Revista Brasileira de Ornitologia/Sanabria, M{\"{u}}l
+  \verb ler Brusco - 2011 - Registros relevantes de Charadriiformes em praias d
+  \verb o litoral norte do Rio Grande do Sul, Brasil.pdf:pdf
+  \endverb
+  \field{journaltitle}{Revista Brasileira de Ornitologia}
+  \field{year}{2011}
+\endentry
+
+\entry{Scherer2012}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Scherer}{S.}%
+     {Angelo~L}{A.~L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Petry}{P.}%
+     {Maria~V}{M.~V.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SALPMV1}
+  \strng{fullhash}{SALPMV1}
+  \field{labelyear}{2012}
+  \field{sortinit}{S}
+  \field{number}{1}
+  \field{pages}{40\bibrangedash 50}
+  \field{title}{{Seasonal Variation In Shorebird Abundance In The State of Rio
+  Grande Do Sul, Southern Brazil}}
+  \field{volume}{124}
+  \verb{file}
+  \verb :home/josh/Papers/Wilson Journal of Ornithology/Scherer, Petry - 2012 -
+  \verb  Seasonal Variation In Shorebird Abundance In The State of Rio Grande D
+  \verb o Sul, Southern Brazil.pdf:pdf
+  \endverb
+  \field{journaltitle}{Wilson Journal of Ornithology}
+  \field{year}{2012}
+\endentry
+
+\entry{Villeger2008}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Vill{\'{e}}ger}{V.}%
+     {S}{S}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mason}{M.}%
+     {N~W~H}{N.~W.~H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mouillot}{M.}%
+     {D}{D}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{competitive filtering,environmental filtering,functional
+  divergence,functional evenness,functional niche,functional
+  richness,functional traits,null model}
+  \strng{namehash}{VSMNWHMD1}
+  \strng{fullhash}{VSMNWHMD1}
+  \field{labelyear}{2008}
+  \field{sortinit}{V}
+  \field{number}{8}
+  \field{pages}{2290\bibrangedash 2301}
+  \field{title}{{New multidimensional functional diversity indices for a
+  multifaceted framework in functional ecology}}
+  \field{volume}{89}
+  \verb{file}
+  \verb :home/josh/Papers/Ecology/Vill{\'{e}}ger, Mason, Mouillot - 2008 - New
+  \verb multidimensional functional diversity indices for a multifaceted framew
+  \verb ork in functional ecology.pdf:pdf
+  \endverb
+  \field{journaltitle}{Ecology}
+  \field{year}{2008}
 \endentry
 
 \lossort

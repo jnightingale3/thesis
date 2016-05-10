@@ -16,7 +16,7 @@ id_vars <- c('order', 'species', 'mig')
 ## list all variables in each category
 behav_vars <- c('scavenging', "pecking", "probing", "jabbing","scything", 
                 "foot.trembling", "turning", "hammering", "swimming", "diving",
-                "aerial", "kelptoparasitism", "dipping", "skimming")
+                "aerial", "kleptoparasitism", "dipping", "skimming")
 diet_vars  <- c("insects", "crabs", "crustaceans", "worms", "snails" ,"molluscs",
                 "herps", "fish", "plant", "other", "eggs", "diatoms")
 morph_vars <- c('mass', 'bill.length', 'tarsus', 'bill.shape')
@@ -28,13 +28,15 @@ morph_vars <- c('mass', 'bill.length', 'tarsus', 'bill.shape')
 ## behavioural traits
 behav_mat <- subset(master_trait, select=c(behav_vars))
 behav_mat[is.na(behav_mat)] <- 0  # if not recorded, assume does not occur
-#behav_mat %<>% equals(1) %>% data.frame # convert to logical for Gower distance
+# behav_mat %<>% equals(1) %>% data.frame # convert to logical for Gower distance
 
 ## diet contents traits
 diet_mat <- subset(master_trait, select=c(diet_vars))
 # convert data to Boolean
 diet_mat[is.na(diet_mat)] <- 0 # if not recorded, assume does not occur in diet
 #diet_mat %<>% equals(1) %>% data.frame # logical for Gower
+# no diet info available for Gallinula melanops: set this sp to NA
+diet_mat[master_trait$species == 'Gallinula melanops',] <- NA
 
 ## morphological traits
 morph_mat <- subset(master_trait, select=c(morph_vars))

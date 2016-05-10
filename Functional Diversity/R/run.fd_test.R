@@ -1,9 +1,6 @@
 # load data
 setwd('~/Dropbox/Thesis/Repo/thesis/Functional Diversity/R')
 
-# load packages
-require(FD) # for functional diversity metrics
-require(reshape2) # for data manipulation for plotting
 
 # create new data frame for this analysis
 # only including species for which I have data
@@ -11,8 +8,11 @@ require(reshape2) # for data manipulation for plotting
 # species data need to be identical & in the same order in both matrices
 common_spp <- intersect(rownames(trait_mat), colnames(dat.spsite))
 spsite <- dat.spsite[,colnames(dat.spsite) %in% common_spp]
-# analysis requires at least 3 unique species to be observed!
-spsite <- spsite[(rowSums(spsite != 0)>2),]
+
+# which spp excluded?
+# colnames(dat.spsite)[which(colnames(dat.spsite) %in% common_spp == FALSE)]
+# colSums(dat.spsite[,which(colnames(dat.spsite) %in% common_spp == FALSE)]>0)
+# none!
 
 # store species names in row names - can't include as a column
 #row.names(dat.umig) <- dat.umig$sp
@@ -20,8 +20,13 @@ spsite <- spsite[(rowSums(spsite != 0)>2),]
 # create trait matrix only including correct species
 trait_fd <- trait_mat[rownames(trait_mat) %in% common_spp,]
 # check
-all.equal(rownames(trait_fd), colnames(spsite))
-sum(rowSums(spsite) > 2) == nrow(spsite)
+# all.equal(rownames(trait_fd), colnames(spsite)) # nope
+# sum(rownames(trait_fd) %in% colnames(spsite)) # all present, in wrong order
+# reorder trait_fd rows to match spsite columns
+trait_fd <- trait_fd[match(colnames(spsite),rownames(trait_fd)),]
+# all.equal(rownames(trait_fd), colnames(spsite)) # success!
+# check all sites have more than two species
+# sum(rowSums(spsite>0) > 2) == nrow(spsite) # yes
 
 
 ### run full distance-based FD analysis using package FD
@@ -35,35 +40,40 @@ fd.test <- dbFD(x=trait_fd, a=spsite, corr = 'cailliez', calc.FGR=F)
 
 # extract this data, add habitat info and reshape for plotting
 
-cwms <- assign_habitat(fd.test$CWM, site=rownames(fd.test$CWM)) %>% 
-  melt(id=c('site', 'habitat', 'season'))
+cwms <- fd.test$CWM
+cwms$site <- rownames(fd.test$CWM)
+cwms$habitat <- id_habitats(cwms$site)  
+cwms$season  <- id_seasons(cwms$site)
+cwms %<>% melt(id=c('site', 'habitat', 'season'))
 cwms$value <- as.numeric(cwms$value) # convert these values to numbers for plotting
 # introduces NAs where value was a factor; remove them for now
 cwms <- na.omit(cwms)
 
-require(ggplot2)
+
 p <- ggplot(cwms, aes(y=value))
 p <- p + facet_wrap(~variable, scales='free_y')
-   
 ph <- p + geom_boxplot(aes(x=habitat))
-print(ph) #too many boxes!
+print(ph) #
 
 ## pull out some interesting ones
-cwms_sub <- subset(cwms, 
-                   variable %in% c('Diet.Inv', 'Diet.Vfish', 
-                                   'ForStrat.watbelowsurf', 'ForStrat.ground'))
+cwms_sub <- subset(cwms, variable %in% c('mass', 'bill.length', 'tarsus'))
 q <- ggplot(cwms_sub, aes(y=value))
-q <- q + facet_grid(variable ~ habitat) + ylab('CWM') +theme_bw()
+q <- q + facet_grid(variable ~ habitat, scales='free') + ylab('CWM') +theme_bw()
 qh <- q + geom_boxplot(aes(x=season, fill=season))# + theme_classic()
 print(qh) 
+q <- ggplot(cwms_sub, aes(y=value))
+q <- q + facet_grid(variable ~ season, scales='free') + ylab('CWM') +theme_bw()
+qs <- q + geom_boxplot(aes(x=habitat, fill=habitat))# + theme_classic()
+print(qs) 
   
 
 # ps <- p + geom_boxplot(aes(x=season))
 # print(ps)
 
 ## look at dispersion
-fdis <- fd.test$FDis %>% cbind(habitats) 
-names(fdis)[1] <- 'fdisp' 
+fdis <- data.frame(fdisp = fd.test$FDis)
+fdis$habitat = id_habitats(rownames(fdis))
+fdis$season = id_seasons(rownames(fdis))
 
 p <- ggplot(fdis, aes(y=fdisp))
 p <- p + geom_boxplot(aes(x=habitat))
@@ -77,14 +87,14 @@ print(p)
 
 
 
-## CWM = migrant
-cwmmig <- data.frame(
-  (fd.test$CWM[,17])[fd.test$CWM[,17] != 'resdt'],
-   habitats$season[fd.test$CWM[,17] != 'resdt'],
-   habitats$habitat[fd.test$CWM[,17] != 'resdt'],
-   habitats$site[fd.test$CWM[,17] != 'resdt'])
-names(cwmmig) <- c('status', 'season', 'habitat', 'site')
-cwmmig 
+## CWM = migrant - deprecated
+# cwmmig <- data.frame(
+#   (fd.test$CWM[,17])[fd.test$CWM[,17] != 'resdt'],
+#    habitats$season[fd.test$CWM[,17] != 'resdt'],
+#    habitats$habitat[fd.test$CWM[,17] != 'resdt'],
+#    habitats$site[fd.test$CWM[,17] != 'resdt'])
+# names(cwmmig) <- c('status', 'season', 'habitat', 'site')
+# cwmmig 
 
 #################species data########################
 

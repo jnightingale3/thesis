@@ -62,16 +62,16 @@ source('def.maca_whacker.R')
 noblankIDmac <- droplevels(maca_whacker(noblankID))
 
 #############################################
-## option 1: minimum number of occurrences ##
+##### option 1: minimum % of occurrences ####
 #############################################
 # list of species that were observed more than 5% surveys and identified
 # use droplevels to remove unused factor levels
 # spp.obs <- droplevels(subset(noblankIDmac, octot > (134 * .05)))
 
 #############################################
-#### option 2: all species that occurred ####
+## option 2: minimum number of occurrences ##
 #############################################
-spp.obs <- droplevels(subset(noblankIDmac, octot > 0))
+spp.obs <- droplevels(subset(noblankIDmac, octot > 5))
 
 ## show list of species
 # may still contain synonyms, typos etc
