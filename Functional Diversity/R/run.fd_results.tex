@@ -52,6 +52,7 @@
 \usepackage{fullpage} % for margins
 \usepackage{setspace} % for line spacing
 \onehalfspacing % one and a half lines' spacing
+\usepackage{dcolumn} 
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -74,7 +75,7 @@
 
 }
 
-\caption[Correlation between the behaviour, diet, morphlogy and mean distance matrices]{Correlation between the behaviour, diet, morphlogy and mean distance matrices. Lower panels show scatter plots; upper panels show Pearson correlation coefficients, scaled according to their value.}\label{fig:distpairs}
+\caption[Correlation matrix between the behaviour, diet, morphlogy and mean distance matrices]{Correlation matrix between the behaviour, diet, morphlogy and mean distance matrices. Lower panels show scatter plots; upper panels show Pearson correlation coefficients, scaled according to their value.}\label{fig:distpairs}
 \end{figure}
 
 
@@ -94,24 +95,26 @@ However, the overall distance matrix used in subsequent analysis, calculated fro
 
 In general, functional diversity appeared similar between habitats (Figure \ref{fig:fdsea}). Formal hypothesis testing confirmed this similarity. Only functional evenness varied between habitats (Table \ref{fdhabt}). Pairwise Mann-Whitney $U$ tests with the Benjamini-Hochberg (1995) correction showed that beach communities were less functionally even than grassland ($p = 0.001$) and lake ($p = \ensuremath{10^{-4}}$) communities, whereas there was no significant difference between grassland and lakes ($p = 0.83$).
 
-% latex table generated in R 3.3.0 by xtable 1.8-2 package
-% Tue May 10 03:17:06 2016
-\begin{table}[t]
-\centering
-\caption{FDR-adjusted p values from Kruskal-Wallis tests comparing each functional diversity metric between beach, grassland and lake survey locations.} 
-\label{fdhabt}
-\begin{tabular}{rlr}
-  \hline
- & Metric & p value \\ 
-  \hline
-1 & Dispersion & 0.409 \\ 
-  2 & Divergence & 0.285 \\ 
-  3 & Evenness & 0.001 \\ 
-  4 & No.Species & 0.357 \\ 
-  5 & Richness & 0.001 \\ 
-   \hline
-\end{tabular}
-\end{table}
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Wed, May 11, 2016 - 00:13:44
+\begin{table}[!htbp] \centering 
+  \caption{FDR-adjusted p values from Kruskal-Wallis tests comparing each functional diversity metric between beach, grassland and lake survey locations} 
+  \label{fdhabt} 
+\small 
+\begin{tabular}{@{\extracolsep{5pt}} cc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Metric & p value \\ 
+\hline \\[-1.8ex] 
+Dispersion & $0.409$ \\ 
+Divergence & $0.285$ \\ 
+Evenness & $0.001$ \\ 
+No.Species & $0.357$ \\ 
+Richness & $0.001$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
 
 
 There was no apparent difference in any functional diversity metric between seasons (Figure \ref{fig:fdsea}), which was confirmed by formal hypothesis testing (Table \ref{fdseat}): there was no significant difference in any metric between summer and winter (FDR-adjusted Mann-Whitney $U$ tests: all $p > 0.05$).
@@ -129,24 +132,26 @@ There was no apparent difference in any functional diversity metric between seas
 
 \end{knitrout}
 
-% latex table generated in R 3.3.0 by xtable 1.8-2 package
-% Tue May 10 03:17:10 2016
-\begin{table}[hb]
-\centering
-\caption{FDR-adjusted p values from Mann-Whitney tests comparing each functional diversity metric between summer and winter surveys.} 
-\label{fdseat}
-\begin{tabular}{rlr}
-  \hline
- & Metric & p value \\ 
-  \hline
-1 & Dispersion & 0.69 \\ 
-  2 & Divergence & 0.69 \\ 
-  3 & Evenness & 0.69 \\ 
-  4 & No.Species & 0.85 \\ 
-  5 & Richness & 0.69 \\ 
-   \hline
-\end{tabular}
-\end{table}
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Wed, May 11, 2016 - 00:13:48
+\begin{table}[!htbp] \centering 
+  \caption{FDR-adjusted p values from Mann-Whitney tests comparing each functional diversity metric between summer and winter surveys} 
+  \label{fdseat} 
+\small 
+\begin{tabular}{@{\extracolsep{5pt}} cc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Metric & p value \\ 
+\hline \\[-1.8ex] 
+Dispersion & $0.69$ \\ 
+Divergence & $0.69$ \\ 
+Evenness & $0.69$ \\ 
+No.Species & $0.85$ \\ 
+Richness & $0.69$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
 
 
 \begin{knitrout}
@@ -169,7 +174,7 @@ The pattern of functional divergence across habitat did not appear to vary seaso
 \clearpage
 \subsection{Comparison with null model}
  
-Species number and functional dispersion had SESs less than zero, while functional richness had an SES greater than 0 (Figure \ref{fig:SEShists}). Divergence and evenness were spread either side of 0. Significance of these scores can be seen in Table \ref{SESrestab}.
+Species number and functional dispersion had SESs mostly lower than zero, while functional richness had SES usually greater than 0. Divergence and evenness were spread either side of 0, with medians slightly negative (Figure \ref{fig:SEShists}). Significance of these scores can be seen in Table \ref{SESrestab}.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h]
@@ -184,36 +189,153 @@ Species number and functional dispersion had SESs less than zero, while function
 
 \end{knitrout}
 
-% latex table generated in R 3.3.0 by xtable 1.8-2 package
-% Tue May 10 03:17:15 2016
-\begin{table}[ht]
-\centering
-\caption{Median SES score and its associated p-value for each functional diversity metric} 
-\label{SESrestab}
-\begin{tabular}{rlrr}
-  \hline
- & Metric & Median & p value \\ 
-  \hline
-1 & Dispersion & -15.7 & 0.057 \\ 
-  2 & Divergence & -0.8 & 0.811 \\ 
-  3 & Evenness & -2.8 & 0.623 \\ 
-  4 & No.Species & -8.2 & 0.151 \\ 
-  5 & Richness & 1.9 & 0.283 \\ 
-   \hline
-\end{tabular}
-\end{table}
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Wed, May 11, 2016 - 00:13:56
+\begin{table}[!htbp] \centering 
+  \caption{Median SES score and its associated p-value for each functional diversity metric} 
+  \label{SESrestab} 
+\small 
+\begin{tabular}{@{\extracolsep{5pt}} ccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Metric & Median & p value \\ 
+\hline \\[-1.8ex] 
+Dispersion & $$-$16.2$ & \textless 0.001 \\ 
+Divergence & $$-$0.6$ & 0.012 \\ 
+Evenness & $$-$2.5$ & 0.001 \\ 
+No.Species & $$-$8.4$ & \textless 0.001 \\ 
+Richness & $0.4$ & \textless 0.001 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
 
 
 \clearpage
 \subsection{Predicting community composition and function}
 
-This bit first?
 
-Species composition is significantly affected by both habitat and season; functional composition is affected only by habitat.
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Wed, May 11, 2016 - 00:13:57
+% Requires LaTeX packages: dcolumn 
+\begin{table}[tb] \centering 
+  \caption{Predicting inter-survey dissimilarity of species composition with three regression models using distance matrices of (1) Survey habitat, (2) Season of survey and (3) Habitat and season} 
+  \label{comp_pred_sg} 
+\small 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{Species composition} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+\hline \\[-1.8ex] 
+ Habitat & 0.17^{***} &  &  \\ 
+  & \multicolumn{1}{c}{(0.15$, $0.18)} &  &  \\ 
+  & & & \\ 
+ Season &  & 0.01^{*} &  \\ 
+  &  & \multicolumn{1}{c}{(0.001$, $0.02)} &  \\ 
+  & & & \\ 
+ Habitat and season &  &  & 0.18^{***} \\ 
+  &  &  & \multicolumn{1}{c}{(0.16$, $0.19)} \\ 
+  & & & \\ 
+ Intercept & 1.05^{***} & 1.15^{***} & 1.06^{***} \\ 
+  & \multicolumn{1}{c}{(1.05$, $1.06)} & \multicolumn{1}{c}{(1.14$, $1.16)} & \multicolumn{1}{c}{(1.05$, $1.07)} \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{5,565} & \multicolumn{1}{c}{5,565} & \multicolumn{1}{c}{5,565} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.13} & \multicolumn{1}{c}{0.001} & \multicolumn{1}{c}{0.07} \\ 
+F Statistic (df = 1; 5563) & \multicolumn{1}{c}{830.33$^{***}$} & \multicolumn{1}{c}{4.24$^{*}$} & \multicolumn{1}{c}{447.20$^{***}$} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.05; $^{**}$p$<$0.01; $^{***}$p$<$0.001} \\ 
+\end{tabular} 
+\end{table} 
 
-Analysing the subsets of trait data, there are seasonal differences in behaviour, but not in morphology nor in diet. How does this vary within habitats? Same food available, but need different method to acquire?
+
+Species assemblages were highly significantly more dissimilar between sites in different habitats ($p < 0.001$), with this relationship explaining 13\% of variation. In addition, season was a significant predictor of community dissimilarity, though with very weak expanatory power ($R^2 = 0.001$). 
+
+The distance matrix including both habitat and season was also a very significant predictor of species dissimilarity ($p < 0.001$), with intermediate $F$-statistic and $R^2$.
+
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Wed, May 11, 2016 - 00:13:58
+% Requires LaTeX packages: dcolumn 
+\begin{table}[!htbp] \centering 
+  \caption{Predicting inter-survey dissimilarity of functional composition (Community Weighted Means) with three regression models using distance matrices of (1) Survey habitat, (2) Season of survey and (3) Habitat and season} 
+  \label{func_pred_sg} 
+\small 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{Functional composition} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+\hline \\[-1.8ex] 
+ Habitat & 0.04^{***} &  &  \\ 
+  & \multicolumn{1}{c}{(0.04$, $0.05)} &  &  \\ 
+  & & & \\ 
+ Season &  & -0.0004 &  \\ 
+  &  & \multicolumn{1}{c}{(-0.01$, $0.004)} &  \\ 
+  & & & \\ 
+ Habitat and season &  &  & 0.04^{***} \\ 
+  &  &  & \multicolumn{1}{c}{(0.03$, $0.05)} \\ 
+  & & & \\ 
+ Intercept & 0.21^{***} & 0.24^{***} & 0.22^{***} \\ 
+  & \multicolumn{1}{c}{(0.21$, $0.22)} & \multicolumn{1}{c}{(0.23$, $0.24)} & \multicolumn{1}{c}{(0.21$, $0.22)} \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{5,565} & \multicolumn{1}{c}{5,565} & \multicolumn{1}{c}{5,565} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.05} & \multicolumn{1}{c}{0.0000} & \multicolumn{1}{c}{0.02} \\ 
+F Statistic (df = 1; 5563) & \multicolumn{1}{c}{271.65$^{***}$} & \multicolumn{1}{c}{0.02} & \multicolumn{1}{c}{127.97$^{***}$} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.05; $^{**}$p$<$0.01; $^{***}$p$<$0.001} \\ 
+\end{tabular} 
+\end{table} 
+
+
+Differences in community functional composition were also strongly related to habitat differences ($p < 0.001$), though with much less variation explained by this relationship ($R^2 = 0.047$; Table \ref{func_pred_sg}). 
+
+Unlike species composition, functional composition did not vary between seasons. Attempts to model this relationship resulted in an $F$-statistic and $R^2$ very close to 0. The matrix including habitat and season was a significant predictor of species dissimilarity ($p < 0.001$), but with lower $F$-statistic and $R^2$ than the habitat-only model (Table \ref{func_pred_sg}).
+
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Wed, May 11, 2016 - 00:13:58
+% Requires LaTeX packages: dcolumn 
+\begin{table}[!htbp] \centering 
+  \caption{functional subgroups} 
+  \label{func_subs_pred_sg} 
+\small 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-1} D{.}{.}{-1} D{.}{.}{-1} D{.}{.}{-1} D{.}{.}{-1} D{.}{.}{-1} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-7} 
+\\[-1.8ex] & \multicolumn{2}{c}{Behaviour} & \multicolumn{2}{c}{Diet} & \multicolumn{2}{c}{Morphology} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)} & \multicolumn{1}{c}{(6)}\\ 
+\hline \\[-1.8ex] 
+ Habitat & 0.04^{***} &  & 0.1^{***} &  & 0.02^{***} &  \\ 
+  Season &  & 0.001 &  & -0.001 &  & -0.001 \\ 
+  Intercept & 0.2^{***} & 0.2^{***} & 0.2^{***} & 0.3^{***} & 0.2^{***} & 0.2^{***} \\ 
+ \hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{5,565} & \multicolumn{1}{c}{5,565} & \multicolumn{1}{c}{5,565} & \multicolumn{1}{c}{5,565} & \multicolumn{1}{c}{5,565} & \multicolumn{1}{c}{5,565} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.1} & \multicolumn{1}{c}{0.000} & \multicolumn{1}{c}{0.1} & \multicolumn{1}{c}{0.000} & \multicolumn{1}{c}{0.003} & \multicolumn{1}{c}{0.000} \\ 
+F Statistic & \multicolumn{1}{c}{294.2$^{***}$} & \multicolumn{1}{c}{0.2} & \multicolumn{1}{c}{441.3$^{***}$} & \multicolumn{1}{c}{0.2} & \multicolumn{1}{c}{17.6$^{***}$} & \multicolumn{1}{c}{0.1} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.05; $^{**}$p$<$0.01; $^{***}$p$<$0.001} \\ 
+\end{tabular} 
+\end{table} 
+
+
+Considering each category of functional traits separately confirmed that birds' behaviour, diet and morphology varies significantly between habitats, but not between seasons (Table \ref{func_subs_pred_sg}).
+
 
 \clearpage
-\subsection{Drill into CWMs?}
+\subsection{Drill into CWMs? Differences amongst habitats in traits supported}
+
+To do.
 
 \end{document}

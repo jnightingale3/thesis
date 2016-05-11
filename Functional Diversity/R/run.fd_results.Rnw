@@ -3,6 +3,7 @@
 \usepackage{fullpage} % for margins
 \usepackage{setspace} % for line spacing
 \onehalfspacing % one and a half lines' spacing
+\usepackage{dcolumn} 
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -23,8 +24,8 @@ require(FD) # gowdis() for Gower distance; dbFD() for functional diversity metri
 require(reshape2) # organising data, mainly to prepare for plotting
 require(ggplot2) # for plotting
 require(gridExtra) # for multi-figure ggplot2 plots
-require(xtable) # for Latex tables
-require(stargazer) # for Latex tables from model output
+# require(xtable) # for Latex tables - repaced with stargazer (probably)
+require(stargazer) # for Latex tables
 @
 
 <<setup, echo=FALSE, results='hide', error=FALSE, warning=FALSE, message=FALSE>>=
@@ -42,7 +43,7 @@ source('dat.trait_mats.R')
 source('dat.dist_mats.R')
 @
 
-<<distpairs, echo=FALSE, results='hide', error=FALSE, warning=FALSE, message=FALSE, fig.cap='Correlation between the behaviour, diet, morphlogy and mean distance matrices. Lower panels show scatter plots; upper panels show Pearson correlation coefficients, scaled according to their value.', fig.pos='t'>>=
+<<distpairs, echo=FALSE, results='hide', error=FALSE, warning=FALSE, message=FALSE, fig.cap='Correlation matrix between the behaviour, diet, morphlogy and mean distance matrices. Lower panels show scatter plots; upper panels show Pearson correlation coefficients, scaled according to their value.', fig.pos='t'>>=
 source('def.panelutils.R')
 pairs(x=data.frame(
   behaviour = as.vector(dist.beh0),
@@ -70,6 +71,7 @@ p <- ggplot(oblong) # for use in future plots
 
 <<fdhabp, echo=FALSE, results='hide', error=FALSE, warning=FALSE, message=FALSE, fig.pos='b'>>=
 h <- p + geom_point(aes(x=Habitat, y=Value), shape=21, alpha=.5) +
+  theme_bw() +
   geom_boxplot(aes(x=Habitat, y=Value, fill=Habitat), alpha=.5) +
   facet_grid(Metric ~ . , scales='free') + theme(legend.position = 'bottom')
 @
@@ -84,7 +86,9 @@ krus.hab <- ddply(oblong, .(Metric), .fun=function(x) {
 names(krus.hab)[2] <- 'p value'
 krus.hab[,2] %<>% p.adjust(method='fdr')
 
-print(xtable(krus.hab, digits=3, caption='FDR-adjusted p values from Kruskal-Wallis tests comparing each functional diversity metric between beach, grassland and lake survey locations.', label='fdhabt'), caption.placement = 'top', table.placement='t')
+# print(xtable(krus.hab, digits=3, caption='FDR-adjusted p values from Kruskal-Wallis tests comparing each functional diversity metric between beach, grassland and lake survey locations', label='fdhabt'), caption.placement = 'top', table.placement='t', include.rownames=F)
+
+stargazer(krus.hab, summary=F, digits=3, label='fdhabt', title='FDR-adjusted p values from Kruskal-Wallis tests comparing each functional diversity metric between beach, grassland and lake survey locations', font.size='small', rownames=F)
 
 # pairwise.wilcox.test(obsdf$Evenness, obsdf$Habitat, p.adjust.method = 'fdr')
 @
@@ -93,6 +97,7 @@ There was no apparent difference in any functional diversity metric between seas
 
 <<fdsea, echo=FALSE, results='hide', error=FALSE, warning=FALSE, message=FALSE, fig.pos='b', fig.cap='Functional diversity metrics according to habitat (left) and season (right). Note that the $y$-axis has a different scale in each plot facet. Only functional evenness by habitat showed a significant difference, with beach communities significantly less even than the others (see text for statistics).', out.height='\\textwidth', out.width='\\textwidth'>>=
 s <- p + geom_point(aes(x=Season, y=Value), shape=21, alpha=.5) +
+  theme_bw() +
   geom_boxplot(aes(x=Season, y=Value, fill=Season), alpha=.5) +
   facet_grid(Metric ~ . , scales='free') + theme(legend.position = 'bottom') +
   ylab('')
@@ -106,11 +111,13 @@ wilc.sea <- ddply(oblong, .(Metric), .fun=function(x) {
 })
 names(wilc.sea)[2] <- 'p value'
 wilc.sea[,2] %<>% p.adjust(method='fdr')
-print(xtable(wilc.sea, digits=2, caption='FDR-adjusted p values from Mann-Whitney tests comparing each functional diversity metric between summer and winter surveys.', label='fdseat'), caption.placement = 'top', table.placement='hb')
+# print(xtable(wilc.sea, digits=2, caption='FDR-adjusted p values from Mann-Whitney tests comparing each functional diversity metric between summer and winter surveys', label='fdseat'), caption.placement = 'top', table.placement='hb', include.rownames=F)
+stargazer(wilc.sea, summary=F, digits=2, label='fdseat', title='FDR-adjusted p values from Mann-Whitney tests comparing each functional diversity metric between summer and winter surveys', font.size='small', rownames=F)
 @
 
 <<fdhabsea, echo=FALSE, results='hide', error=FALSE, warning=FALSE, message=FALSE, fig.cap='Habitat differences in functional diversity within each survey season. No significant interaction between habitat and season for any functional diversity metric were revealed by two-way ANOVA models.', out.height='\\textwidth', out.width='\\textwidth'>>=
 hs <- p + geom_point(aes(x=Habitat, y=Value), shape=21, alpha=.5) +
+  theme_bw() +
   geom_boxplot(aes(x=Habitat, y=Value, fill=Habitat), alpha=.5) +
   facet_grid(Metric ~ Season, scales='free')
 print(hs)
@@ -130,7 +137,7 @@ The pattern of functional divergence across habitat did not appear to vary seaso
 \clearpage
 \subsection{Comparison with null model}
  
-Species number and functional dispersion had SESs less than zero, while functional richness had an SES greater than 0 (Figure \ref{fig:SEShists}). Divergence and evenness were spread either side of 0. Significance of these scores can be seen in Table \ref{SESrestab}.
+Species number and functional dispersion had SESs mostly lower than zero, while functional richness had SES usually greater than 0. Divergence and evenness were spread either side of 0, with medians slightly negative (Figure \ref{fig:SEShists}). Significance of these scores can be seen in Table \ref{SESrestab}.
 
 <<SEShists, echo=FALSE, results='hide', error=FALSE, warning=FALSE, message=FALSE, fig.cap='Histograms of standardised effect size (SES) for each functional diversity metric, calculated from 1000 randomly simulated communities', out.width='\\textwidth', out.height='0.7\\textwidth', fig.height=5>>=
 source('run.random_community_comparison.R')
@@ -146,22 +153,73 @@ print(p)
 
 <<SESrestab, echo=FALSE, results='asis', error=FALSE, warning=FALSE, message=FALSE>>=
 source('def.ses_sig.R')
-sestab <- ddply(sesl, .(Metric), .fun=ses_sig)
+sestab <- ddply(sesl, .(Metric), .fun=function(x) {
+  ses_sig(x, nmet=length(unique(sesl$Metric)))})
 names(sestab)[2:3] <- c('Median', 'p value')
+sestab[,3] %<>% round(3) %>% as.character
+for(ises in 1:nrow(sestab)){if(sestab[ises,3] == '0'){sestab[ises,3]<-'<0.001'}}
 
-print(xtable(sestab, digits=c(0, 0, 1, 3), caption='Median SES score and its associated p-value for each functional diversity metric', label='SESrestab'), caption.placement = 'top')
+# print(xtable(sestab, digits=c(0, 0, 1, -2), caption='Median SES score and its associated p-value for each functional diversity metric', label='SESrestab'), caption.placement = 'top', include.rownames=F, math.style.exponents=T)
+stargazer(sestab, summary=F, digits=1, digits.extra=3, label='SESrestab', title='Median SES score and its associated p-value for each functional diversity metric', font.size='small', rownames=F)
 @
 
 \clearpage
 \subsection{Predicting community composition and function}
 
-This bit first?
+<<comp_pred_sg, echo=FALSE, results='asis', error=FALSE, warning=FALSE, message=FALSE>>=
+source('run.predict_comp_fun.R')
+stargazer(lm.sp.h, lm.sp.s, lm.sp.hs, align=T, ci=T,  # use CIs instead of SE
+          label='comp_pred_sg', digits=2, title='Predicting inter-survey dissimilarity of species composition with three regression models using distance matrices of (1) Survey habitat, (2) Season of survey and (3) Habitat and season', 
+          dep.var.labels='Species composition', 
+          covariate.labels=c('Habitat','Season','Habitat and season','Intercept'),
+          omit.stat=c('adj.rsq', 'ser'), font.size='small',
+          star.cutoffs=c(0.05, 0.01, 0.001), table.placement='tb')
+@
 
-Species composition is significantly affected by both habitat and season; functional composition is affected only by habitat.
+Species assemblages were highly significantly more dissimilar between sites in different habitats ($p < 0.001$), with this relationship explaining \Sexpr{round(summary(lm.sp.h)$r.squared*100, 1)}\% of variation. In addition, season was a significant predictor of community dissimilarity, though with very weak expanatory power ($R^2 = \Sexpr{round(summary(lm.sp.s)$r.squared, 3)}$). 
 
-Analysing the subsets of trait data, there are seasonal differences in behaviour, but not in morphology nor in diet. How does this vary within habitats? Same food available, but need different method to acquire?
+The distance matrix including both habitat and season was also a very significant predictor of species dissimilarity ($p < 0.001$), with intermediate $F$-statistic and $R^2$.
 
+<<func_pred_sg, echo=FALSE, results='asis', error=FALSE, warning=FALSE, message=FALSE>>=
+stargazer(lm.fc.h, lm.fc.s, lm.fc.hs, align=T, ci=T,  # use CIs instead of SE
+          label='func_pred_sg', digits=2, title='Predicting inter-survey dissimilarity of functional composition (Community Weighted Means) with three regression models using distance matrices of (1) Survey habitat, (2) Season of survey and (3) Habitat and season', 
+          dep.var.labels='Functional composition', 
+          covariate.labels=c('Habitat','Season','Habitat and season','Intercept'),
+          omit.stat=c('adj.rsq', 'ser'), font.size='small',
+          star.cutoffs=c(0.05, 0.01, 0.001))
+@
+
+Differences in community functional composition were also strongly related to habitat differences ($p < 0.001$), though with much less variation explained by this relationship ($R^2 = \Sexpr{round(summary(lm.fc.h)$r.squared, 3)}$; Table \ref{func_pred_sg}). 
+
+Unlike species composition, functional composition did not vary between seasons. Attempts to model this relationship resulted in an $F$-statistic and $R^2$ very close to 0. The matrix including habitat and season was a significant predictor of species dissimilarity ($p < 0.001$), but with lower $F$-statistic and $R^2$ than the habitat-only model (Table \ref{func_pred_sg}).
+
+<<func_subs_pred_sg, echo=FALSE, results='asis', error=FALSE, warning=FALSE, message=FALSE>>=
+stargazer(lm.cb.h, lm.cb.s, 
+          lm.cd.h, lm.cd.s, 
+          lm.cm.h, lm.cm.s, 
+          align=T, ci=F,  df=F,# use CIs instead of SE
+          label='func_subs_pred_sg', digits=1, title='functional subgroups', 
+          report=c('vc*'),
+          dep.var.labels=c('Behaviour', 'Diet', 'Morphology'),
+          covariate.labels=c('Habitat','Season', 'Intercept'),
+          omit.stat=c('adj.rsq', 'ser'), no.space=T, font.size='small',
+          star.cutoffs=c(0.05, 0.01, 0.001))
+@
+
+Considering each category of functional traits separately confirmed that birds' behaviour, diet and morphology varies significantly between habitats, but not between seasons (Table \ref{func_subs_pred_sg}).
+
+<<sea_behav, echo=FALSE, results='asis', error=FALSE, warning=FALSE, message=FALSE>>=
+# using numeric CWMs for binary traits means this analysis is unnecessary
+# stargazer(seas_behav, summary = F,
+#           align=T, ci=F,  df=F,# use CIs instead of SE
+#           label='sea_behav', digits=2, title='seasonal beaviour diferences', 
+#           report=c('vc*'),
+#           no.space=T, font.size='small',
+#           star.cutoffs=c(0.05, 0.01, 0.001))
+@
 \clearpage
-\subsection{Drill into CWMs?}
+\subsection{Drill into CWMs? Differences amongst habitats in traits supported}
+
+To do.
 
 \end{document}

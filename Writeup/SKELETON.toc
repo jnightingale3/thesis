@@ -26,6 +26,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.7}Null communities and SES}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Results}{12}
+\contentsline {subsection}{\numberline {1.2.8}Predicting community composition and function}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Discussion}{13}
+\contentsline {section}{\numberline {1.3}Results}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Discussion}{14}

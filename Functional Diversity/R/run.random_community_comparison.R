@@ -33,6 +33,12 @@ names(sesl) <- c('Metric', 'SES')
 #   facet_wrap(~Metric, scales='free')
 # print(p)
 
+# ## correlation matrix with number of species
+# pairs(cbind(SES[,-4], obsdf$No.Species), 
+#       upper.panel = panel.cor, lower.panel = function(x,y) {
+#         abline(lm(y~x), col='red'); points(x, y)}, 
+#       main='Standardised Effect Sizes')
+
 ##############
 #### old #####
 ##############

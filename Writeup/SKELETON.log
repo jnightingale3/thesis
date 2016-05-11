@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.22)  10 MAY 2016 03:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.22)  11 MAY 2016 00:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -596,16 +596,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--125
 
  []
 
-[9] [10] [11]
+[9] [10] [11] [12]
 \openout2 = `run.fd_results.aux'.
 
- (./run.fd_results.tex) [12
-
-] [13
+ (./run.fd_results.tex) [13
 
 ] [14
 
-] [15] [16] (./SKELETON.aux
+] [15
+
+] [16] (./SKELETON.aux
 (./run.fd_results.aux))
 Package logreq Info: Writing requests to 'SKELETON.run.xml'.
 \openout1 = `SKELETON.run.xml'.
@@ -629,7 +629,7 @@ nts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmtt12.pfb>
-Output written on SKELETON.pdf (16 pages, 137273 bytes).
+Output written on SKELETON.pdf (16 pages, 139290 bytes).
 PDF statistics:
  96 PDF objects out of 1000 (max. 8388607)
  67 compressed objects within 1 object stream

@@ -165,6 +165,16 @@ where $I_{obs}$ is the observed functional diversity index, $I_{sim}$ is the mea
 
 If SES does not differ significantly from 0 then observed communities do not differ from random. Positive values indicate trait divergence, for example as might result from interspecific competition; negative values indicate trait convergence, for example as a result of ecological filtering by local habitat characteristics.
 
+\subsection{Predicting community composition and function}
+
+Using the matrix of between-survey dissimilarities in species composition as a response variable, I used linear models to test for the effects of between-survey differences in habitat, season or both. As habitat and season are categorical variables, these differences were calculated using Gower distance as described above for the trait distance matrices.
+
+To compare between-survey differences in functional composition, it was first necessary to measure the functional composition of each survey. For this, I used community weighted means (CWMs; LAVOREL ET AL 2008), as computed by the \texttt{functcomp} function of the \texttt{FD} package. 
+
+For continuous trait variables (such as the morphological measures in this analysis) the CWM is simply the mean trait value for each species present, weighted by that species' abundance. For categorical variables with $>2$ categories, such as bill shape, the CWM is the most frequent category. Binary variables' CWMs can be computed as either the dominant value (0 or 1) or a mean, treating the 0s and 1s numerically. I used the latter approach for its more intuitive interpretation (as the proportion of individuals possessing that trait), although repeating the analysis using the former method did not change conclusions.
+
+Functional composition distances were therefore tested for their response to habitat and seasonal differences, as described above for species dissimilarities. Distance matrices for the CWM traits in each category (behaviour, diet and morphology) were tested independently, as was the overall mean.
+
 \include{run.fd_results}
 
 \section{Discussion}

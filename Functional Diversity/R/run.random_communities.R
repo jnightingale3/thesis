@@ -114,7 +114,7 @@ for (iN in 1:Nrep) {
   fake.FRic[match(names(dbfd.fake$FRic), rownames(fake.FRic)), iN] <- dbfd.fake$FRic
   fake.FEve[match(names(dbfd.fake$FEve), rownames(fake.FEve)), iN] <- dbfd.fake$FEve
   
-  if(iN %% 4 == 0) {print(paste('Rep ', iN, ' of ', Nrep, 
+  if(iN %% 25 == 0) {print(paste('Rep ', iN, ' of ', Nrep, 
                                  ' = ', (iN/10), '%', sep=''))}
 }
 
@@ -124,3 +124,5 @@ write.csv(fake.FDiv, file='data/dat.fake.FDiv.csv')
 write.csv(fake.FDis, file='data/dat.fake.FDis.csv')
 write.csv(fake.FRic, file='data/dat.fake.FRic.csv')
 write.csv(fake.FEve, file='data/dat.fake.FEve.csv')
+
+write.csv(trait_fd, file='data/trait.csv')
