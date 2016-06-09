@@ -6,13 +6,13 @@ id_habitats <- function(x) { # x is a character vector of sitenames
   h[grepl('PAPAG', x)] <- 'Lake'
   h[grepl('PANTA', x)] <- 'Grass'
   h[grepl('CAIEA', x)] <- 'Lake'
-  h[grepl('FUNDO', x)] <- 'Grass'
+  h[grepl('FUNDO', x)] <- 'Lake'
   h[grepl('RINCO', x)] <- 'Lake'
   h[grepl('ALEMO', x)] <- 'Grass'
   h[grepl('LMEIO', x)] <- 'Lake'
-  h[grepl('DOURO', x)] <- 'Lake'
+  h[grepl('DOURO', x)] <- 'Lake' 
   h[grepl('PAULO', x)] <- 'Lake'
-  h[grepl('Pont', x)] <- 'Lake'
+  h[grepl('Pont', x)]  <- 'Grass'
   h[grepl('TALHA', x)] <- 'Lake'
   h[grepl('BABAL', x)] <- 'Grass'
   h[grepl('PPRAI', x)] <- 'Beach'
@@ -29,6 +29,8 @@ id_habitats <- function(x) { # x is a character vector of sitenames
   h[grepl('PJOAO', x)] <- 'Lake'
   h[grepl('BARRA', x)] <- 'Beach'
   h[grepl('DUNAS', x)] <- 'Grass'
+  
+  h[h=='Grass'] <- 'Lake' # don't use grassland habitat
   
   h <- factor(h)
   

@@ -1,17 +1,17 @@
-\documentclass[12pt,a4paper,draft]{book}
+\documentclass[12pt,a4paper]{book}
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath}
 \usepackage{fullpage} % for margins
-\usepackage{setspace} % for line spacing
-\onehalfspacing % one and a half lines' spacing
-\usepackage{amsfonts}
-%\usepackage{fontspec,xunicode} %to control fonts
-%\usepackage[T1]{fontenc} % for the Times font + math mode
-\usepackage{amssymb}
-\usepackage[backend=bibtex, style=authoryear]{biblatex}
-\addbibresource{../../../../../Documents/library}
+%\usepackage{setspace} % for line spacing
+%\onehalfspacing % one and a half lines' spacing
+\usepackage[cmintegrals,cmbraces]{newtxmath} % maths in that font
+\usepackage{ebgaramond-maths} % nice font
+\usepackage{amsmath}
+\usepackage[T1]{fontenc} % for the Garamond font + math mode
+\usepackage{natbib} % extra citation styles
+\usepackage{hyperref}
 \author{Josh Nightingale}
 \title{Foraging ecology of waterbirds on the north coast of Rio Grande do Sul}
+
 \begin{document}
 
 \maketitle
@@ -19,6 +19,8 @@
 \tableofcontents
 
 \chapter{Functional ecology}
+
+$\mathbf{Testing123}$
 
 \section{Introduction}
 %
@@ -45,107 +47,134 @@
 \newpage
 \section{Methods}
 
+\LaTeX
+
 \subsection{Survey data}
 
-This study used survey data collected for the CNAA. These censuses were conducted at wetland sites on the coast of Rio Grande do Sul, Brazil. Censuses were conducted during the austral summer (February or March) and winter (July or August), from winter 2005 to summer 2015. 
+This study used survey data collected for the Neotropical Waterbird Census (Censo Neotropical de Aves Aqu\'{a}ticas; CNAA), co-ordinated by Wetlands International. These censuses were conducted at wetland sites on the Mostardas peninsula, on the coast of Rio Grande do Sul, Brazil. The censuses in this study were conducted during the austral summer (February or March) and winter (July or August), from winter 2005 to summer 2015. 
+
+Two distinct habitat categories were sampled, the coastal beach and inland lakes. Surveys on the \textit{beach} recorded all birds seen inshore as well as any on the ground including the intertidal sediments and foredunes. Surveys in \textit{lake} habitats included all birds seen in the water or adjacent vegetation (typically grazed grassland).
 
 Some sites were sampled very frequently (almost every season); others less frequently and several only once. Surveys were conducted at varying times of day and for varying durations. The effect of survey effort (duration, number of observers) or other characteristics (such as weather, human disturbance) was neither analysed nor corrected for as these data were not available for all surveys. The analysis therefore does not assume equality of survey effort. 
 
-Surveys which detected fewer than 5 species were excluded from the analysis, as such atypically low numbers are unlikely to be representative of the total community habitually present at a site. 
+Surveys which detected fewer $< 5$ species were excluded from the analysis, as such atypically low numbers are unlikely to be representative of the total community habitually present at a site. 
 
 \subsection{Species data}
 
-Species names and taxonomy followed \cite{vanPerlo2009}. Only species seen on at least 5 surveys were included, as species detected on so few occasions ($<5\%$) are unlikely to be regular members of a given community. 
+Species names and taxonomy followed \citet{vanPerlo2009}. Only species seen on at least $5$ surveys were included, as species detected on so few occasions ($<5\%$) are unlikely to be regular members of a given community. 
 
-Species were classified as resident, summer migrants or winter migrants based on the account in \cite{vanPerlo2009}. However, this source contains numerous errors for this region; for example, Semipalmated Plover \textit{Charadrius semipalmatus} `rare or vagrant' species, when in fact it is regularly recorded on the coast in large numbers (e.g. \cite{Sanabria2011}, \cite{Scherer2012} and pers. obs.). Therefore, information on the local status of birds was supplemented using a checklist published for Parque Nacional da Lagoa do Peixe, a large protected site in the study area (\cite{Nascimento1995}).
+Species were classified as resident, summer migrants or winter migrants based on the account in \citet{vanPerlo2009}. However, this source contains numerous errors for this region; for example, Semipalmated Plover \textit{Charadrius semipalmatus} is listed as a `rare or vagrant' species, when in fact it is regularly recorded on the coast in large numbers \citep[e.g.][and pers. obs]{Sanabria2011, Scherer2012}. Therefore, information on the local status of birds was supplemented using a checklist published for Parque Nacional da Lagoa do Peixe, a large protected site in the study area \citep{Nascimento1995}.
 
 \subsection{Trait data}	
 
-Variables were selected to cover as many traits related to foraging as possible. Like \cite{Mendez2012} we used a combination of morphological, behavioural and dietary variables.
+Variables were selected to cover as many traits related to foraging as possible. Like \citet{Mendez2012} we used a combination of morphological, behavioural and dietary variables.
 
-Data were gathered initially from \cite{DelHoyo2016}; however, this source does not include bill or tarsus lengths, and does not have detailed diet and/or behaviour information for all species (resident species are especially poorly covered). Therefore, where the species account in \cite{DelHoyo2016} reported that information was scarced, additional data were used from other published accounts. In addition, some species have had their diet studied locally at one of the sites surveyed, in which case this information was used to supplement the \cite{DelHoyo2016} account. A full reference list for each trait is available in Appendix 1A.
+Data were gathered initially from \citet{DelHoyo2016}; however, this source does not include bill or tarsus lengths, and does not have detailed diet and/or behaviour information for all species (resident species are especially poorly covered). Therefore, where the species account in \citet{DelHoyo2016} reported that information was scarce, additional data were used from other published accounts. In addition, some species have had their diet studied locally at one of the sites surveyed, in which case this information was used to supplement the \citet{DelHoyo2016} account. A full reference list for each trait is available in Appendix 1A.
 
 
-\subsubsection{\textit{Morphological data}}
+\subsubsection{\textsc{Morphological data}}
 
 \begin{description}
-\item[Body mass, Bill length, Tarsus length] Where mean values were reported, these were used; for sexually dimorphic species, the mean of each sex's mean was used to calculate an overall value for the species. Where a range was reported, the median value of this range, or of both ranges for sexually dimorphic species, was used. Data for adult birds was used in preference to juveniles, and local subspecies if geographical variation was reported. These continuous data were $\ln(x)$-transformed prior to analysis as they ranged over an order of magnitude.
-\item[Bill shape] As in \cite{Mendez2012}, bills were classified as straight, up-curved or down-curved, based on illustrations in \cite{DelHoyo2016}.
+\item[\textit{Body mass, Bill length, Tarsus length}] Where mean values were reported, these were used; for sexually dimorphic species, the mean of each sex's mean was used to calculate an overall value for the species. Where a range was reported, the median value of this range, or of both ranges for sexually dimorphic species, was used. Data for adult birds was used in preference to juveniles, and local subspecies if geographical variation was reported. These continuous data were $\ln(x)$-transformed prior to analysis as they ranged over an order of magnitude.
+\item[\textit{Bill shape}] As in \citet{Mendez2012}, bills were classified as straight, up-curved or down-curved, based on illustrations in \citet{DelHoyo2016}.
 \end{description}
 \medskip
-\subsubsection{\textit{Behavioural data}} Whether or not the species is recorded as using the following behaviours to forage:
+\subsubsection{\textsc{Behavioural data}} Whether or not the species is recorded as using the following behaviours to forage:
 
 \begin{description}
-\item[Pecking] Taking an item from the surface of the substrate
-\item[Probing] Inserting the bill below the surface of the sediment
-\item[Jabbing] Repeatedly pecking at a prey item
-\item[Hammering] Striking repeatedly with the bill in order to break an object
-\item[Scything] Moving the bill from side to side through the water or sediment
-\item[Turning] Turning over objects to locate prey
-\item[Foot trembling] Inserting a foot into the sediment and vibrating it to disturb invertebrates
-\item[Swimming] Foraging while swimming on the surface of water
-\item[Dipping] Inserting the entire head beneath the surface of the water
-\item[Diving] Foraging entirely below the surface of the water
-\item[Skimming] Flying with the lower mandible of the bill inserted into the water or sediment
-\item[Aerial] Jumping or flying to catch prey before landing
-\item[Kleptoparasitism] Stealing prey caught by individuals of other species
-\item[Scavenging] Consuming animal matter or waste discarded by other species, including humans
+\item[\textit{Pecking}] Taking an item from the surface of the substrate
+\item[\textit{Probing}] Inserting the bill below the surface of the sediment
+\item[\textit{Jabbing}] Repeatedly pecking at a prey item
+\item[\textit{Hammering}] Striking repeatedly with the bill in order to break an object
+\item[\textit{Scything}] Moving the bill from side to side through the water or sediment
+\item[\textit{Turning}] Turning over objects to locate prey
+\item[\textit{Foot trembling}] Inserting a foot into the sediment and vibrating it to disturb invertebrates
+\item[\textit{Swimming}] Foraging while swimming on the surface of water
+\item[\textit{Dipping}] Inserting the entire head beneath the surface of the water
+\item[\textit{Diving}] Foraging entirely below the surface of the water
+\item[\textit{Skimming}] Flying with the lower mandible of the bill inserted into the water or sediment
+\item[\textit{Aerial}] Jumping or flying to catch prey before landing
+\item[\textit{Kleptoparasitism}] Stealing prey caught by individuals of other species
+\item[\textit{Scavenging}] Consuming animal matter or waste discarded by other species, including humans
 \end{description}
 \medskip
-\subsubsection{\textit{Diet data}} If the species is recorded as consuming:
+\subsubsection{\textsc{Diet data}} If the species is recorded as consuming:
 
 \begin{description}
-\item[Insects] Adult or larval insects
-\item[Crabs, Crustaceans] Crabs (and other large Decapoda, such as shrimp) were considered separately to smaller crustaceans such as Amphipoda
-\item[Worms] A highly polyphyletic grouping: any long, legless, soft-bodied invertebrate
-\item[Snails, Molluscs] Snails (and other small Gastropoda) were considered separately to larger, harder shelled molluscs such as clams
-\item[Herpetofauna] Amphibians and Reptiles
-\item[Fish] Fish
-\item[Plant] Any plant matter, including leaves, seeds and other parts
-\item[Eggs] Eggs of any taxon, including birds, fish and horseshoe crabs
-\item[Diatoms] Microscopic, unicelluar phytoplankton characterised by a cell wall composed of silicon dioxide
-\item[Other] Any other diet component not included in the above categories, but insufficiently distinct or common to warrant its own; for example, bird nestlings, human rubbish, faeces
+\item[\textit{Insects}] Adult or larval insects
+\item[\textit{Crabs, Crustaceans}] Crabs (and other large Decapoda, such as shrimp) were considered separately to smaller crustaceans such as Amphipoda
+\item[\textit{Worms}] A highly polyphyletic grouping: any long, legless, soft-bodied invertebrate
+\item[\textit{Snails, Molluscs}] Snails (and other small Gastropoda) were considered separately to larger, harder-shelled molluscs such as clams
+\item[\textit{Herps}] Herpetofauna: amphibians and reptiles
+\item[\textit{Fish}] Fish
+\item[\textit{Plant}] Any plant matter, including leaves, seeds and other parts
+\item[\textit{Eggs}] Eggs of any taxon, including birds, fish and horseshoe crabs
+\item[\textit{Diatoms}] Microscopic, unicelluar phytoplankton characterised by a cell wall composed of silicon dioxide
+\item[\textit{Other}] Any other diet component not included in the above categories, but insufficiently distinct or common to warrant its own; for example, bird nestlings, human rubbish, faeces
 \end{description}
 
 If a given behaviour or dietary component was not recorded in the literature, it was assumed not to occur commonly enough to be considered a trait of the species. For one species, \textit{Gallinula melanops}, no diet information is published. For several, no morphological data was available in the literature; however, the analytical methods used are able to function with small amounts of missing data.
 
 \subsection{Distance matrices}
 
-	\textit{Trait differences between species}\\
+\textsc{Trait differences between species}\\
 \\
-Due to the inclusion of categorical variables, Gower distance was used for the trait data (\cite{Borcard2011}), using the \texttt{gowdis} function of the \texttt{FD} package for \texttt{R} (\cite{Laliberte2014}). 
+Due to the inclusion of categorical variables, Gower distance was used for the trait data \citep{Borcard2011}, using the \texttt{gowdis} function of the \texttt{FD} package for \texttt{R} \citep{Laliberte2014}. 
 
-In order to give equal weight to the three categories of trait variables (behaviour, diet and morphology), despite their unequal number of variables, I first constructed separate distance matrices for each category. The mean of those matrices gave an overall trait distance matrix. Correlation between these four matrices was tested using Pearson's correlation coefficient (significance tests were not conducted due to non-independence of the overall matrix).
+In order to give equal weight to the three categories of trait variables (behaviour, diet and morphology), despite their unequal number of variables, I first constructed separate distance matrices for each category. The mean of those matrices gave an overall trait distance matrix. Correlation between these four matrices was evaluated using Pearson's correlation coefficient (significance tests were not conducted due to non-independence of the overall matrix).
 
-The functional diversity metrics used in this analysis were based on PCoA (\cite{Laliberte2010}) of the trait distance matrix. For these analyses, a Euclidian trait distance matrix is required, calculated from untransformed species abundances. Negative eigenvalues (imaginary axes) were made Euclidian using the Cailliez transformation, which adds the smallest possible constant to the distances (\cite{Laliberte2010}).\\
+The functional diversity metrics used in this analysis were based on PCoA \citep{Laliberte2010} of the trait distance matrix. For these analyses, a Euclidian trait distance matrix is required, calculated from untransformed species abundances. Negative eigenvalues (imaginary axes) were made Euclidian using the Cailliez transformation, which adds the smallest possible constant to the distances \citep{Laliberte2010}.\\
 \\
-\textit{Species differences between sites}\\
+\textsc{Species differences between sites}\\
 \\
-The functional diversity analyses include species abundances only as a simple weighting. For all other analyses, species dissimilarity between sites used the Cao index implemented by the \texttt{vegdist} function of \texttt{vegan} (\cite{Oksanen2016}). This measure minimises bias in data with high beta diversity and variation in sampling intensity, and therefore has higher success in correctly classifying sites (\cite{Cao1997}). This implementation of the index is based on $\ln(x)$-transformation of abundances; zero counts are arbitrarily replaced with 0.1.
+The functional diversity analyses include species abundances only as a simple weighting. For all other analyses, species dissimilarity between sites used the Cao index implemented by the \texttt{vegdist} function of \texttt{vegan} \citep{Oksanen2016}. This measure minimises bias in data with high beta diversity and variation in sampling intensity, and therefore has higher success in correctly classifying sites \citep{Cao1997}. This implementation of the index is based on $\ln(x)$-transformation of abundances; zero counts are arbitrarily replaced with $0.1$.
+
+\subsection{Predicting community composition and function}
+
+Using the matrix of between-survey dissimilarities in species composition as a response variable, I used linear models to test for the effects of between-survey differences in habitat, season or both. As habitat and season are categorical variables, these differences were calculated using Gower distance as described above for the trait distance matrices.
+
+To compare between-survey differences in functional composition, it was first necessary to measure the functional composition of each survey. For this, I used community weighted means \citep[CWMs:][]{Lavorel2008}, as computed by the \texttt{functcomp} function of the \texttt{FD} package. 
+
+For continuous trait variables (such as the morphological measures in this analysis) the CWM is simply the mean trait value for each species present, weighted by that species' abundance. For categorical variables with $>2$ categories, such as bill shape, the CWM is the most frequent category. Binary variables' CWMs can be computed as either the dominant value ($0$ or $1$) or a mean, treating the $0$s and $1$s numerically. I used the latter approach for its more intuitive interpretation (as the proportion of individuals possessing that trait), although repeating the analysis using the former method did not change conclusions.
+
+Functional composition distances were therefore tested for their response to habitat and seasonal differences, as described above for species dissimilarities. Distance matrices for the CWM traits in each category (behaviour, diet and morphology) were tested independently, as was the overall mean.
+
+As the CWMs for binary traits are proportions, I compared them between habitats using a series of $\chi^2$ tests (controlling for the FDR). 
+%%%% but I am going to change these to Mann-Whitney
+
+\subsection{Austral \emph{versus} boreal migrant communities}
+
+To compare average trait values between migratory birds only, these species were eliminated from census results. Following species removal, and censuses which recorded fewer than three species were excluded from analysis, as calculating Community Weighted Means requires at least three.
+
+Functional dissimilarity was then calculated between each migrant-only community, and analysed according to season and habitat as the total community was above.
+
+\subsection{Migrant \emph{versus} resident bird communities: Dominant traits}
+
+Having calculated CWMs for the above migrant-only censuses, I repeated the process excluding migrants, and including only resident species. I then compared average trait values between migrant and resident species using a series of FDR-adjusted Mann-Whitney $U$ tests. 
 
 \subsection{Functional diversity metrics}
 
-Functional diversity is a complex and evolving concept. Modern approaches acknowledge that diversity is a multifaceted issue, and that therefore using several metrics in a single analysis is the preferred approach (\cite{Laliberte2010}).
+Functional diversity is a complex and evolving concept. Modern approaches acknowledge that diversity is a multifaceted issue, and that therefore using several metrics in a single analysis is the preferred approach \citep{Laliberte2010}.
 
-The approach used in this analysis is based on the distance between communities in multivariate trait space (based on the PCoA axes of a Gower distance matrix). The approach used by \cite{Mendez2012}, who used presence/absence data, was based on distances along branches of hierarchical classifications; the approach used here additionally incorporates information about species' relative abundances (\cite{Villeger2008}); I considered this a useful feature for analysing data with abundances ranging from 0 to 4408.
+The approach used in this analysis is based on the distance between communities in multivariate trait space (based on the PCoA axes of a Gower distance matrix). The approach used by \citet{Mendez2012}, who used presence/absence data, was based on distances along branches of hierarchical classifications; the approach used here additionally incorporates information about species' relative abundances \citep{Villeger2008}..
 
 Five independent functional diversity metrics were used in this analysis:
 
 \begin{description}
-\item[Functional richness] is the minimum convex-hull volume which can include all species in multivariate space. Proposed as a multivariate analogue of the range of a single trait by \cite{Villeger2008}, it is unweighted by abundance and therefore sensitive to outliers \cite{Laliberte2010}.
-\item[Functional evenness] is a description of the abundance distribution within a communities convex hull. Higher values indicate that distances between all nearest-neighbour pairs are similar; values tend towards zero with increasingly clustered points.
-\item[Functional divergence] describes the abundance distribution of species relative to the centre of the convex hull. As noted above, the vertices of the convex hull may be formed by common species or by very rare outliers. High values indicate that the abundant species are close to the vertices of the hull; values approach zero as abundant species approach the centre of the hull.
-\item[Functional dispersion] was proposed by \cite{Laliberte2010} to combine the strengths of the first three measures. Like evenness and divergence, it incorporates abundance information; unlike those measures, but like richness, it considers the dispersion of species in trait space (rather than within a convex hull \textit{independently} of its volume). In essence, dispersion is the mean distance of each individual species to the centroid of all species in the community.
-\item[Number of functionally distinct species] in this analysis is equal to the number of species recorded in a community, as all included species were functionally distinct.
+\item[\textit{Functional richness}] is the minimum convex-hull volume which can include all species in multivariate space. Proposed as a multivariate analogue of the range of a single trait by \citet{Villeger2008}, it is unweighted by abundance and therefore sensitive to outliers \citep{Laliberte2010}.
+\item[\textit{Functional evenness}] is a description of the abundance distribution within a community's convex hull. Higher values indicate that distances between all nearest-neighbour pairs are similar; values tend towards zero with increasingly clustered points.
+\item[\textit{Functional divergence}] describes the abundance distribution of species relative to the centre of the convex hull. As noted above, the vertices of the convex hull may be formed by common species or by very rare outliers. High values indicate that the abundant species are close to the vertices of the hull; values approach zero as abundant species approach the centre of the hull.
+\item[\textit{Functional dispersion}] was proposed by \citet{Laliberte2010} to combine the strengths of the first three measures. Like evenness and divergence, it incorporates abundance information; unlike those measures, but like richness, it considers the dispersion of species in trait space (rather than within a convex hull \textit{independently} of its volume). In essence, dispersion is the mean distance of each individual species to the centroid of all species in the community.
+\item[\textit{Number of functionally distinct species}] in this analysis is equal to the number of species recorded in a community, as all included species were functionally distinct.
 \end{description}
 
 \subsection{Observed functional diversity}
 
-As all the diversity metrics were bounded between 0 and 1 (except for species count data), I used non-parametric testing to compare measures between categories. 
+As all the diversity metrics were bounded between $0$ and $1$ (except for species count data), I used non-parametric testing to compare measures between categories. 
 
 To compare functional diversity between habitats I used Kruskal-Wallis tests to look for significant variation amongst groups, and pairwise Mann-Whitney $U$ tests to identify the source(s) of that variation. As there were only two seasons, these were directly compared with Mann-Whitney $U$ tests.
 
-Due to the multiple comparisons in each analysis, $p$-values were adjusted using the false discovery rate (FDR) correction of \cite{Benjamini1995}.
+Due to the multiple comparisons in each analysis, $p$-values were adjusted using the false discovery rate (FDR) correction of \citet{Benjamini1995}.
 
 In addition to these analyses, I tested for an interaction between habitat and seasonal effects using analysis of variance. For each functional diversity metric I tested models allowing different intercepts for each group, and models allowing different slopes and intercepts for each group. Models which included a significant term for at least one habitat and a seasonal effect were considered significant.
 
@@ -153,33 +182,27 @@ In addition to these analyses, I tested for an interaction between habitat and s
 
 I also compared the observed functional diversity metrics to the `expected' functional diversity of randomly generated communities.
 
-I first identified the separate species pools for summer and winter surveys. Then, for each survey included in the above analyses I drew the same number of individuals as was observed in the original survey, randomly, from the appropriate seasonal pool. These draws were weighted by the relative frequency of occurrence of each species within that season. This process was repeated to generate 1000 random communities for each survey site.
+I first identified the separate species pools for summer and winter surveys. Then, for each survey included in the above analyses I drew the same number of individuals as was observed in the original survey, randomly, from the appropriate seasonal pool. These draws were weighted by the relative frequency of occurrence of each species within that season. This process was repeated to generate $1000$ random communities for each survey site.
 
 Following the same methods and trait data used to analyse the observed data (detailed above), all five functional diversity metrics were then calculated for each random community.
 
-As in \cite{Mendez2012}, these values were used to calculate the standardised effect size (SES). \cite{Gotelli2002} give the formula as
+As in \citet{Mendez2012}, these values were used to calculate the standardised effect size (SES). \citet{Gotelli2002} give the formula as
 \begin{equation}
 \frac{I_{obs} - I_{sim}}{\sigma_{sim}},
 \end{equation}
-where $I_{obs}$ is the observed functional diversity index, $I_{sim}$ is the mean of the 1000 indices calculated from random communities, and $\sigma_{sim}$ is the standard deviation of those 1000 random indices.
+where $I_{obs}$ is the observed functional diversity index, $I_{sim}$ is the mean of the $1000$ indices calculated from random communities, and $\sigma_{sim}$ is the standard deviation of those $1000$ random indices.
 
-If SES does not differ significantly from 0 then observed communities do not differ from random. Positive values indicate trait divergence, for example as might result from interspecific competition; negative values indicate trait convergence, for example as a result of ecological filtering by local habitat characteristics.
+If SES does not differ significantly from $0$ then observed communities do not differ from random. Positive values indicate trait divergence, for example as might result from interspecific competition; negative values indicate trait convergence, for example as a result of ecological filtering by local habitat characteristics.
 
-\subsection{Predicting community composition and function}
+\subsection{Software}
 
-Using the matrix of between-survey dissimilarities in species composition as a response variable, I used linear models to test for the effects of between-survey differences in habitat, season or both. As habitat and season are categorical variables, these differences were calculated using Gower distance as described above for the trait distance matrices.
-
-To compare between-survey differences in functional composition, it was first necessary to measure the functional composition of each survey. For this, I used community weighted means (CWMs; LAVOREL ET AL 2008), as computed by the \texttt{functcomp} function of the \texttt{FD} package. 
-
-For continuous trait variables (such as the morphological measures in this analysis) the CWM is simply the mean trait value for each species present, weighted by that species' abundance. For categorical variables with $>2$ categories, such as bill shape, the CWM is the most frequent category. Binary variables' CWMs can be computed as either the dominant value (0 or 1) or a mean, treating the 0s and 1s numerically. I used the latter approach for its more intuitive interpretation (as the proportion of individuals possessing that trait), although repeating the analysis using the former method did not change conclusions.
-
-Functional composition distances were therefore tested for their response to habitat and seasonal differences, as described above for species dissimilarities. Distance matrices for the CWM traits in each category (behaviour, diet and morphology) were tested independently, as was the overall mean.
+All analysis used the \texttt{R} environment \citep{R2016}. In addition to the packages cited above, the analysis used the \texttt{dudi.pco} function of \texttt{ade4} for principle co-ordinates analysis \citep{Dray2007}. 
 
 \include{run.fd_results}
 
 \section{Discussion}
 
-\printbibliography
-
+\bibliographystyle{jae}
+\bibliography{../../../../../Documents/library}
 
 \end{document}

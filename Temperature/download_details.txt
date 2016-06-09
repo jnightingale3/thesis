@@ -1,0 +1,10 @@
+Dados da Estação Automática: MOSTARDAS (RS)
+info about these stations from http://www.inmet.gov.br/portal/css/content/topo_iframe/pdf/Nota_Tecnica-Rede_estacoes_INMET.pdf
+
+http://www.inmet.gov.br/portal/index.php?r=estacoes/estacoesautomaticas
+
+Observação: Estes são dados brutos e sem consistência com o único objetivo de deixá-los disponíveis de forma imediata.
+
+datas: 18/02 - 11/05 2016
+
+

@@ -2,6 +2,31 @@
 # script to test species and trait composition by habitat, season and both #
 ############################################################################
 
+# create new data frame for this analysis
+# only including species for which I have data
+
+# species data need to be identical & in the same order in both matrices
+common_spp <- intersect(rownames(trait_mat), colnames(dat.spsite))
+spsite <- dat.spsite[,colnames(dat.spsite) %in% common_spp]
+
+# which spp excluded?
+# colnames(dat.spsite)[which(colnames(dat.spsite) %in% common_spp == FALSE)]
+# colSums(dat.spsite[,which(colnames(dat.spsite) %in% common_spp == FALSE)]>0)
+# none!
+
+
+# create trait matrix only including correct species
+trait_fd <- trait_mat[rownames(trait_mat) %in% common_spp,]
+# check
+# all.equal(rownames(trait_fd), colnames(spsite)) # nope
+# sum(rownames(trait_fd) %in% colnames(spsite)) # all present, in wrong order
+# reorder trait_fd rows to match spsite columns
+trait_fd <- trait_fd[match(colnames(spsite),rownames(trait_fd)),]
+# all.equal(rownames(trait_fd), colnames(spsite)) # success!
+# check all sites have more than two species
+# sum(rowSums(spsite>0) > 2) == nrow(spsite) # yes
+
+
 # get habitat & season data
 dat.hab <- data.frame(id_habitats(rownames(spsite))); names(dat.hab) <- 'hab'
 dat.sea <- data.frame(id_seasons(rownames(spsite))); names(dat.sea) <- 'sea'
