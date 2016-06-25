@@ -1,542 +1,241 @@
-% $ biblatex auxiliary file $
-% $ biblatex version 2.3 $
-% Do not modify the above lines!
-%
-% This is an auxiliary file used by the 'biblatex' package.
-% This file may safely be deleted. It will be recreated as
-% required.
-%
-\begingroup
-\makeatletter
-\@ifundefined{ver@biblatex.sty}
-  {\@latex@error
-     {Missing 'biblatex' package}
-     {The bibliography requires the 'biblatex' package.}
-      \aftergroup\endinput}
-  {}
-\endgroup
+\begin{thebibliography}{41}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
 
-\entry{Benjamini1995}{article}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Benjamini}{B.}%
-     {Yoav}{Y.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {{Yosef Hochberg}}{Y.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{BYY1}
-  \strng{fullhash}{BYY1}
-  \field{labelyear}{1995}
-  \field{sortinit}{B}
-  \field{number}{1}
-  \field{pages}{289\bibrangedash 300}
-  \field{title}{{Controlling the false discovery rate: a practical and powerful
-  approach to multiple testing}}
-  \field{volume}{57}
-  \verb{file}
-  \verb :home/josh/Papers/Journal of the Royal Statistical Society. Series B (M
-  \verb ethodological)/Benjamini, Yosef Hochberg - 1995 - Controlling the false
-  \verb  discovery rate a practical and powerful approach to multiple testing.p
-  \verb df:pdf
-  \endverb
-  \field{journaltitle}{Journal of the Royal Statistical Society. Series B
-  (Methodological)}
-  \field{year}{1995}
-\endentry
+\bibitem[{Benjamini \& Hochberg(1995)}]{Benjamini1995}
+Benjamini, Y. \& Hochberg, Y. (1995) {Controlling the false discovery rate: a
+  practical and powerful approach to multiple testing}.
+\newblock \emph{Journal of the Royal Statistical Society B}, \textbf{57},
+  289--300.
 
-\entry{Borcard2011}{book}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Borcard}{B.}%
-     {D}{D}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Gillet}{G.}%
-     {F}{F}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Legendre}{L.}%
-     {P}{P}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Springer}%
-  }
-  \strng{namehash}{BDGFLP1}
-  \strng{fullhash}{BDGFLP1}
-  \field{labelyear}{2011}
-  \field{sortinit}{B}
-  \field{title}{{Numerical Ecology with R}}
-  \list{location}{1}{%
-    {New York}%
-  }
-  \field{year}{2011}
-\endentry
+\bibitem[{Borcard, Gillet \& Legendre(2011)}]{Borcard2011}
+Borcard, D., Gillet, F. \& Legendre, P. (2011) \emph{{Numerical Ecology with
+  R}}.
+\newblock Springer, New York.
 
-\entry{Cao1997}{article}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Cao}{C.}%
-     {Yong}{Y.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Williams}{W.}%
-     {W~Peter}{W.~P.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Bark}{B.}%
-     {Anthony~W}{A.~W.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{community index,have been devel-,macroinvertebrates,numerous community
-  similarity measures,pling,river,sam-,similarity,water quality}
-  \strng{namehash}{CYWWPBAW1}
-  \strng{fullhash}{CYWWPBAW1}
-  \field{labelyear}{1997}
-  \field{sortinit}{C}
-  \field{number}{1}
-  \field{pages}{95\bibrangedash 106}
-  \field{title}{{Similarity measure bias in river benthic Aufwuchs community
-  analysis}}
-  \field{volume}{69}
-  \verb{file}
-  \verb :home/josh/Papers/Water Environment Research/Cao, Williams, Bark - 1997
-  \verb  - Similarity measure bias in river benthic Aufwuchs community analysis
-  \verb .pdf:pdf
-  \endverb
-  \field{journaltitle}{Water Environment Research}
-  \field{year}{1997}
-\endentry
+\bibitem[{Cao, Williams \& Bark(1997)}]{Cao1997}
+Cao, Y., Williams, W.P. \& Bark, A.W. (1997) {Similarity measure bias in river
+  benthic Aufwuchs community analysis}.
+\newblock \emph{Water Environment Research}, \textbf{69}, 95--106.
 
-\entry{Gotelli2002}{article}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Gotelli}{G.}%
-     {N~J}{N.~J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {McCabe}{M.}%
-     {D~J}{D.~J.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{absence matrix,community assembly rules,meta-analysis,null
-  models,presence,species co-occurrence}
-  \strng{namehash}{GNJMDJ1}
-  \strng{fullhash}{GNJMDJ1}
-  \field{labelyear}{2002}
-  \field{sortinit}{G}
-  \field{number}{8}
-  \field{pages}{2091\bibrangedash 2096}
-  \field{title}{{Species co-occurrence: a meta-analysis of J. M. Diamond's
-  assembly rules model}}
-  \field{volume}{83}
-  \verb{file}
-  \verb :home/josh/Papers/Ecology/Gotelli, McCabe - 2002 - Species co-occurrenc
-  \verb e a meta-analysis of J. M. Diamond's assembly rules model.pdf:pdf
-  \endverb
-  \field{journaltitle}{Ecology}
-  \field{year}{2002}
-\endentry
+\bibitem[{Croci, Butet \& Clergeau(2008)}]{Croci2008}
+Croci, S., Butet, A. \& Clergeau, P. (2008) {Does urbanization filter birds on
+  the basis of their biological traits?}
+\newblock \emph{Condor}, \textbf{110}, 223--240.
 
-\entry{DelHoyo2016}{book}{}
-  \name{editor}{5}{}{%
-    {{}%
-     {Hoyo}{H.}%
-     {J.}{J.}%
-     {del}{d.}%
-     {}{}}%
-    {{}%
-     {Elliott}{E.}%
-     {A.}{A.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Sargatal}{S.}%
-     {J.}{J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Christie}{C.}%
-     {D.A.}{D.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Juana}{J.}%
-     {E.}{E.}%
-     {de}{d.}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Lynx Editions}%
-  }
-  \strng{namehash}{HJd+1}
-  \strng{fullhash}{HJdEASJCDJEd1}
-  \field{labelyear}{2016}
-  \field{sortinit}{H}
-  \field{title}{{Handbook of the Birds of the World Alive}}
-  \verb{url}
-  \verb http://www.hbw.com/
-  \endverb
-  \list{location}{1}{%
-    {Madrid}%
-  }
-  \field{year}{2016}
-\endentry
+\bibitem[{Darwin(1859)}]{Darwin1859a}
+Darwin, C. (1859) \emph{{On the Origin of Species}}.
+\newblock Signet Classics, New York.
 
-\entry{Laliberte2014}{misc}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Lalibert{\'{e}}}{L.}%
-     {E.}{E.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Legendre}{L.}%
-     {P.}{P.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Shipley}{S.}%
-     {B.}{B.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {R package version 1.0-12.}%
-  }
-  \strng{namehash}{LELPSB1}
-  \strng{fullhash}{LELPSB1}
-  \field{labelyear}{2014}
-  \field{sortinit}{L}
-  \field{title}{{FD: measuring functional diversity from multiple traits, and
-  other tools for functional ecology}}
-  \field{year}{2014}
-\endentry
+\bibitem[{Diamond(1975)}]{Diamond1975}
+Diamond, J.M. (1975) {Assembly of species communities}.
+\newblock  \emph{Ecology and Evolution of Communities} (eds. M.L. Cody \& J.M.
+  Diamond), pp. 342--444. Harvard University Press, Cambridge, USA.
 
-\entry{Laliberte2010}{article}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Laliberte}{L.}%
-     {Etienne}{E.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Legendre}{L.}%
-     {Pierre}{P.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{functional composition,functional dispersion,functional
-  divergence,functional diversity,functional evenness,functional
-  identity,functional richness,functional trait,multivariate dispersion}
-  \strng{namehash}{LELP1}
-  \strng{fullhash}{LELP1}
-  \field{labelyear}{2010}
-  \field{sortinit}{L}
-  \field{number}{1}
-  \field{pages}{299\bibrangedash 305}
-  \field{title}{{A distance-based framework for measuring functional diversity
-  from multiple traits}}
-  \field{volume}{91}
-  \verb{file}
-  \verb :home/josh/Papers/Ecology/Laliberte, Legendre - 2010 - A distance-based
-  \verb  framework for measuring functional diversity from multiple traits.pdf:
-  \verb pdf
-  \endverb
-  \field{journaltitle}{Ecology}
-  \field{year}{2010}
-\endentry
+\bibitem[{Dray \& Dufour(2007)}]{Dray2007}
+Dray, S. \& Dufour, A.B. (2007) {The ade4 Package: Implementing the Duality
+  Diagram for Ecologists}.
+\newblock \emph{Journal of Statistical Software}, \textbf{22}, 1--20.
 
-\entry{Mendez2012}{article}{}
-  \name{author}{6}{}{%
-    {{}%
-     {Mendez}{M.}%
-     {Veronica}{V.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Gill}{G.}%
-     {Jennifer~a.}{J.~a.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Burton}{B.}%
-     {Niall H.~K.}{N.~H.~K.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Austin}{A.}%
-     {Graham~E.}{G.~E.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Petchey}{P.}%
-     {Owen~L.}{O.~L.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Davies}{D.}%
-     {Richard~G.}{R.~G.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{community composition,community
-  structure,competition,environmental,estuary ecology,filtering,functional
-  diversity,waders}
-  \strng{namehash}{MV+1}
-  \strng{fullhash}{MVGJaBNHKAGEPOLDRG1}
-  \field{labelyear}{2012}
-  \field{sortinit}{M}
-  \verb{doi}
-  \verb 10.1111/j.1472-4642.2011.00868.x
-  \endverb
-  \field{issn}{13669516}
-  \field{number}{4}
-  \field{pages}{356\bibrangedash 365}
-  \field{title}{{Functional diversity across space and time: trends in wader
-  communities on British estuaries}}
-  \verb{url}
-  \verb http://doi.wiley.com/10.1111/j.1472-4642.2011.00868.x
-  \endverb
-  \field{volume}{18}
-  \verb{file}
-  \verb :home/josh/Papers/Diversity and Distributions/Mendez et al. - 2012 - Fu
-  \verb nctional diversity across space and time trends in wader communities on
-  \verb  British estuaries.pdf:pdf
-  \endverb
-  \field{journaltitle}{Diversity and Distributions}
-  \field{year}{2012}
-\endentry
+\bibitem[{Fedrizzi(2008)}]{Fedrizzi2008}
+Fedrizzi, C.E. (2008) \emph{{Distribui{\c{c}}{\~{a}}o, abund{\^{a}}ncia e
+  ecologia alimentar de aves lim{\'{i}}colas (Charadriiformes: Charadrii e
+  Scolopaci) na zona costeira do Rio Grande do Sul, Brasil}}.
+\newblock Doctoral thesis, Funda{\c{c}}{\~{a}}o Universidade Federal do Rio
+  Grande.
 
-\entry{Nascimento1995}{book}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Nasicmento}{N.}%
-     {In{\^{e}}s de Lima~Serrano}{I.~d. L.~S.}%
-     {do}{d.}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais
-  Renov{\'{a}}veis}%
-  }
-  \strng{namehash}{NIdLSd1}
-  \strng{fullhash}{NIdLSd1}
-  \field{labelyear}{1995}
-  \field{sortinit}{N}
-  \field{edition}{1st editio}
-  \field{title}{{Aves do Parque Nacional da Lagoa do Peixe}}
-  \list{location}{1}{%
-    {Bras{\'{i}}lia}%
-  }
-  \field{year}{1995}
-\endentry
+\bibitem[{Fountain-Jones, Baker \& Jordan(2015)}]{Fountain-Jones2015}
+Fountain-Jones, N.M., Baker, S.C. \& Jordan, G.J. (2015) {Moving beyond the
+  guild concept: developing a practical functional trait framework for
+  terrestrial beetles}.
+\newblock \emph{Ecological Entomology}, \textbf{40}, 1--13.
 
-\entry{Oksanen2016}{manual}{}
-  \name{author}{10}{}{%
-    {{}%
-     {Oksanen}{O.}%
-     {Jari}{J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Blanchet}{B.}%
-     {F~Guillaume}{F.~G.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Kindt}{K.}%
-     {Roeland}{R.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Legendre}{L.}%
-     {Pierre}{P.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Minchin}{M.}%
-     {Peter~R}{P.~R.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {O'Hara}{O.}%
-     {R~B}{R.~B.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Simpson}{S.}%
-     {Gavin~L}{G.~L.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Solymos}{S.}%
-     {Peter}{P.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Stevens}{S.}%
-     {M~Henry~H}{M.~H.~H.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Wagner}{W.}%
-     {Helene}{H.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{OJ+1}
-  \strng{fullhash}{OJBFGKRLPMPRORBSGLSPSMHHWH1}
-  \field{labelyear}{2016}
-  \field{sortinit}{O}
-  \field{title}{{vegan: Community Ecology Package}}
-  \verb{url}
-  \verb https://cran.r-project.org/package=vegan
-  \endverb
-  \field{annotation}{%
-  R package version 2.3-4%
-  }
-  \field{year}{2016}
-\endentry
+\bibitem[{Gon{\c{c}}alves(2009)}]{Goncalves2009}
+Gon{\c{c}}alves, M.S.S. (2009) \emph{{Ecologia e Conserva{\c{c}}{\~{a}}o de
+  Aves dos Ecossistemas Associados ao Estu{\'{a}}rio do Parque Nacional da
+  Lagoa do Peixe, Brasil}}.
+\newblock Masters thesis, Universidade do Vale do Rio dos Sinos Unisinos.
 
-\entry{vanPerlo2009}{book}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Perlo}{P.}%
-     {Ber}{B.}%
-     {van}{v.}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Oxford University Press}%
-  }
-  \strng{namehash}{PBv1}
-  \strng{fullhash}{PBv1}
-  \field{labelyear}{2009}
-  \field{sortinit}{P}
-  \field{edition}{1st editio}
-  \field{title}{{A Field Guide to the Birds of Brazil}}
-  \list{location}{1}{%
-    {New York}%
-  }
-  \field{year}{2009}
-\endentry
+\bibitem[{Gotelli \& McCabe(2002)}]{Gotelli2002}
+Gotelli, N.J. \& McCabe, D.J. (2002) {Species co-occurrence: a meta-analysis of
+  J. M. Diamond's assembly rules model}.
+\newblock \emph{Ecology}, \textbf{83}, 2091--2096.
 
-\entry{Sanabria2011}{article}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Sanabria}{S.}%
-     {Jos{\'{e}} Ant{\^{o}}nio~Fazio}{J.~A.~F.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {{M{\"{u}}ller Brusco}}{M.}%
-     {Giuliano}{G.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{SJAFMG1}
-  \strng{fullhash}{SJAFMG1}
-  \field{labelyear}{2011}
-  \field{sortinit}{S}
-  \field{number}{4}
-  \field{pages}{529\bibrangedash 534}
-  \field{title}{{Registros relevantes de Charadriiformes em praias do litoral
-  norte do Rio Grande do Sul, Brasil}}
-  \field{volume}{19}
-  \verb{file}
-  \verb :home/josh/Papers/Revista Brasileira de Ornitologia/Sanabria, M{\"{u}}l
-  \verb ler Brusco - 2011 - Registros relevantes de Charadriiformes em praias d
-  \verb o litoral norte do Rio Grande do Sul, Brasil.pdf:pdf
-  \endverb
-  \field{journaltitle}{Revista Brasileira de Ornitologia}
-  \field{year}{2011}
-\endentry
+\bibitem[{Gotelli(2000)}]{Gotelli2000}
+Gotelli, N.J. (2000) {Null model analysis of species co-occurrence patterns}.
+\newblock \emph{Ecology}, \textbf{81}, 2606--2621.
 
-\entry{Scherer2012}{article}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Scherer}{S.}%
-     {Angelo~L}{A.~L.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Petry}{P.}%
-     {Maria~V}{M.~V.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{SALPMV1}
-  \strng{fullhash}{SALPMV1}
-  \field{labelyear}{2012}
-  \field{sortinit}{S}
-  \field{number}{1}
-  \field{pages}{40\bibrangedash 50}
-  \field{title}{{Seasonal Variation In Shorebird Abundance In The State of Rio
-  Grande Do Sul, Southern Brazil}}
-  \field{volume}{124}
-  \verb{file}
-  \verb :home/josh/Papers/Wilson Journal of Ornithology/Scherer, Petry - 2012 -
-  \verb  Seasonal Variation In Shorebird Abundance In The State of Rio Grande D
-  \verb o Sul, Southern Brazil.pdf:pdf
-  \endverb
-  \field{journaltitle}{Wilson Journal of Ornithology}
-  \field{year}{2012}
-\endentry
+\bibitem[{van~der Graaf \emph{et~al.}(2006)van~der Graaf, Stahl, Klimkowska,
+  Bakker \& Drent}]{VanDerGraaf2006}
+van~der Graaf, S.A.J., Stahl, J., Klimkowska, A., Bakker, J.P. \& Drent, R.H.
+  (2006) {Surfing on a green wave – how plant growth drives spring migration
+  in the Barnacle Goose Branta leucopsis}.
+\newblock \emph{Ardea}, \textbf{94}, 567--577.
 
-\entry{Villeger2008}{article}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Vill{\'{e}}ger}{V.}%
-     {S}{S}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Mason}{M.}%
-     {N~W~H}{N.~W.~H.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Mouillot}{M.}%
-     {D}{D}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{competitive filtering,environmental filtering,functional
-  divergence,functional evenness,functional niche,functional
-  richness,functional traits,null model}
-  \strng{namehash}{VSMNWHMD1}
-  \strng{fullhash}{VSMNWHMD1}
-  \field{labelyear}{2008}
-  \field{sortinit}{V}
-  \field{number}{8}
-  \field{pages}{2290\bibrangedash 2301}
-  \field{title}{{New multidimensional functional diversity indices for a
-  multifaceted framework in functional ecology}}
-  \field{volume}{89}
-  \verb{file}
-  \verb :home/josh/Papers/Ecology/Vill{\'{e}}ger, Mason, Mouillot - 2008 - New
-  \verb multidimensional functional diversity indices for a multifaceted framew
-  \verb ork in functional ecology.pdf:pdf
-  \endverb
-  \field{journaltitle}{Ecology}
-  \field{year}{2008}
-\endentry
+\bibitem[{Helsen, Hermy \& Honnay(2012)}]{Helsen2012}
+Helsen, K., Hermy, M. \& Honnay, O. (2012) {Trait but not species convergence
+  during plant community assembly in restored semi-natural grasslands}.
+\newblock \emph{Oikos}, \textbf{121}, 2121--2130.
 
-\lossort
-\endlossort
+\bibitem[{del Hoyo \emph{et~al.}(2016)del Hoyo, Elliott, Sargatal, Christie \&
+  de~Juana}]{DelHoyo2016}
+del Hoyo, J., Elliott, A., Sargatal, J., Christie, D. \& de~Juana, E., eds.
+  (2016) \emph{{Handbook of the Birds of the World Alive}}.
+\newblock Lynx Editions, Barcelona.
+\newline\urlprefix\url{http://www.hbw.com/}
 
-\endinput
+\bibitem[{Jones(2001)}]{Jones2001a}
+Jones, J. (2001) {Habitat Selection Studies in Avian Ecology: A Critical
+  Review}.
+\newblock \emph{Auk}, \textbf{118}, 557--562.
+
+\bibitem[{Lalibert{\'{e}}, Legendre \& Shipley(2014)}]{Laliberte2014}
+Lalibert{\'{e}}, E., Legendre, P. \& Shipley, B. (2014) {FD: measuring
+  functional diversity from multiple traits, and other tools for functional
+  ecology}.
+\newline\urlprefix\url{https://cran.r-project.org/package=FD}
+
+\bibitem[{Lalibert{\'{e}} \& Legendre(2010)}]{Laliberte2010}
+Lalibert{\'{e}}, E. \& Legendre, P. (2010) {A distance-based framework for
+  measuring functional diversity from multiple traits}.
+\newblock \emph{Ecology}, \textbf{91}, 299--305.
+
+\bibitem[{{Lara Resende}(1988)}]{LaraResende1988}
+{Lara Resende}, S.d.M. (1988) \emph{{Nonbreeding strategies of migratory birds
+  at Lagoa do Peixe, Rio Grande do Sul, Brazil}}.
+\newblock Masters thesis, Cornell University.
+
+\bibitem[{Lavorel \emph{et~al.}(2008)Lavorel, Grigulis, McIntyre, Williams,
+  Garden, Berman, Qu{\'{e}}tier, Th{\'{e}}bault \& Bonis}]{Lavorel2008}
+Lavorel, S., Grigulis, K., McIntyre, S., Williams, N.S.G., Garden, D., Berman,
+  S., Qu{\'{e}}tier, F., Th{\'{e}}bault, A. \& Bonis, A. (2008) {Assessing
+  functional diversity in the field – methodology matters!}
+\newblock \emph{Functional Ecology}, \textbf{22}, 134--147.
+
+\bibitem[{Lesku \emph{et~al.}(2012)Lesku, Rattenborg, Valcu, Vyssotski, Kuhn,
+  Kuemmeth, Heidrich \& Kempenaers}]{Lesku2012}
+Lesku, J.A., Rattenborg, N.C., Valcu, M., Vyssotski, A.L., Kuhn, S., Kuemmeth,
+  F., Heidrich, W. \& Kempenaers, B. (2012) {Adaptive sleep loss in polygynous
+  pectoral sandpipers.}
+\newblock \emph{Science}, \textbf{337}, 1654--8.
+
+\bibitem[{MacArthur \& Levins(1967)}]{Macarthur1967}
+MacArthur, R. \& Levins, R. (1967) {The Limiting Similarity, Convergence, and
+  Divergence of Coexisting Species}.
+\newblock \emph{American Naturalist}, \textbf{101}, 377--385.
+
+\bibitem[{McLusky \& Elliott(2004)}]{McLusky2004}
+McLusky, D.S. \& Elliott, M. (2004) \emph{{The Estuarine Ecosystem: Ecology,
+  Threats, and Management}}.
+\newblock Oxford University Press, Oxford, 3rd edn.
+
+\bibitem[{Mendez \emph{et~al.}(2012)Mendez, Gill, Burton, Austin, Petchey \&
+  Davies}]{Mendez2012}
+Mendez, V., Gill, J.A., Burton, N.H.K., Austin, G.E., Petchey, O.L. \& Davies,
+  R.G. (2012) {Functional diversity across space and time: trends in wader
+  communities on British estuaries}.
+\newblock \emph{Diversity and Distributions}, \textbf{18}, 356--365.
+
+\bibitem[{Mims \& Olden(2013)}]{Mims2013}
+Mims, M.C. \& Olden, J.D. (2013) {Fish assemblages respond to altered flow
+  regimes via ecological filtering of life history strategies}.
+\newblock \emph{Freshwater Biology}, \textbf{58}, 50--62.
+
+\bibitem[{Moreno-Mateos \emph{et~al.}(2012)Moreno-Mateos, Power, Com{\'{i}}n \&
+  Yockteng}]{Moreno-Mateos2012}
+Moreno-Mateos, D., Power, M.E., Com{\'{i}}n, F.A. \& Yockteng, R. (2012)
+  {Structural and functional loss in restored wetland ecosystems}.
+\newblock \emph{PLoS Biology}, \textbf{10}, e1001247.
+
+\bibitem[{do~Nascimento(1995)}]{Nascimento1995}
+do~Nascimento, I.d.L.S. (1995) \emph{{Aves do Parque Nacional da Lagoa do
+  Peixe}}.
+\newblock Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais
+  Renov{\'{a}}veis, Bras{\'{i}}lia, 1st edn.
+
+\bibitem[{Newton(2008)}]{Newton2008}
+Newton, I. (2008) \emph{{The Migration Ecology of Birds}}.
+\newblock Academic Press, London, 1st edn.
+
+\bibitem[{Oksanen \emph{et~al.}(2016)Oksanen, Blanchet, Kindt, Legendre,
+  Minchin, O'Hara, Simpson, Solymos, Stevens \& Wagner}]{Oksanen2016}
+Oksanen, J., Blanchet, F.G., Kindt, R., Legendre, P., Minchin, P.R., O'Hara,
+  R.B., Simpson, G.L., Solymos, P., Stevens, M.H.H. \& Wagner, H. (2016)
+  \emph{{vegan: Community Ecology Package}}.
+\newline\urlprefix\url{https://cran.r-project.org/package=vegan}
+
+\bibitem[{van Perlo(2009)}]{vanPerlo2009}
+van Perlo, B. (2009) \emph{{A Field Guide to the Birds of Brazil}}.
+\newblock Oxford University Press, New York, 1st edn.
+
+\bibitem[{Piersma(2003)}]{Piersma2003}
+Piersma, T. (2003) {“Coastal” versus “inland” shorebird species:
+  interlinked fundamental dichotomies between their life- and demographic
+  histories ?}
+\newblock \emph{Wader Study Group Bulletin}, \textbf{100}, 5--9.
+
+\bibitem[{Piersma(2007)}]{Piersma2007}
+Piersma, T. (2007) {Using the power of comparison to explain habitat use and
+  migration strategies of shorebirds worldwide}.
+\newblock \emph{Journal of Ornithology}, \textbf{148}, S45--S59.
+
+\bibitem[{Piersma \& van Gils(2011)}]{Piersma2011}
+Piersma, T. \& van Gils, J.A. (2011) \emph{{The Flexible Phenotype}}.
+\newblock Oxford University Press, Oxford.
+
+\bibitem[{{R Core Team}(2016)}]{R2016}
+{R Core Team} (2016) \emph{{R: A Language and Environment for Statistical
+  Computing}}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria.
+\newline\urlprefix\url{https://www.r-project.org/}
+
+\bibitem[{van Riper \emph{et~al.}(1986)van Riper, van Riper, Goff \&
+  Laird}]{VanRiperIII1986}
+van Riper, C., van Riper, S.G., Goff, M.L. \& Laird, M. (1986) {The
+  epizootiology and ecological significance of Malaria in Hawaiian land birds.}
+\newblock \emph{Ecological Monographs}, \textbf{56}, 327--344.
+
+\bibitem[{Sanabria \& {M{\"{u}}ller Brusco}(2011)}]{Sanabria2011}
+Sanabria, J.A.F. \& {M{\"{u}}ller Brusco}, G. (2011) {Registros relevantes de
+  Charadriiformes em praias do litoral norte do Rio Grande do Sul, Brasil}.
+\newblock \emph{Revista Brasileira de Ornitologia}, \textbf{19}, 529--534.
+
+\bibitem[{Scherer \& Petry(2012)}]{Scherer2012}
+Scherer, A.L. \& Petry, M.V. (2012) {Seasonal Variation In Shorebird Abundance
+  In The State of Rio Grande Do Sul, Southern Brazil}.
+\newblock \emph{Wilson Journal of Ornithology}, \textbf{124}, 40--50.
+
+\bibitem[{Schneider \& Harrington(1981)}]{Schneider1981}
+Schneider, C. \& Harrington, B.A. (1981) {Timing of shorebird migration in
+  relation to prey depletion}.
+\newblock \emph{Auk}, \textbf{98}, 801--811.
+
+\bibitem[{Sutherland \emph{et~al.}(2013)Sutherland, Freckleton, Godfray,
+  Beissinger, Benton, Cameron, Carmel, Coomes, Coulson, Emmerson, Hails, Hays,
+  Hodgson, Hutchings, Johnson, Jones, Keeling, Kokko, Kunin, Lambin, Lewis,
+  Malhi, Mieszkowska, Milner-Gulland, Norris, Phillimore, Purves, Reid, Reuman,
+  Thompson, Travis, Turnbull, Wardle \& Wiegand}]{Sutherland2013}
+Sutherland, W.J., Freckleton, R.P., Godfray, H.C.J., Beissinger, S.R., Benton,
+  T., Cameron, D.D., Carmel, Y., Coomes, D.a., Coulson, T., Emmerson, M.C.,
+  Hails, R.S., Hays, G.C., Hodgson, D.J., Hutchings, M.J., Johnson, D., Jones,
+  J.P.G., Keeling, M.J., Kokko, H., Kunin, W.E., Lambin, X., Lewis, O.T.,
+  Malhi, Y., Mieszkowska, N., Milner-Gulland, E.J., Norris, K., Phillimore,
+  A.B., Purves, D.W., Reid, J.M., Reuman, D.C., Thompson, K., Travis, J.M.J.,
+  Turnbull, L.A., Wardle, D.A. \& Wiegand, T. (2013) {Identification of 100
+  fundamental ecological questions}.
+\newblock \emph{Journal of Ecology}, \textbf{101}, 58--67.
+
+\bibitem[{Vill{\'{e}}ger, Mason \& Mouillot(2008)}]{Villeger2008}
+Vill{\'{e}}ger, S., Mason, N.W.H. \& Mouillot, D. (2008) {New multidimensional
+  functional diversity indices for a multifaceted framework in functional
+  ecology}.
+\newblock \emph{Ecology}, \textbf{89}, 2290--2301.
+
+\bibitem[{Winger, Barker \& Ree(2014)}]{Winger2014}
+Winger, B.M., Barker, F.K. \& Ree, R.H. (2014) {Temperate origins of
+  long-distance seasonal migration in New World songbirds}.
+\newblock \emph{Proceedings of the National Academy of Sciences}, \textbf{111},
+  12115--12120.
+
+\end{thebibliography}

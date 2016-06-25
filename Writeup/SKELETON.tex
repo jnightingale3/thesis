@@ -1,4 +1,59 @@
+%% knitr packages:
+%\documentclass[12pt,a4paper]{article} % default; overridden below
 \documentclass[12pt,a4paper]{book}
+\usepackage[]{graphicx}
+\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+%% my packages:
 \usepackage[utf8]{inputenc}
 \usepackage{fullpage} % for margins
 %\usepackage{setspace} % for line spacing
@@ -8,7 +63,8 @@
 \usepackage{amsmath}
 \usepackage[T1]{fontenc} % for the Garamond font + math mode
 \usepackage{natbib} % extra citation styles
-\usepackage{hyperref}
+\usepackage{hyperref} % hyperlinked references
+\usepackage{enumerate} % for using letters in \enumerate environment
 \author{Josh Nightingale}
 \title{Foraging ecology of waterbirds on the north coast of Rio Grande do Sul}
 
@@ -20,9 +76,35 @@
 
 \chapter{Functional ecology}
 
-$\mathbf{Testing123}$
-
 \section{Introduction}
+
+The extent to which local communities are determined by deterministic \textit{versus} stochastic processes, and the strength of influence of the regional species pool, are considered fundamental questions in ecological research \citep{Sutherland2013}. Approaches to these questions have often focussed on studying species' co-occurrences: are they more or less frequent than expected by chance? What characteristics allow them to do so? 
+
+For example, by comparing island bird communities in the Bismarck Archipelago, Diamond \citep[1975, in][]{Gotelli2002} argued that while the assembly process is essentially stochastic, biotic interactions (interspecific competition) determine which co-occurrences, and therefore which communities, are stable over time. While the patterns detected by \citet{Diamond1975} -- lower-than-expected co-occurrence, fewer observed species pairs and `checkerboards' of `allowed' or `forbidden' pairs of species -- have been found consistently in a variety of systems, the processes underlying the pattern remain controversial \citep{Gotelli2002}.
+
+Whilst competition may limit which combinations are stable, abiotic conditions, in combination with other biotic interactions (e.g. prey availability, parasite pressure) present limits to which species can inhabit a given area \citep[e.g.][]{VanRiperIII1986, Mims2013}. There are therefore two competing ecological pressures affecting functional similarity of co-occurring species: competition limiting similarity \citep{Macarthur1967}, and environmental filtering that restricts occurrence to certain phenotypes, necessarily increasing organisms' similarity. 
+
+A variety of methods have been employed in the attempt to isolate environmental effects from those of species pools. The method used by \citet{Diamond1975} has been criticised for its \textit{post hoc} nature, analysing communities that have already assembled. Though this shortcoming was remedied in part through comparing observed patterns with expectations from null models, the details of this approach have been somewhat controversial \citep{Gotelli2000}. Isolating pattern from process would benefit from studying communities as they assemble from \textit{tabula rasa}..
+
+In this chapter, I investigate the use of waterbird census data to test community assembly processes. The presence of a number of seasonally migratory species in the study region causes annual alternation between two distinct seasonal pools, one of resident species plus boreal migrants (during the local summer) and one of resident species and austral migrants (during local winter). By calculating and comparing trends in species and functional composition of communities between seasons, we can answer explore the following questions:
+\begin{enumerate}[(a)]
+\item Is the seasonal difference in species composition statistically detectable? If a significant proportion of species and individuals are migratory in a given community, then it is fair to consider summer and winter communities as partially independent, and we can then characterise these communities as having assembled from distinct (though partially overlapping) species pools.
+\item Are there functional differences between summer and winter communities? If so, this would imply that the differences in species pool override environmental determinants of community composition. Alternatively, if both communities are functionally equivalent, this suggests that trait-environment linkages are driving assembly processes.
+\item Do these trends differ between habitat types? For example, is the role of environmental filtering stronger in environments that offer fewer niches?
+\end{enumerate}
+
+The majority of previous work on community assembly and related topics has focussed on vegetation communities, especially herbaceous species. While herbaceous plants offer a number of advantages to researchers -- for instance, they can be planted or otherwise experimentally manipulated with ease and without ethical considerations -- their sessile nature limits the wider applicability of these results, for example to animals. In addition, primary producers often have simpler trophic interactions than consumers, and lack complex behaviour.
+
+Migratory animals therefore offer an opportunity to investigate relative importance of stochastic and deterministic factors in the absence of one of the main limiting processes in plant studies, dispersal: travelling from other biogeographical regions, migratory individuals can be reasonably assumed to have the ability to reach any site in the study region. Volant taxa in general are less likely to be limited by dispersal than passively-transported organisms such as plants, especially as they can fly directly over unfavourable habitat areas. Due to this dispersal limitation, species composition of plant communities is often highly stochastic and subject to a `priority effect', whereby the first-arriving suitable species rapidly become dominant, and influence the future course of community development. 
+
+For this reason, newly-established plant communities (in the study cited, restored grasslands on former pine plantations) often diverge from each other in terms of species composition, becoming more dissimilar over time \citep{Helsen2012}. Nevertheless, the same study found that communities became functionally more similar as they established, attesting to the influence of environmental filtering: the environment offers a restricted range of niches which can be filled, constraining the possible traits that additional members of a community can occupy. On the other hand, species identity does not relate to the filling of niches \citep{Helsen2012}.
+
+There is currently no agreed standard for which functional traits to analyse in birds. Plant studies tend to focus on morphology and life history \citep[e.g.][]{Helsen2012}, and a recently-developed framework for terrestrial beetles focusses on the same \citep{Fountain-Jones2015}. However, in both cases these traits tend to be assessed from collected specimens, whereas behavioural data, derived from field observations, is available for most bird species in compendia such as \citet{DelHoyo2016}. 
+
+In previous studies of birds, the traits analysed have often been tailored to the question under focus. For example, studying which traits facilitate birds' breeding in urban areas, \citet{Croci2008} included traits relating to life history, diet and nesting, explicitly because those traits pertain to tolerance of new environments. Conversely, studying non-breeding waders in estuaries, a habitat used primarily for foraging, \citet{Mendez2012} selected traits relating to waders' use of food resources. 
+
+This study included census data from outside the focal species' breeding periods \citep{Nascimento1995}, and so traits to do with life history or reproduction have been omitted. Instead, traits related to foraging are included, from three categories: diet composition, foraging behaviour and morphology. These categories were based on a previous analysis of wader functional diversity \citep{Mendez2012}, but have been refined for the details of this study, primarily by expanding the categories to account for waterbirds other than waders.
+
 %
 %How local communities are assembled from species pools is an enduring and controversial question in ecology.
 %
@@ -47,8 +129,6 @@ $\mathbf{Testing123}$
 \newpage
 \section{Methods}
 
-\LaTeX
-
 \subsection{Survey data}
 
 This study used survey data collected for the Neotropical Waterbird Census (Censo Neotropical de Aves Aqu\'{a}ticas; CNAA), co-ordinated by Wetlands International. These censuses were conducted at wetland sites on the Mostardas peninsula, on the coast of Rio Grande do Sul, Brazil. The censuses in this study were conducted during the austral summer (February or March) and winter (July or August), from winter 2005 to summer 2015. 
@@ -57,11 +137,11 @@ Two distinct habitat categories were sampled, the coastal beach and inland lakes
 
 Some sites were sampled very frequently (almost every season); others less frequently and several only once. Surveys were conducted at varying times of day and for varying durations. The effect of survey effort (duration, number of observers) or other characteristics (such as weather, human disturbance) was neither analysed nor corrected for as these data were not available for all surveys. The analysis therefore does not assume equality of survey effort. 
 
-Surveys which detected fewer $< 5$ species were excluded from the analysis, as such atypically low numbers are unlikely to be representative of the total community habitually present at a site. 
+Surveys which detected fewer than five species were excluded from the analysis, as such atypically low numbers are unlikely to be representative of the total community habitually present at a site. 
 
 \subsection{Species data}
 
-Species names and taxonomy followed \citet{vanPerlo2009}. Only species seen on at least $5$ surveys were included, as species detected on so few occasions ($<5\%$) are unlikely to be regular members of a given community. 
+Species names and taxonomy followed \citet{vanPerlo2009}. Only species seen on at least five surveys were included, as species detected on so few occasions ($<5\%$) are unlikely to be regular members of a given community. 
 
 Species were classified as resident, summer migrants or winter migrants based on the account in \citet{vanPerlo2009}. However, this source contains numerous errors for this region; for example, Semipalmated Plover \textit{Charadrius semipalmatus} is listed as a `rare or vagrant' species, when in fact it is regularly recorded on the coast in large numbers \citep[e.g.][and pers. obs]{Sanabria2011, Scherer2012}. Therefore, information on the local status of birds was supplemented using a checklist published for Parque Nacional da Lagoa do Peixe, a large protected site in the study area \citep{Nascimento1995}.
 
@@ -69,13 +149,13 @@ Species were classified as resident, summer migrants or winter migrants based on
 
 Variables were selected to cover as many traits related to foraging as possible. Like \citet{Mendez2012} we used a combination of morphological, behavioural and dietary variables.
 
-Data were gathered initially from \citet{DelHoyo2016}; however, this source does not include bill or tarsus lengths, and does not have detailed diet and/or behaviour information for all species (resident species are especially poorly covered). Therefore, where the species account in \citet{DelHoyo2016} reported that information was scarce, additional data were used from other published accounts. In addition, some species have had their diet studied locally at one of the sites surveyed, in which case this information was used to supplement the \citet{DelHoyo2016} account. A full reference list for each trait is available in Appendix 1A.
+Data were gathered initially from \citet{DelHoyo2016}; however, this source does not include bill or tarsus lengths, and does not have detailed diet and/or behaviour information for all species (resident species with small ranges are especially poorly covered). Therefore, where the species account in \citet{DelHoyo2016} reported that information was scarce, additional data were used from other published accounts. In addition, some species have had their diet studied locally at one of the sites surveyed, in which case this information was used to supplement the \citet{DelHoyo2016} account. A full reference list for each trait is available in Appendix 1A.
 
 
 \subsubsection{\textsc{Morphological data}}
 
 \begin{description}
-\item[\textit{Body mass, Bill length, Tarsus length}] Where mean values were reported, these were used; for sexually dimorphic species, the mean of each sex's mean was used to calculate an overall value for the species. Where a range was reported, the median value of this range, or of both ranges for sexually dimorphic species, was used. Data for adult birds was used in preference to juveniles, and local subspecies if geographical variation was reported. These continuous data were $\ln(x)$-transformed prior to analysis as they ranged over an order of magnitude.
+\item[\textit{Body mass, Bill length, Tarsus length}] Where mean values were reported, these were used; for sexually dimorphic species, the mean of each sex's mean was used to calculate an overall mean for the species. Where a range was reported, the median value of this range, or of both ranges for sexually dimorphic species, was used. Data for adult birds was used in preference to juveniles, and local subspecies if geographical variation was reported. These continuous data were $\ln(x)$-transformed prior to analysis as they ranged over an order of magnitude.
 \item[\textit{Bill shape}] As in \citet{Mendez2012}, bills were classified as straight, up-curved or down-curved, based on illustrations in \citet{DelHoyo2016}.
 \end{description}
 \medskip
@@ -113,7 +193,7 @@ Data were gathered initially from \citet{DelHoyo2016}; however, this source does
 \item[\textit{Other}] Any other diet component not included in the above categories, but insufficiently distinct or common to warrant its own; for example, bird nestlings, human rubbish, faeces
 \end{description}
 
-If a given behaviour or dietary component was not recorded in the literature, it was assumed not to occur commonly enough to be considered a trait of the species. For one species, \textit{Gallinula melanops}, no diet information is published. For several, no morphological data was available in the literature; however, the analytical methods used are able to function with small amounts of missing data.
+If a given behaviour or dietary component was not recorded in the literature, it was assumed not to occur commonly enough to be considered a trait of the species. For one species, the Spot-flanked Gallinule \textit{Gallinula melanops}, no diet information is published. For several, no morphological data was available in the literature; however, the analytical methods used are able to function with small amounts of missing data.
 
 \subsection{Distance matrices}
 
@@ -121,9 +201,9 @@ If a given behaviour or dietary component was not recorded in the literature, it
 \\
 Due to the inclusion of categorical variables, Gower distance was used for the trait data \citep{Borcard2011}, using the \texttt{gowdis} function of the \texttt{FD} package for \texttt{R} \citep{Laliberte2014}. 
 
-In order to give equal weight to the three categories of trait variables (behaviour, diet and morphology), despite their unequal number of variables, I first constructed separate distance matrices for each category. The mean of those matrices gave an overall trait distance matrix. Correlation between these four matrices was evaluated using Pearson's correlation coefficient (significance tests were not conducted due to non-independence of the overall matrix).
+In order to give equal weight to the three categories of trait variables (behaviour, diet and morphology), despite their unequal number of variables, I first constructed separate distance matrices for each category. The mean of those matrices gave an overall trait distance matrix. Correlation between these four matrices was evaluated using Pearson's correlation coefficient (significance tests were not conducted due to non-independence of the overall-mean matrix).
 
-The functional diversity metrics used in this analysis were based on PCoA \citep{Laliberte2010} of the trait distance matrix. For these analyses, a Euclidian trait distance matrix is required, calculated from untransformed species abundances. Negative eigenvalues (imaginary axes) were made Euclidian using the Cailliez transformation, which adds the smallest possible constant to the distances \citep{Laliberte2010}.\\
+The functional diversity metrics used in this analysis were based on PCoA \citep{Laliberte2010} of the trait distance matrix. For these analyses, a Euclidian trait distance matrix is required, calculated from untransformed species abundances. Negative eigenvalues (imaginary axes) were made Euclidian using the Cailliez transformation, which adds the smallest possible constant to the distances.\\
 \\
 \textsc{Species differences between sites}\\
 \\
@@ -137,26 +217,25 @@ To compare between-survey differences in functional composition, it was first ne
 
 For continuous trait variables (such as the morphological measures in this analysis) the CWM is simply the mean trait value for each species present, weighted by that species' abundance. For categorical variables with $>2$ categories, such as bill shape, the CWM is the most frequent category. Binary variables' CWMs can be computed as either the dominant value ($0$ or $1$) or a mean, treating the $0$s and $1$s numerically. I used the latter approach for its more intuitive interpretation (as the proportion of individuals possessing that trait), although repeating the analysis using the former method did not change conclusions.
 
-Functional composition distances were therefore tested for their response to habitat and seasonal differences, as described above for species dissimilarities. Distance matrices for the CWM traits in each category (behaviour, diet and morphology) were tested independently, as was the overall mean.
+Functional composition distances were tested for their response to habitat and seasonal differences, as described above for species dissimilarities. Distance matrices for the CWM traits in each category (behaviour, diet and morphology) were tested independently, as was the overall mean.
 
 As the CWMs for binary traits are proportions, I compared them between habitats using a series of $\chi^2$ tests (controlling for the FDR). 
 %%%% but I am going to change these to Mann-Whitney
 
 \subsection{Austral \emph{versus} boreal migrant communities}
 
-To compare average trait values between migratory birds only, these species were eliminated from census results. Following species removal, and censuses which recorded fewer than three species were excluded from analysis, as calculating Community Weighted Means requires at least three.
+To compare average trait values between migratory birds only, resident species were eliminated from census results. Following species removal, any censuses which recorded fewer than three species were excluded from analysis, as calculating Community Weighted Means requires at least three \citep{Lavorel2008}.
 
 Functional dissimilarity was then calculated between each migrant-only community, and analysed according to season and habitat as the total community was above.
 
-\subsection{Migrant \emph{versus} resident bird communities: Dominant traits}
+\subsection{Migrant \emph{versus} resident bird communities}
 
 Having calculated CWMs for the above migrant-only censuses, I repeated the process excluding migrants, and including only resident species. I then compared average trait values between migrant and resident species using a series of FDR-adjusted Mann-Whitney $U$ tests. 
 
 \subsection{Functional diversity metrics}
 
-Functional diversity is a complex and evolving concept. Modern approaches acknowledge that diversity is a multifaceted issue, and that therefore using several metrics in a single analysis is the preferred approach \citep{Laliberte2010}.
-
-The approach used in this analysis is based on the distance between communities in multivariate trait space (based on the PCoA axes of a Gower distance matrix). The approach used by \citet{Mendez2012}, who used presence/absence data, was based on distances along branches of hierarchical classifications; the approach used here additionally incorporates information about species' relative abundances \citep{Villeger2008}..
+Functional diversity is a complex and evolving concept. Modern approaches acknowledge that diversity is a multifaceted issue, and that therefore using several metrics in a single analysis is the preferred approach \citep{Laliberte2010}. 
+The approach used in this analysis is based on the distance between communities in multivariate trait space (based on the PCoA axes of a Gower distance matrix), and incorporates information about species' relative abundances \citep{Villeger2008}.
 
 Five independent functional diversity metrics were used in this analysis:
 
@@ -164,17 +243,13 @@ Five independent functional diversity metrics were used in this analysis:
 \item[\textit{Functional richness}] is the minimum convex-hull volume which can include all species in multivariate space. Proposed as a multivariate analogue of the range of a single trait by \citet{Villeger2008}, it is unweighted by abundance and therefore sensitive to outliers \citep{Laliberte2010}.
 \item[\textit{Functional evenness}] is a description of the abundance distribution within a community's convex hull. Higher values indicate that distances between all nearest-neighbour pairs are similar; values tend towards zero with increasingly clustered points.
 \item[\textit{Functional divergence}] describes the abundance distribution of species relative to the centre of the convex hull. As noted above, the vertices of the convex hull may be formed by common species or by very rare outliers. High values indicate that the abundant species are close to the vertices of the hull; values approach zero as abundant species approach the centre of the hull.
-\item[\textit{Functional dispersion}] was proposed by \citet{Laliberte2010} to combine the strengths of the first three measures. Like evenness and divergence, it incorporates abundance information; unlike those measures, but like richness, it considers the dispersion of species in trait space (rather than within a convex hull \textit{independently} of its volume). In essence, dispersion is the mean distance of each individual species to the centroid of all species in the community.
+\item[\textit{Functional dispersion}] was proposed by \citet{Laliberte2010} to combine the strengths of the first three measures. Like evenness and divergence, it incorporates abundance information; unlike those measures, but like richness, it considers the dispersion of species in trait space (rather than within a convex hull \textit{independently} of its volume). In essence, dispersion is the mean distance of each individual to the centroid of the community.
 \item[\textit{Number of functionally distinct species}] in this analysis is equal to the number of species recorded in a community, as all included species were functionally distinct.
 \end{description}
 
 \subsection{Observed functional diversity}
 
-As all the diversity metrics were bounded between $0$ and $1$ (except for species count data), I used non-parametric testing to compare measures between categories. 
-
-To compare functional diversity between habitats I used Kruskal-Wallis tests to look for significant variation amongst groups, and pairwise Mann-Whitney $U$ tests to identify the source(s) of that variation. As there were only two seasons, these were directly compared with Mann-Whitney $U$ tests.
-
-Due to the multiple comparisons in each analysis, $p$-values were adjusted using the false discovery rate (FDR) correction of \citet{Benjamini1995}.
+As all the diversity metrics (except for species count data) were bounded between $0$ and $1$  and often had skewed or bimodal distributions, I used non-parametric testing to compare measures between categories. Functional diversity was compared between habitats and seasons using Mann-Whitney $U$ tests.Due to the multiple comparisons in each analysis, $p$-values were adjusted using the false discovery rate (FDR) correction of \citet{Benjamini1995}.
 
 In addition to these analyses, I tested for an interaction between habitat and seasonal effects using analysis of variance. For each functional diversity metric I tested models allowing different intercepts for each group, and models allowing different slopes and intercepts for each group. Models which included a significant term for at least one habitat and a seasonal effect were considered significant.
 
@@ -198,11 +273,97 @@ If SES does not differ significantly from $0$ then observed communities do not d
 
 All analysis used the \texttt{R} environment \citep{R2016}. In addition to the packages cited above, the analysis used the \texttt{dudi.pco} function of \texttt{ade4} for principle co-ordinates analysis \citep{Dray2007}. 
 
-\include{run.fd_results}
+%\clearpage
+%\input{run.fd_results}
+%\include{../Functional Diversity/R/run.fd_results}
 
+\clearpage
 \section{Discussion}
+
+\subsection{Species composition}
+
+Survey habitat explained $40$\% of the variance in species composition, with communities in different habitats tending to have a Cao dissimilarity index $0.3$ greater (out of $1$) than surveys conducted in the same habitat.
+
+In contrast, while survey season was also a statistically significant explanatory variable, the proportion of variance explained was negligible, and including season in the model with habitat halved the model's explanatory power compared with the habitat-only model. 
+
+While many of the waterbird species detected by these surveys have specific habitat requirements \citep{DelHoyo2016}, only around a quarter of species or individuals were migratory. Though seasonal movements do occur also in resident species, overall most of the species in this region can be observed year-round \citep{Nascimento1995}. Therefore, while the seasonal difference in species composition is statistically detectable, it is not of any great biological significance in terms of overall community composition.
+
+\subsection{Functional composition}
+
+While the Gower distance of functional composition between surveys was on average only $0.08$ higher for surveys in different habitats, as an explanatory variable habitat explained $20$\% of the variance in community functional composition.
+
+On the other hand, unlike species composition, functional composition did not vary according to season. This may be because of the small contribution of migratory species to the overall community, or may represent the filling of any niches vacated by departing migrants by resident species.
+
+This relationship held true for each subcategory of functional trait, with habitat explaining $30$\% of the variance in communities' diets, $20$\% of the variance in the prevalence of behavioural traits but only $2$\% of the variance in morphology. This hierarchy reflects the extent to which these traits are environmentally mediated. Diet is entirely constrained by the food items available in the environment. The extent to which a behavioural strategy is adaptive depends in part on environmental conditions: what prey is present, where prey is located, and other factors such as water depth, presence of predators and so on. Morphology, on the other hand, is largely genetically determined via developmental processes, and cannot be adjusted by organisms to suit a particular habitat.
+
+It should be borne in mind, however, that the traits analysed in this study were derived from published literature, chiefly \citet{DelHoyo2016}, rather than from direct observations of each species in the locations surveyed in this study. The diet and behaviour actually manifested by individuals in this region is likely to be a subset of those attributed to species in this analysis: for instance, diet in a given habitat and season can only reflect which prey items are present in that place and time. Behaviour is also known to be remarkably plastic, enabling rapid adjustment of foraging strategies as birds change environment, or as their environment changes (see \citet{Piersma2011} for examples including shorebirds, gulls, waterfowl and other birds). 
+
+In addition, detecting birds in a particular habitat does not necessarily imply that they are foraging there \citep{Jones2001a}. At one of the survey sites in this study, birds of several species are known to roost in Lagoa do Peixe, but forage preferentially on the beach (e.g. \textit{Calidris alba}) or offshore \citep[e.g. \textit{Sterna hirundo};][]{LaraResende1988}. The inclusion of non-foraging individuals likely weakens the association between habitat and function, as the traits included were those relevant to foraging. 
+
+\subsection{Differences between migrant and resident species}
+While summer and winter communities were functionally similar, this was not caused by functionally-similar boreal and austral migrants seasonally occupying identical niches; rather, the continuity of average community trait values resulted from relatively continuous occupation of the same habitats by resident species throughout the year.
+
+In fact, boreal migrant species had a distinct, and less diverse, array of ecological functions, suggesting that they occupy a distinct niche. By implication, either a niche is left seasonally unoccupied -- which seems unlikely, given the usual efficiency of life in exploiting opportunity \citep{Darwin1859a} -- or else migratory waterbirds have evolved to exploit a seasonally-restricted niche in their non-breeding range, as they do in their breeding range \citep[Chapter 20]{Newton2008}. Boreal migrants have been shown to time their arrival to coincide to with maximum prey availability during both southward \citep{Schneider1981} and northward \citep{VanDerGraaf2006} migration at stopover sites. Locally, work by \citet{Fedrizzi2008} has shown that the migratory shorebirds \textit{Calidris alba} and \textit{C. fuscicollis} have their peak abundance at Lagoa do Peixe at the same time their principal benthic macroinvertebrate prey reach peak abundances \citep[see][Chapter 2]{Fedrizzi2008}.
+
+Migratory birds made up a fairly small proportion of the total number of species or individuals detected, around $25$\% in both cases. Few surveys contained sufficient migratory species for the analysis \citep[at least $3$;][]{Laliberte2014}. In particular, only one winter survey from a lake habitat was included. Any conclusions from these analyses must therefore be drawn very cautiously, and warrant testing on a considerably larger dataset.
+
+\subsection{Austral \emph{versus} boreal migrant communities}
+
+Functional composition of migratory bird assemblages differed between habitats and between seasons, with the model including both predictors explaining the most variance (a still-modest $8$\%). Focussing on subcategories of traits, behaviour and diet varied between season only, whereas morphology differed between habitats. 
+
+Of the species included in this analysis, one lineage (the Scolopacidae) is a boreal radiation. The $7$ species of this lineage occur in the surveyed region only during the austral summer, and were often among the most abundant species in these surveys. These species' foraging strategy, with a substantial component of probing in the sediment, is highly distinct and has no equivalent in the austral migrant community. While the Scolopacidae therefore contribute a large amount of seasonal variation, these species occur in both habitats \citep{LaraResende1988}.
+
+Conversely, the most numerous austral migrant is the Chilean Flamingo (\textit{Phoenicopterus chilensis}), which occurs exclusively in lake habitats and is considerably larger than any species occurring on the beach. This species probably causes most of the variation in morphology. However, it is present year-round at Lagoa do Peixe -- the only location Brazil where this is true \citep{Nascimento1995, vanPerlo2009} -- and therefore does not cause seasonal variation in this dataset, as the only winter lake survey is from Lagoa do Peixe. Repeating this analysis with data from other areas could help to determine if there is an effect other than that caused by flamingoes.
+
+\subsection{Functional diversity}
+The bird community in lake habitats was functionally richer and more even than that of the beach, while there were no differences in functional dispersion or divergence. This is likely to be due to the presence of certain functionally unusual, but uncommon, species in lake habitats. 
+
+Functional richness reflects the total range of all traits simultaneously; however, it is not weighted by abundance, and so can be inflated even by a single individual with unusual characteristics. While in most cases traits were scored as $0$ or $1$, morphological measurements were continuous variables. Most of the largest species in this region, such as flamingoes, storks (Maguari Stork \textit{Ciconia maguari}, Wood Stork \textit{Mycteria americana}) and the larger herons (Cocoi Heron \textit{Ardea cocoi}, Great Egret \textit{Ardea alba}) were generally or entirely restricted to lake habitats. Furthermore, the nine species of waterfowl (Anatidae) and three grebes (Podicepidae) represent a distinct suite of functions -- such as consuming plant material, and foraging by dipping while swimming -- which are absent from almost all species on the beach, but appear on most lake surveys as species in these groups are locally common \citep[and pers. obs.]{Nascimento1995}. The presence of these additional traits would have the effect of expanding the vertices of the community's convex hull in trait-space, in other words increasing the functional richness.
+
+Low functional evenness indicates clustering of species within that convex hull. This indicates that certain areas of trait-space are occupied more or less frequently than others. Ecologically this suggests that the extent to which some combinations of functions are more adaptive than others is greater in beach habitats. This is generally interpreted as representing environmental filtering: for example, there is almost no vegetation on the beaches in the study region (pers. obs.), so species depending on plant material would struggle to survive. Similarly, wave action and the largely benthic distribution of marine invertebrates makes swimming a poorly adapted strategy. Conversely, these traits support many organisms in lakes, while the foraging strategies and dietary components found on the beach are mostly also present in lakes. The beach habitat is therefore shown to offer fewer niches, or require greater specialisation, than lakes.
+
+There were no differences in functional divergence or dispersion. These metrics evaluate the abundance distribution of species relative to the weighted average of the total community. In this case, the majority of traits are binary. Species can therefore have a value of either $0$ or $1$ only, whereas the community average can be an intermediate rational number. In both habitats we therefore expect most species to occupy positions far from the centroid of most traits.
+
+There were no seasonal differences in any metric of functional diversity, just as survey season did not explain any variation in functional distance between communities. This result lends further support to the notion that the summer and winter bird communities resemble each other functionally, despite statistically detectable differences in the species present. 
+
+Overall there were no seasonal or habitat differences in the number of species present. While this result may be valid, and therefore reflect ecological processes, I think it is more likely that the variation in species richness between survey dwarfed any difference there might be between habitats and/or seasons. This is another case where confronting ideas with a far larger dataset would be useful.
+
+For all these metrics there was great variation in all the functional diversity metrics calculated for individual surveys, likely reflecting the variation in species richness between surveys. All species were functionally distinct, and so functional diversity is often partly a function of species richness.
+
+\subsection{Null communities and SES}
+
+Despite having a lower number of species, observed communities had greater functional richness than random assemblages. However, functional dispersion, divergence and evenness were all greater in random assemblages than in the observed communities.
+
+This combination of results indicates clustering of functional traits in waterbird communities. Real communities had fewer species than the randomly-drawn assemblages, despite having the same number of individuals. Many waterbird species occur in flocks, so while individuals of a given species were drawn independently in the null models, their occurrence in real life is not independent. 
+
+Nevertheless, the greater-than-random functional richness suggests that a genuine ecological pattern is revealed by these data. Unweighted by abundance, functional richness simply reflects the total number of traits present in a surveyed community, and is therefore equivalent to a presence/absence transformation of the same data. This metric shows that the species present at each site are more functionally distinct than expected by chance. On the other hand, the other metrics indicate that individuals are more functionally similar than would be expected. 
+
+This apparent paradox may simply be an artefact of the non-independence of individual occurrence mentioned above; however, it may reveal that both competition and environmental filtering co-occur in these habitats. While the majority of individuals are clustered in a few, highly exploited niches, there nevertheless remains opportunity for ecologically dissimilar species to persist -- but only in low numbers. For example, a given area may support many benthic-feeding insectivores, as their prey is numerous, but only a few piscivorous species which, feeding at a higher trophic level, face the challenge of finding less abundant prey. 
+
+\subsection{Synthesis}
+
+While species composition varied between both habitats and seasons, functional composition was similar in both seasons, but still varied between habitats. The same pattern was observed whether diet, behavioural or morphological traits were considered, or using a composite functional index. In other words, despite modest but statistically detectable differences in available species pools between seasons, surveyed communities remained functionally similar. Taken together, these results suggest that environmental filtering determines waterbird community assembly, at least at the local spatial scale considered here, while dispersal limitation seems unlikely given the geographic proximity and overlap of many of the surveyed sites.
+
+Similarly, whilst functional diversity was similar between seasons, differences in diversity between habitats suggested that environmental filtering was stronger in beach habitats than lakes. Robust statistical results show that many individual traits have significantly different frequencies of occurrence in each habitat. Similarly, frequency and abundance of species varied significantly between habitats. While this latter result is not exactly surprising -- species differences between habitats have been recorded locally (at Lagoa do Peixe) by a substantial body of previous work \citep[e.g][]{LaraResende1988, Nascimento1995, Fedrizzi2008, Goncalves2009} -- it is valuable to confirm that the dissimilarity-based methods used here detect known relationships, before attempting to draw inference from the non-detection of an unknown (in this case, a link between season and ecological function). The results of this study therefore provide a useful proof-of-concept that waterbird census data from areas including migratory species may be used to study processes of community assembly and environmental filtering in a variety of habitats. However, the limited quantity of data used in this study, owing to its restricted spatial scale, limits the strength and scope of conclusions that can be drawn.
+
+While this study focussed on foraging and associated traits, differences in habitat use may also result from phenomena other than environmental conditions and foraging, in particular biotic interactions such as competition \citep{Jones2001a}. Furthermore, the habitats selected during the non-breeding period (as is the case for the boreal migrants in this study) may be partially determined by conditions during the breeding season, in another hemisphere. Reviewing evidence from shorebirds, gulls, terns, waterfowl and passerines, \citet{Piersma2007} makes a case that a positive feedback exists between breeding and non-breeding habitat specialism over evolutionary time: species breeding in the high Arctic may decrease investment in immunity due to the low environmental disease pressure in these regions, enabling higher energetic performance under demanding environmental conditions such as extreme thermoregulatory costs \citep{Piersma2011} and perpetual daylight \citep{Lesku2012}. Decreased immunity could also result from population bottlenecks caused by such extreme specialism during periods of environmental change \citep{Piersma2007}. In either case, a comparatively weak immune system would restrict potential non-breeding habitats to saline, marine or coastal areas, which also have lower environmental disease pressure; for example, freshwater habitats have many more mosquitoes, which are vectors for avian malaria \citep{Piersma2003}. Thus, further specialisation in habitat selection during the non-breeding period and migratory stopovers, would be necessary to mitigate this increased susceptibility, potentially causing further bottlenecks and constraining future adaptation \citep{Piersma2007}. A pattern of correlated Arctic- and marine-specialisation is observed in many groups of waterbird \citep{Piersma2007}.
+
+In general, migration appears to be a strategy evolved by boreal-breeding taxa that shift their non-breeding range increasingly southward, as demonstrated convincingly for New World emberizoid passerines by \citet{Winger2014}. The migratory strategy likely evolved to enable breeding at latitudes and habitats that could not support large, long-term populations of the species \citep[Chapter 20]{Newton2008}. The effect of this (probable) boreal origin of most migratory waterbird lineages is the strong phylogenetic non-independence of migration: all but two of the migrants recorded on these surveys were Charadriiformes, and the other two were Phoenicopteriformes; the other seven orders of birds present contain no migratory taxa at these sites. In the southern hemisphere, therefore, migration is somewhat inseparable from both habitat use and evolutionary history.
+
+\subsection{Conservation and reserve design}
+These results have implications for the choice or design of reserves for waterbirds in general, and non-breeding migrants in particular. Conservation projects targeting particular species should ensure that as many as possible of that species' ecological functions are supported by the environment sufficiently to bear the target population size. Where competitive exclusion by other species is a threat, enhancing environmental characteristics that exploit any functional differences between the competitors  may be of benefit. Alternatively, for projects aiming to enhance waterbird diversity in general, environmental conditions that support as wide a diversity of ecological functions as possible should be sought.
+
+In addition, the detection of habitat differences in functional diversity suggest that waterbird survey data could be used to monitor the success of wetland restoration projects \textit{via} a functional framework. Whereas differences in abundances of certain species between sites may lack a clear ecological interpretation, comparing functional diversity of communities between natural and restored/created sites may give a clearer indication of the project's success. While an individual species may depend on multiple criteria, analysing the functional composition of entire communities makes it possible to detect trends in individual functions across all species, as seen in this study. If a given function is found to be unsupported by a restored site, targeted planning can be undertaken to address what is lacking. For example, a dearth of probing species compared with surface-feeders would suggest a lack of benthic infauna compared with epifauna \citep{McLusky2004}. This approach has already been used to determine recovery of biogeochemical functioning and biological (though mainly vegetation) structure \citep{Moreno-Mateos2012}, finding that even 100 years from establishment restored wetlands are functionally distinct from reference sites. However, where the goal of restoration is directly the offsetting of threats to biodiversity from habitat loss, testing effects on the target biota directly may be more appropriate.
+
+\section{Acknowledgements}
+
+I thank Andr\'{e} Dias, Francesco de Bello and participants on the Functional Trait Data Analysis course at Universidade Federal do Rio de Janeiro for their help in the design of this chapter.
+
+This project was financially supported by the European Commission through the program Erasmus Mundus Master Course -- International Master in Applied Ecology (EMMC-IMAE) (FPA 2023-0224 / 532524-1-FR-2012-1-ERA-MUNDUS-EMMC).
 
 \bibliographystyle{jae}
 \bibliography{../../../../../Documents/library}
+
+
 
 \end{document}
