@@ -1,0 +1,18 @@
+Step
+
+Peck (point)
+- success
+
+Non-random probe (point)
+- success
+
+Random probe (state)
+- success
+
+Defecation (point)
+
+Out-of-view (state)
+
+Identify preys eaten
+
+Success and prey ID only in good-quality videos

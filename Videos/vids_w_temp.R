@@ -30,7 +30,7 @@ for (ii in 1:N) {
 time_matcher$diff <- difftime(vids$datetime[time_matcher$vid],
                               temp$datetime[time_matcher$temp],
                               units-'mins') %>% abs
-time_matcher$closenough <- time_matcher$diff <= 15
+time_matcher$closenough <- time_matcher$diff <= 30
 sum(time_matcher$closenough)
 
 time_matcher$flockid <- vids$flockid
@@ -47,5 +47,14 @@ time_matcher$vidno <- time_matcher$vid -
 
 
 # table with videos ordered per flock
-time_matcher[order(time_matcher$flockno, time_matcher$diff),]
+vids_sorted <- time_matcher[order(time_matcher$flockno, time_matcher$diff),]
+# only those that are close enough
+vids_sorted_enough <- vids_sorted[which(vids_sorted$closenough==T),]
+nrow(vids_sorted_enough[grepl('San',vids_sorted_enough$flockid),])
+nrow(vids_sorted_enough[grepl('Fus',vids_sorted_enough$flockid),])
 
+length(unique(vids_sorted_enough$flockid))
+(vids_sorted_enough[grepl('San',vids_sorted_enough$flockid),])$flockid %>% 
+  unique %>% length
+(vids_sorted_enough[grepl('Fus',vids_sorted_enough$flockid),])$flockid %>% 
+  unique %>% length
