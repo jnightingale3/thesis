@@ -30,7 +30,7 @@ for (ii in 1:N) {
 time_matcher$diff <- difftime(vids$datetime[time_matcher$vid],
                               temp$datetime[time_matcher$temp],
                               units-'mins') %>% abs
-time_matcher$closenough <- time_matcher$diff <= 30
+time_matcher$closenough <- time_matcher$diff <= 15
 sum(time_matcher$closenough)
 
 time_matcher$flockid <- vids$flockid

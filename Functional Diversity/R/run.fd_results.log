@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.16)  8 JUN 2016 22:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.16)  28 JUN 2016 01:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1228,7 +1228,7 @@ LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/it' will be
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.142  Habitat & 0.29^
+l.142  Habitat & 0.28^
                       {***} &  &  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1236,7 +1236,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
-l.142  Habitat & 0.29^{***} &
+l.142  Habitat & 0.28^{***} &
                                &  \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1247,7 +1247,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.142  Habitat & 0.29^{***} &
+l.142  Habitat & 0.28^{***} &
                                &  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1255,7 +1255,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.142  Habitat & 0.29^{***} &
+l.142  Habitat & 0.28^{***} &
                                &  \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1267,15 +1267,15 @@ my insertion and my current dilemma will both disappear.
 <inserted text> 
                 $
 l.145  Season &  & 0.01^
-                        {*} &  \\
+                        {**} &  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
-l.145  Season &  & 0.01^{*} &
-                               \\
+l.145  Season &  & 0.01^{**} &
+                                \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1285,16 +1285,16 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.145  Season &  & 0.01^{*} &
-                               \\
+l.145  Season &  & 0.01^{**} &
+                                \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.145  Season &  & 0.01^{*} &
-                               \\
+l.145  Season &  & 0.01^{**} &
+                                \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1342,7 +1342,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.151  Intercept & 1.05^
+l.151  Intercept & 1.06^
                         {***} & 1.15^{***} & 1.03^{***} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1350,7 +1350,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
-l.151  Intercept & 1.05^{***} &
+l.151  Intercept & 1.06^{***} &
                                 1.15^{***} & 1.03^{***} \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1361,7 +1361,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.151  Intercept & 1.05^{***} &
+l.151  Intercept & 1.06^{***} &
                                 1.15^{***} & 1.03^{***} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1369,7 +1369,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.151  Intercept & 1.05^{***} &
+l.151  Intercept & 1.06^{***} &
                                 1.15^{***} & 1.03^{***} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1380,7 +1380,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.151  Intercept & 1.05^{***} & 1.15^
+l.151  Intercept & 1.06^{***} & 1.15^
                                      {***} & 1.03^{***} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1388,7 +1388,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
-l.151  Intercept & 1.05^{***} & 1.15^{***} &
+l.151  Intercept & 1.06^{***} & 1.15^{***} &
                                              1.03^{***} \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1399,7 +1399,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.151  Intercept & 1.05^{***} & 1.15^{***} &
+l.151  Intercept & 1.06^{***} & 1.15^{***} &
                                              1.03^{***} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1407,7 +1407,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.151  Intercept & 1.05^{***} & 1.15^{***} &
+l.151  Intercept & 1.06^{***} & 1.15^{***} &
                                              1.03^{***} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1418,7 +1418,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.151  Intercept & 1.05^{***} & 1.15^{***} & 1.03^
+l.151  Intercept & 1.06^{***} & 1.15^{***} & 1.03^
                                                   {***} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1427,7 +1427,7 @@ you left one out. Proceed, with fingers crossed.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
 l.152   &
-          \multicolumn{1}{c}{(1.05$, $1.06)} & \multicolumn{1}{c}{(1.14$, $1...
+          \multicolumn{1}{c}{(1.05$, $1.06)} & \multicolumn{1}{c}{(1.15$, $1...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1438,7 +1438,7 @@ deleted material, e.g., by typing `I$}'.
 <inserted text> 
                 $
 l.152   &
-          \multicolumn{1}{c}{(1.05$, $1.06)} & \multicolumn{1}{c}{(1.14$, $1...
+          \multicolumn{1}{c}{(1.05$, $1.06)} & \multicolumn{1}{c}{(1.15$, $1...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -1446,7 +1446,7 @@ you left one out. Proceed, with fingers crossed.
 <inserted text> 
                 }
 l.152   &
-          \multicolumn{1}{c}{(1.05$, $1.06)} & \multicolumn{1}{c}{(1.14$, $1...
+          \multicolumn{1}{c}{(1.05$, $1.06)} & \multicolumn{1}{c}{(1.15$, $1...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1761,7 +1761,7 @@ you left one out. Proceed, with fingers crossed.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
 l.197   &
-          \multicolumn{1}{c}{(0.21$, $0.21)} & \multicolumn{1}{c}{(0.23$, $0...
+          \multicolumn{1}{c}{(0.20$, $0.21)} & \multicolumn{1}{c}{(0.23$, $0...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1772,7 +1772,7 @@ deleted material, e.g., by typing `I$}'.
 <inserted text> 
                 $
 l.197   &
-          \multicolumn{1}{c}{(0.21$, $0.21)} & \multicolumn{1}{c}{(0.23$, $0...
+          \multicolumn{1}{c}{(0.20$, $0.21)} & \multicolumn{1}{c}{(0.23$, $0...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -1780,7 +1780,7 @@ you left one out. Proceed, with fingers crossed.
 <inserted text> 
                 }
 l.197   &
-          \multicolumn{1}{c}{(0.21$, $0.21)} & \multicolumn{1}{c}{(0.23$, $0...
+          \multicolumn{1}{c}{(0.20$, $0.21)} & \multicolumn{1}{c}{(0.23$, $0...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -2079,7 +2079,7 @@ If that doesn't work, type  X <return>  to quit.
 <inserted text> 
                 $
 l.226  Habitat & 0.1^
-                     {***} &  & 0.1^{***} &  & 0.05^{***} &  \\
+                     {***} &  & 0.1^{***} &  & 0.1^{***} &  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -2087,7 +2087,7 @@ you left one out. Proceed, with fingers crossed.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
 l.226  Habitat & 0.1^{***} &
-                              & 0.1^{***} &  & 0.05^{***} &  \\
+                              & 0.1^{***} &  & 0.1^{***} &  \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -2098,7 +2098,7 @@ deleted material, e.g., by typing `I$}'.
 <inserted text> 
                 $
 l.226  Habitat & 0.1^{***} &
-                              & 0.1^{***} &  & 0.05^{***} &  \\
+                              & 0.1^{***} &  & 0.1^{***} &  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -2106,7 +2106,7 @@ you left one out. Proceed, with fingers crossed.
 <inserted text> 
                 }
 l.226  Habitat & 0.1^{***} &
-                              & 0.1^{***} &  & 0.05^{***} &  \\
+                              & 0.1^{***} &  & 0.1^{***} &  \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -2117,7 +2117,7 @@ my insertion and my current dilemma will both disappear.
 <inserted text> 
                 $
 l.226  Habitat & 0.1^{***} &  & 0.1^
-                                    {***} &  & 0.05^{***} &  \\
+                                    {***} &  & 0.1^{***} &  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -2125,7 +2125,7 @@ you left one out. Proceed, with fingers crossed.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
 l.226  Habitat & 0.1^{***} &  & 0.1^{***} &
-                                             & 0.05^{***} &  \\
+                                             & 0.1^{***} &  \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -2136,7 +2136,7 @@ deleted material, e.g., by typing `I$}'.
 <inserted text> 
                 $
 l.226  Habitat & 0.1^{***} &  & 0.1^{***} &
-                                             & 0.05^{***} &  \\
+                                             & 0.1^{***} &  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -2144,7 +2144,7 @@ you left one out. Proceed, with fingers crossed.
 <inserted text> 
                 }
 l.226  Habitat & 0.1^{***} &  & 0.1^{***} &
-                                             & 0.05^{***} &  \\
+                                             & 0.1^{***} &  \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -2154,7 +2154,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.226 ...tat & 0.1^{***} &  & 0.1^{***} &  & 0.05^
+l.226 ...itat & 0.1^{***} &  & 0.1^{***} &  & 0.1^
                                                   {***} &  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2162,7 +2162,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
-l.226 ....1^{***} &  & 0.1^{***} &  & 0.05^{***} &
+l.226 ...0.1^{***} &  & 0.1^{***} &  & 0.1^{***} &
                                                     \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2173,7 +2173,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.226 ....1^{***} &  & 0.1^{***} &  & 0.05^{***} &
+l.226 ...0.1^{***} &  & 0.1^{***} &  & 0.1^{***} &
                                                     \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2181,7 +2181,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.226 ....1^{***} &  & 0.1^{***} &  & 0.05^{***} &
+l.226 ...0.1^{***} &  & 0.1^{***} &  & 0.1^{***} &
                                                     \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3006,16 +3006,16 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.336  Habitat & 0.03^
-                      {*} &  &  \\
+l.336  Habitat & 0.05^
+                      {***} &  &  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
-l.336  Habitat & 0.03^{*} &
-                             &  \\
+l.336  Habitat & 0.05^{***} &
+                               &  \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -3025,16 +3025,16 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.336  Habitat & 0.03^{*} &
-                             &  \\
+l.336  Habitat & 0.05^{***} &
+                               &  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.336  Habitat & 0.03^{*} &
-                             &  \\
+l.336  Habitat & 0.05^{***} &
+                               &  \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -3044,16 +3044,16 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.339  Season &  & 0.05^
-                        {***} &  \\
+l.339  Season &  & 0.03^
+                        {*} &  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
-l.339  Season &  & 0.05^{***} &
-                                 \\
+l.339  Season &  & 0.03^{*} &
+                               \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -3063,16 +3063,16 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.339  Season &  & 0.05^{***} &
-                                 \\
+l.339  Season &  & 0.03^{*} &
+                               \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.339  Season &  & 0.05^{***} &
-                                 \\
+l.339  Season &  & 0.03^{*} &
+                               \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -3091,7 +3091,7 @@ you left one out. Proceed, with fingers crossed.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
 l.343   &
-           &  & \multicolumn{1}{c}{(0.05$, $0.12)} \\
+           &  & \multicolumn{1}{c}{(0.05$, $0.11)} \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -3102,7 +3102,7 @@ deleted material, e.g., by typing `I$}'.
 <inserted text> 
                 $
 l.343   &
-           &  & \multicolumn{1}{c}{(0.05$, $0.12)} \\
+           &  & \multicolumn{1}{c}{(0.05$, $0.11)} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -3110,7 +3110,7 @@ you left one out. Proceed, with fingers crossed.
 <inserted text> 
                 }
 l.343   &
-           &  & \multicolumn{1}{c}{(0.05$, $0.12)} \\
+           &  & \multicolumn{1}{c}{(0.05$, $0.11)} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -3120,16 +3120,16 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.345  Intercept & 0.25^
-                        {***} & 0.24^{***} & 0.22^{***} \\
+l.345  Intercept & 0.24^
+                        {***} & 0.25^{***} & 0.22^{***} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
-l.345  Intercept & 0.25^{***} &
-                                0.24^{***} & 0.22^{***} \\
+l.345  Intercept & 0.24^{***} &
+                                0.25^{***} & 0.22^{***} \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -3139,16 +3139,16 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.345  Intercept & 0.25^{***} &
-                                0.24^{***} & 0.22^{***} \\
+l.345  Intercept & 0.24^{***} &
+                                0.25^{***} & 0.22^{***} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.345  Intercept & 0.25^{***} &
-                                0.24^{***} & 0.22^{***} \\
+l.345  Intercept & 0.24^{***} &
+                                0.25^{***} & 0.22^{***} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -3158,7 +3158,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.345  Intercept & 0.25^{***} & 0.24^
+l.345  Intercept & 0.24^{***} & 0.25^
                                      {***} & 0.22^{***} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3166,7 +3166,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
-l.345  Intercept & 0.25^{***} & 0.24^{***} &
+l.345  Intercept & 0.24^{***} & 0.25^{***} &
                                              0.22^{***} \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3177,7 +3177,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.345  Intercept & 0.25^{***} & 0.24^{***} &
+l.345  Intercept & 0.24^{***} & 0.25^{***} &
                                              0.22^{***} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3185,7 +3185,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.345  Intercept & 0.25^{***} & 0.24^{***} &
+l.345  Intercept & 0.24^{***} & 0.25^{***} &
                                              0.22^{***} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3196,7 +3196,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.345  Intercept & 0.25^{***} & 0.24^{***} & 0.22^
+l.345  Intercept & 0.24^{***} & 0.25^{***} & 0.22^
                                                   {***} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3205,7 +3205,7 @@ you left one out. Proceed, with fingers crossed.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
 l.346   &
-          \multicolumn{1}{c}{(0.23$, $0.26)} & \multicolumn{1}{c}{(0.22$, $0...
+          \multicolumn{1}{c}{(0.22$, $0.25)} & \multicolumn{1}{c}{(0.23$, $0...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -3216,7 +3216,7 @@ deleted material, e.g., by typing `I$}'.
 <inserted text> 
                 $
 l.346   &
-          \multicolumn{1}{c}{(0.23$, $0.26)} & \multicolumn{1}{c}{(0.22$, $0...
+          \multicolumn{1}{c}{(0.22$, $0.25)} & \multicolumn{1}{c}{(0.23$, $0...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -3224,7 +3224,7 @@ you left one out. Proceed, with fingers crossed.
 <inserted text> 
                 }
 l.346   &
-          \multicolumn{1}{c}{(0.23$, $0.26)} & \multicolumn{1}{c}{(0.22$, $0...
+          \multicolumn{1}{c}{(0.22$, $0.25)} & \multicolumn{1}{c}{(0.23$, $0...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -3522,16 +3522,16 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.375  Habitat & 0.02 &  & -0.004 &  & 0.1^
-                                           {**} &  \\
+l.375  Habitat & 0.04^
+                      {**} &  & -0.001 &  & 0.1^{***} &  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
-l.375  Habitat & 0.02 &  & -0.004 &  & 0.1^{**} &
-                                                   \\
+l.375  Habitat & 0.04^{**} &
+                              & -0.001 &  & 0.1^{***} &  \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -3541,16 +3541,16 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.375  Habitat & 0.02 &  & -0.004 &  & 0.1^{**} &
-                                                   \\
+l.375  Habitat & 0.04^{**} &
+                              & -0.001 &  & 0.1^{***} &  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.375  Habitat & 0.02 &  & -0.004 &  & 0.1^{**} &
-                                                   \\
+l.375  Habitat & 0.04^{**} &
+                              & -0.001 &  & 0.1^{***} &  \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -3560,16 +3560,16 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.376   Season &  & 0.1^
-                        {***} &  & 0.1^{***} &  & 0.02 \\
+l.375  Habitat & 0.04^{**} &  & -0.001 &  & 0.1^
+                                                {***} &  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
-l.376   Season &  & 0.1^{***} &
-                                 & 0.1^{***} &  & 0.02 \\
+l.375 ... & 0.04^{**} &  & -0.001 &  & 0.1^{***} &
+                                                    \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -3579,16 +3579,16 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.376   Season &  & 0.1^{***} &
-                                 & 0.1^{***} &  & 0.02 \\
+l.375 ... & 0.04^{**} &  & -0.001 &  & 0.1^{***} &
+                                                    \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.376   Season &  & 0.1^{***} &
-                                 & 0.1^{***} &  & 0.02 \\
+l.375 ... & 0.04^{**} &  & -0.001 &  & 0.1^{***} &
+                                                    \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -3598,16 +3598,16 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.376   Season &  & 0.1^{***} &  & 0.1^
-                                       {***} &  & 0.02 \\
+l.376   Season &  & 0.04^
+                         {***} &  & 0.04^{***} &  & 0.004 \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
-l.376   Season &  & 0.1^{***} &  & 0.1^{***} &
-                                                & 0.02 \\
+l.376   Season &  & 0.04^{***} &
+                                  & 0.04^{***} &  & 0.004 \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -3617,16 +3617,54 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.376   Season &  & 0.1^{***} &  & 0.1^{***} &
-                                                & 0.02 \\
+l.376   Season &  & 0.04^{***} &
+                                  & 0.04^{***} &  & 0.004 \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.376   Season &  & 0.1^{***} &  & 0.1^{***} &
-                                                & 0.02 \\
+l.376   Season &  & 0.04^{***} &
+                                  & 0.04^{***} &  & 0.004 \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.376   Season &  & 0.04^{***} &  & 0.04^
+                                         {***} &  & 0.004 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<template> \unskip \hfil }
+                          \hskip \tabcolsep \endtemplate 
+l.376   Season &  & 0.04^{***} &  & 0.04^{***} &
+                                                  & 0.004 \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.376   Season &  & 0.04^{***} &  & 0.04^{***} &
+                                                  & 0.004 \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.376   Season &  & 0.04^{***} &  & 0.04^{***} &
+                                                  & 0.004 \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -4484,19 +4522,19 @@ You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: Float too large for page by 25.29117pt on input line 655.
+LaTeX Warning: Float too large for page by 37.29117pt on input line 656.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 659.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 660.
 [13
 
  <./figure/SEShists-1.pdf>] [14] [15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 659.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 660.
  (./run.fd_results.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 659.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 659.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 660.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 660.
 Package rerunfilecheck Info: File `run.fd_results.out' has not changed.
 (rerunfilecheck)             Checksum: 13A7FA220159F09481B5586B84F3952C;524.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 659.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 660.
  ) 
 Here is how much of TeX's memory you used:
  8744 strings out of 493027
@@ -4516,7 +4554,7 @@ l/texlive/2015/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond12-Italic.pfb
 -Regular.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtx
 r.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on run.fd_results.pdf (15 pages, 570749 bytes).
+Output written on run.fd_results.pdf (15 pages, 588960 bytes).
 PDF statistics:
  220 PDF objects out of 1000 (max. 8388607)
  188 compressed objects within 2 object streams

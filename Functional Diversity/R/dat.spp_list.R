@@ -22,7 +22,8 @@ dat.list <- list(
   'd2012ver' = read.csv("data/spp.matrices/2012ver.csv"),
   'd2013ver' = read.csv("data/spp.matrices/2013ver.csv"),
   'd2014inv' = read.csv("data/spp.matrices/2014inv.csv"),
-  'd2015ver' = read.csv("data/spp.matrices/2015ver.csv")
+  'd2015ver' = read.csv("data/spp.matrices/2015ver.csv"),
+  'd2016ver' = read.csv("data/spp.matrices/2016ver.csv")
 )
 
 ## rename columns for join - each census needs a unique name

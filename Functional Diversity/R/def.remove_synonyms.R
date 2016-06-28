@@ -39,6 +39,7 @@ remove_synonyms <- function(x) {within(x, {
   sp[sp=="Casmerodius  albus"] <- "Ardea alba"
   sp[sp=="Anhima cornuta"] <- "Chauna torquata"
   sp[sp=="Chroicocephalus  maculipennis "] <- "Chroicocephalus maculipennis"
+  sp[sp=="Croicocephalus maculipennis"] <- "Chroicocephalus maculipennis"
   sp[sp=="Circus buffoni "] <- "Circus buffoni"
   sp[sp=="Cygnus melancoryphus"] <- "Cygnus melanocoryphus"
   sp[sp=="Fulica  armillata"] <- "Fulica armillata"
