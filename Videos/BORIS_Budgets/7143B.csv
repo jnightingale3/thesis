@@ -1,0 +1,22 @@
+Observations:,,,,,,,,,
+B,,,,,,,,,
+,,,,,,,,,
+Independent variables:,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+Time budget:,,,,,,,,,
+Subject,Behavior,Modifiers,Total number,Total duration (s),Duration mean (s),Duration std dev,inter-event intervals mean (s),inter-event intervals std dev,% of total media length
+,,,,,,,,,
+No focal subject,Defecation,-,0,-,-,-,-,-,-
+No focal subject,Out of view,,3,1.887,0.629,0.573,8.584,10.464,2.6
+No focal subject,Peck,Fail,2,-,-,-,5.586,NA,-
+No focal subject,Peck,Success,6,-,-,-,5.9,8.9,-
+No focal subject,Peck,,1,-,-,-,NA,NA,-
+No focal subject,Random probe,Success,4,1.896,0.474,0.568,9.763,6.753,2.6
+No focal subject,Random probe,Fail,20,11.672,0.584,0.343,1.657,2.701,16.3
+No focal subject,Random probe,,1,0.6,0.6,NA,NA,NA,0.8
+No focal subject,Scratch,-,0,-,-,-,-,-,-
+No focal subject,Step,,259,-,-,-,0.271,0.383,-
+No focal subject,non-random Probe,Success,6,4.919,0.82,0.304,8.393,6.057,6.9
+No focal subject,non-random Probe,fail,4,3.134,0.783,0.553,11.293,12.389,4.4
+No focal subject,non-random Probe,,1,1.529,1.529,NA,NA,NA,2.1
