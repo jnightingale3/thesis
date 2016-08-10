@@ -1,0 +1,1461 @@
+{
+ "project_date": "2016-07-04T21:27:59",
+ "observations": {
+  "A": {
+   "time offset": 0.0,
+   "close_behaviors_between_videos": false,
+   "description": "Individual present at beginning of video.",
+   "media_info": {
+    "fps": {
+     "/home/josh/Videos/Thesis Videos/0301/Fus4/DSCN7215.MOV": 25.0
+    },
+    "length": {
+     "/home/josh/Videos/Thesis Videos/0301/Fus4/DSCN7215.MOV": 53.04
+    }
+   },
+   "type": "MEDIA",
+   "file": {
+    "1": [
+     "/home/josh/Videos/Thesis Videos/0301/Fus4/DSCN7215.MOV"
+    ],
+    "2": []
+   },
+   "independent_variables": {},
+   "events": [
+    [
+     0.0,
+     "",
+     "Random probe",
+     "Success",
+     ""
+    ],
+    [
+     1.687,
+     "",
+     "Random probe",
+     "Success",
+     ""
+    ],
+    [
+     2.2,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     2.2,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     2.499,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     2.587,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     3.289,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     3.7,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     4.3,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     4.7,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     4.987,
+     "",
+     "non-random Probe",
+     "Success",
+     ""
+    ],
+    [
+     5.0,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     5.307,
+     "",
+     "non-random Probe",
+     "Success",
+     ""
+    ],
+    [
+     5.706,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     6.551,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     6.689,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     7.713,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     8.1,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     8.118,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     9.236,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     9.253,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     10.0,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     10.097,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     10.124,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     11.1,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     11.352,
+     "",
+     "non-random Probe",
+     "Fail",
+     ""
+    ],
+    [
+     11.353,
+     "",
+     "non-random Probe",
+     "Fail",
+     ""
+    ],
+    [
+     11.473,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     11.474,
+     "",
+     "non-random Probe",
+     "Success",
+     ""
+    ],
+    [
+     11.7,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     11.811,
+     "",
+     "non-random Probe",
+     "Success",
+     ""
+    ],
+    [
+     11.9,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     12.1,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     12.311,
+     "",
+     "Peck",
+     "Fail",
+     ""
+    ],
+    [
+     12.9,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     13.1,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     13.5,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     13.511,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     14.911,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     15.0,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     15.111,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     15.4,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     15.6,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     16.1,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     16.111,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     16.185,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     16.559,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     17.785,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     18.639,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     18.8,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     19.2,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     19.285,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     19.585,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     19.6,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     19.692,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     19.8,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     20.185,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     20.2,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     20.266,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     20.9,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     21.0,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     21.269,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     21.274,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     22.005,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     22.02,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     22.1,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     22.639,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     22.725,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     22.9,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     22.92,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     22.939,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     23.281,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     23.4,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     23.4,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     23.955,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     24.059,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     24.508,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     24.6,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     25.0,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     25.1,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     25.486,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     25.491,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     25.7,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     25.927,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     26.1,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     26.4,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     26.5,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     26.7,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     26.8,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     26.9,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     27.162,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     27.331,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     27.5,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     27.528,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     27.631,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     27.807,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     27.874,
+     "",
+     "non-random Probe",
+     "Fail",
+     ""
+    ],
+    [
+     28.0,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     28.062,
+     "",
+     "non-random Probe",
+     "Fail",
+     ""
+    ],
+    [
+     28.3,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     28.6,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     28.981,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     29.334,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     29.454,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     29.8,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     30.265,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     30.5,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     30.625,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     30.7,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     30.869,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     30.994,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     31.2,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     31.257,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     31.353,
+     "",
+     "Random probe",
+     "",
+     ""
+    ],
+    [
+     31.9,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     31.902,
+     "",
+     "Random probe",
+     "",
+     ""
+    ],
+    [
+     32.1,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     32.159,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     32.422,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     32.513,
+     "",
+     "Random probe",
+     "Success",
+     ""
+    ],
+    [
+     32.8,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     32.812,
+     "",
+     "Random probe",
+     "Success",
+     ""
+    ],
+    [
+     33.1,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     33.27,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     35.98,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     36.1,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     36.101,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     36.548,
+     "",
+     "Random probe",
+     "Fail",
+     ""
+    ],
+    [
+     36.725,
+     "",
+     "Random probe",
+     "",
+     ""
+    ],
+    [
+     37.0,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     37.072,
+     "",
+     "Random probe",
+     "",
+     ""
+    ],
+    [
+     37.9,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     38.3,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     38.4,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     38.6,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     38.7,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     38.8,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     38.9,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     39.0,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     39.1,
+     "",
+     "Out of view",
+     "",
+     ""
+    ],
+    [
+     39.421,
+     "",
+     "Out of view",
+     "",
+     ""
+    ],
+    [
+     39.421,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     39.51,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     39.632,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     39.654,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     39.8,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     39.9,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     40.0,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     40.2,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     40.3,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     40.4,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     40.5,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     40.7,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     40.9,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     41.1,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     41.4,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     41.6,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     41.8,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     41.9,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     42.0,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     42.1,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     42.2,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     42.3,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     42.5,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     42.6,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     42.7,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     42.8,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     42.865,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     42.915,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     42.94,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     43.006,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     43.146,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     43.255,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     43.335,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     43.464,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     43.756,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     43.869,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     43.874,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     44.078,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     44.185,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     44.304,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     44.387,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     44.515,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     44.613,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     44.748,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     44.827,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     44.942,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     45.038,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     45.264,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     45.364,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     45.464,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     45.664,
+     "",
+     "Step",
+     "",
+     ""
+    ],
+    [
+     45.75,
+     "",
+     "Out of view",
+     "",
+     ""
+    ],
+    [
+     53.155,
+     "",
+     "Out of view",
+     "",
+     ""
+    ]
+   ],
+   "date": "2016-07-04T21:28:50",
+   "time offset second player": 0.0,
+   "visualize_spectrogram": false
+  }
+ },
+ "project_format_version": "1.6",
+ "coding_map": {},
+ "project_name": "7215",
+ "project_description": "",
+ "subjects_conf": {},
+ "independent_variables": {},
+ "behaviors_conf": {
+  "0": {
+   "excluded": "Out of view",
+   "type": "Point event",
+   "key": "S",
+   "code": "Step",
+   "description": "One step",
+   "modifiers": "",
+   "coding map": ""
+  },
+  "4": {
+   "excluded": "",
+   "type": "State event",
+   "key": "X",
+   "code": "Out of view",
+   "description": "Bill not visible",
+   "modifiers": "",
+   "coding map": ""
+  },
+  "2": {
+   "excluded": "Out of view",
+   "type": "State event",
+   "key": "R",
+   "code": "Random probe",
+   "description": "Bill kept in sediment (stitching)",
+   "modifiers": "Success (S),Fail (F)",
+   "coding map": ""
+  },
+  "3": {
+   "excluded": "Out of view",
+   "type": "Point event",
+   "key": "M",
+   "code": "Defecation",
+   "description": "Bird defecates",
+   "modifiers": "",
+   "coding map": ""
+  },
+  "5": {
+   "excluded": "Random probe,Out of view",
+   "type": "Point event",
+   "key": "G",
+   "code": "Peck",
+   "description": "Prey collected from surface of sediment",
+   "modifiers": "Success (S),Fail (F)",
+   "coding map": ""
+  },
+  "1": {
+   "excluded": "Random probe,Out of view",
+   "type": "State event",
+   "key": "P",
+   "code": "non-random Probe",
+   "description": "Bill inserted at precise point in sediment",
+   "modifiers": "Success (S),Fail (F)",
+   "coding map": ""
+  },
+  "6": {
+   "excluded": "Out of view",
+   "type": "Point event",
+   "key": "Q",
+   "code": "Scratch",
+   "description": "Bird scratches self with foot",
+   "modifiers": "",
+   "coding map": ""
+  }
+ },
+ "time_format": "hh:mm:ss"
+}

@@ -1,7 +1,7 @@
 ## ID videos with temperature data
 require(birk) # for which.closest()
 require(magrittr) # ceci n'est pas un pipe
-require(plyr)
+require(plyr) # for ddply()ing the first video code of each flock
 # need unique_clocks.R to ID unique flocks first
 
 ## read in data
@@ -42,19 +42,33 @@ time_matcher$flockno <- match(time_matcher$flockid, unqflid)
 
 # what is the first video code for each flock?
 vidmin <- ddply(time_matcher, .(flockid), function(x){min(x$vid)})
-time_matcher$vidno <- time_matcher$vid - 
-  vidmin$V1[match(time_matcher$flockid, vidmin$flockid)] + 1
+vidmax <- ddply(time_matcher, .(flockid), function(x){max(x$vid)})
+time_matcher$vidno <- (vidmax$V1-vidmin$V1)[match(time_matcher$flockid, 
+                                                  vidmin$flockid)] -
+  time_matcher$vid - 
+  vidmax$V1[match(time_matcher$flockid, vidmax$flockid)] + 1 
+  
 
 
 # table with videos ordered per flock
 vids_sorted <- time_matcher[order(time_matcher$flockno, time_matcher$diff),]
 # only those that are close enough
 vids_sorted_enough <- vids_sorted[which(vids_sorted$closenough==T),]
-nrow(vids_sorted_enough[grepl('San',vids_sorted_enough$flockid),])
-nrow(vids_sorted_enough[grepl('Fus',vids_sorted_enough$flockid),])
 
-length(unique(vids_sorted_enough$flockid))
+
+###### final table ######
+# in total, how many of each species?
+sum(grepl('San',vids_sorted_enough$flockid)) # 58
+sum(grepl('Fus',vids_sorted_enough$flockid)) # 57
+
+# how many unique flocks?
+length(unique(vids_sorted_enough$flockid)) # 35
+
+# ...of each species?
 (vids_sorted_enough[grepl('San',vids_sorted_enough$flockid),])$flockid %>% 
-  unique %>% length
+  unique %>% length # 19
 (vids_sorted_enough[grepl('Fus',vids_sorted_enough$flockid),])$flockid %>% 
-  unique %>% length
+  unique %>% length # 16
+
+# write table to working directory
+# write.csv(vids_sorted_enough, file='watch_order_table.csv')
